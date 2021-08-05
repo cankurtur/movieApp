@@ -19,7 +19,7 @@
 
 INPUT_FILE=$1
 START_LINE=`head -1 $INPUT_FILE`
-PATTERN='^\[((?i)[a-z]+-[0-9]+)\].|(?i)merge'
+PATTERN='^\[([a-zA-Z]+-[0-9]+)\].|(?i)merge'
 length=${#START_LINE}
 
 check=$(head -1 $1 | egrep $PATTERN)
@@ -29,8 +29,8 @@ if [ "" = "$check" ]; then
     exit 1
 fi
 
-if [ $length -le 50 ]; then
-    echo "Please enter a message with at least 50 characters."
+if [ $length -le 20 ]; then
+    echo "Please enter a message with at least 20 characters."
     echo "Message: ${START_LINE}"
     exit 1
 fi
