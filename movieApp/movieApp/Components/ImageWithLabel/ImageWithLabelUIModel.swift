@@ -13,7 +13,7 @@ struct ImageWithLabelUIModel {
     var labelText: String
 
     // MARK: - Business Logic
-    init(imageName: String = "error", labelText: String = "") {
+    init(imageName: String = "", labelText: String = "") {
         self.imageName = imageName
         self.labelText = labelText
     }

@@ -13,7 +13,7 @@ struct IconWithPointLabelUIModel {
     let pointNumberText: String
 
     // MARK: - Business Logic
-    init(iconName: String = "error", pointNumberText: String = "") {
+    init(iconName: String = "", pointNumberText: String = "") {
         self.iconName = iconName
         self.pointNumberText = pointNumberText
     }

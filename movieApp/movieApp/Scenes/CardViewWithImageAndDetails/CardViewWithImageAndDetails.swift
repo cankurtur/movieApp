@@ -11,6 +11,7 @@ class CardViewWithImageAndDetails: UIView {
     // MARK: - Constant
     private struct Constants {
         static let cornerRadius: CGFloat = 8
+        static let detailsLabelOpacity: CGFloat = 0.8
     }
 
     // MARK: - IBOutlet
@@ -40,8 +41,13 @@ class CardViewWithImageAndDetails: UIView {
     }
 
     private func setupUI() {
-        self.backgroundColor = UIColor.white
         self.layer.cornerRadius = Constants.cornerRadius
+        self.backgroundColor = UIColor.white
+        titleLabel.font = UIFont.headline3
+        titleLabel.textColor = UIColor.almostBlack
+        detailsLabel.font = UIFont.body1
+        detailsLabel.alpha = Constants.detailsLabelOpacity
+        detailsLabel.textColor = UIColor.almostBlack
     }
 
     func configure(UIModel: CardViewWithImageAndDetailsUIModel) {

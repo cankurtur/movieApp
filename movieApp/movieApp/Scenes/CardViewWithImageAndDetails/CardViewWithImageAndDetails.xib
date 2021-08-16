@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -29,64 +28,66 @@
             <rect key="frame" x="0.0" y="0.0" width="346" height="112"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L2s-ge-olk" userLabel="Cover Image View">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L2s-ge-olk" userLabel="Cover Image View">
                     <rect key="frame" x="0.0" y="0.0" width="78.5" height="112"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="L2s-ge-olk" secondAttribute="height" multiplier="7:10" id="vDK-8R-2Oh"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9W-2l-rS6" userLabel="Title Label">
-                    <rect key="frame" x="88.5" y="10" width="35" height="20"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9W-2l-rS6" userLabel="Title Label">
+                    <rect key="frame" x="88.5" y="10" width="257.5" height="0.0"/>
                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
                     <color key="textColor" name="AlmostBlack"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSE-il-Zkb" userLabel="Details Label">
-                    <rect key="frame" x="88.5" y="35" width="47" height="18"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSE-il-Zkb" userLabel="Details Label">
+                    <rect key="frame" x="88.5" y="15" width="257.5" height="0.0"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" name="AlmostBlack"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="15" translatesAutoresizingMaskIntoConstraints="NO" id="UAH-Dr-Wod" userLabel="Image With Label View" customClass="ImageWithLabel" customModule="movieApp" customModuleProvider="target">
-                    <rect key="frame" x="88.5" y="63" width="124" height="31"/>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="88.5" y="25" width="80" height="14"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="UAH-Dr-Wod" secondAttribute="height" multiplier="60:15" id="ffx-ta-Vbc"/>
+                        <constraint firstAttribute="height" constant="14" id="hrb-Nn-KTX"/>
+                        <constraint firstAttribute="width" constant="80" id="kef-2c-kAw"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4f-pC-KLT" userLabel="Separator">
-                    <rect key="frame" x="222.5" y="63" width="2" height="31"/>
-                    <color key="backgroundColor" name="AlmostBlack"/>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="2" placeholderIntrinsicHeight="31" translatesAutoresizingMaskIntoConstraints="NO" id="f4f-pC-KLT" userLabel="Separator">
+                    <rect key="frame" x="178.5" y="25" width="1" height="14"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="f4f-pC-KLT" secondAttribute="height" multiplier="1:15" id="HRb-dF-FhQ"/>
+                        <constraint firstAttribute="width" constant="1" id="riO-uv-umW"/>
+                        <constraint firstAttribute="height" constant="14" id="soa-5D-xJB"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="52" placeholderIntrinsicHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SUd-Sa-3fx" userLabel="Icon With Point Label View" customClass="IconWithPointLabel" customModule="movieApp" customModuleProvider="target">
-                    <rect key="frame" x="234.5" y="60" width="95" height="38"/>
-                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                    <rect key="frame" x="189.5" y="22" width="55" height="22"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="SUd-Sa-3fx" secondAttribute="height" multiplier="55:22" id="sVI-Q8-0Db"/>
+                        <constraint firstAttribute="width" constant="55" id="ePY-Ok-8k8"/>
+                        <constraint firstAttribute="height" constant="22" id="wtE-AF-ZBg"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="U9W-2l-rS6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="6dt-aR-dpK"/>
-                <constraint firstItem="UAH-Dr-Wod" firstAttribute="top" secondItem="oSE-il-Zkb" secondAttribute="bottom" constant="10" id="F7j-ra-IN1"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="SUd-Sa-3fx" secondAttribute="bottom" constant="14" id="HG8-KS-aU3"/>
-                <constraint firstItem="SUd-Sa-3fx" firstAttribute="top" secondItem="oSE-il-Zkb" secondAttribute="bottom" constant="7" id="JPV-gm-xZh"/>
-                <constraint firstItem="SUd-Sa-3fx" firstAttribute="leading" secondItem="f4f-pC-KLT" secondAttribute="trailing" constant="10" id="OOW-12-yho"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="U9W-2l-rS6" secondAttribute="trailing" id="DP5-e0-dA0"/>
+                <constraint firstItem="UAH-Dr-Wod" firstAttribute="top" secondItem="oSE-il-Zkb" secondAttribute="bottom" constant="10" id="FFY-CX-vg6"/>
+                <constraint firstItem="f4f-pC-KLT" firstAttribute="leading" secondItem="UAH-Dr-Wod" secondAttribute="trailing" constant="10" id="KqY-M6-mkg"/>
+                <constraint firstItem="f4f-pC-KLT" firstAttribute="top" secondItem="oSE-il-Zkb" secondAttribute="bottom" constant="10" id="Moe-YP-sXe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oSE-il-Zkb" secondAttribute="trailing" id="NPg-w7-qyp"/>
                 <constraint firstItem="L2s-ge-olk" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Wxa-BP-ZaD"/>
                 <constraint firstItem="U9W-2l-rS6" firstAttribute="leading" secondItem="L2s-ge-olk" secondAttribute="trailing" constant="10" id="ZUV-WT-36y"/>
                 <constraint firstItem="L2s-ge-olk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZwO-UF-n7Z"/>
                 <constraint firstItem="L2s-ge-olk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="da2-2l-xHf"/>
-                <constraint firstAttribute="bottom" secondItem="f4f-pC-KLT" secondAttribute="bottom" constant="18" id="f2G-eh-ps1"/>
-                <constraint firstItem="f4f-pC-KLT" firstAttribute="leading" secondItem="UAH-Dr-Wod" secondAttribute="trailing" constant="10" id="gzH-4H-gHl"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="UAH-Dr-Wod" secondAttribute="bottom" constant="18" id="hn9-Vh-2DH"/>
-                <constraint firstItem="f4f-pC-KLT" firstAttribute="top" secondItem="oSE-il-Zkb" secondAttribute="bottom" constant="10" id="iYG-io-TRy"/>
-                <constraint firstItem="UAH-Dr-Wod" firstAttribute="leading" secondItem="L2s-ge-olk" secondAttribute="trailing" constant="10" id="j0R-MA-Cb2"/>
+                <constraint firstItem="SUd-Sa-3fx" firstAttribute="top" secondItem="oSE-il-Zkb" secondAttribute="bottom" constant="7" id="g2u-wr-Z0H"/>
+                <constraint firstItem="UAH-Dr-Wod" firstAttribute="leading" secondItem="L2s-ge-olk" secondAttribute="trailing" constant="10" id="iQe-tY-Lzf"/>
                 <constraint firstItem="oSE-il-Zkb" firstAttribute="leading" secondItem="L2s-ge-olk" secondAttribute="trailing" constant="10" id="l4W-UR-ijU"/>
+                <constraint firstItem="SUd-Sa-3fx" firstAttribute="leading" secondItem="f4f-pC-KLT" secondAttribute="trailing" constant="10" id="m7h-J6-6dV"/>
                 <constraint firstItem="oSE-il-Zkb" firstAttribute="top" secondItem="U9W-2l-rS6" secondAttribute="bottom" constant="5" id="uVg-7I-N4i"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -97,11 +98,5 @@
         <namedColor name="AlmostBlack">
             <color red="0.030999999493360519" green="0.035000000149011612" blue="0.039000000804662704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
