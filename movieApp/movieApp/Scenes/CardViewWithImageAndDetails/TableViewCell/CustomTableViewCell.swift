@@ -39,17 +39,17 @@ class CustomTableViewCell: UITableViewCell {
     func setupShadow() {
         contentView.frame = contentView.frame.inset(by: Constants.contentViewFrame)
 
-        self.cardViewWithImageAndDetails.layer.cornerRadius = Constants.cornerRadius
-        self.cardViewWithImageAndDetails.layer.masksToBounds = true
+        cardViewWithImageAndDetails.layer.cornerRadius = Constants.cornerRadius
+        cardViewWithImageAndDetails.layer.masksToBounds = true
 
         let bezierPath = UIBezierPath.init(roundedRect: self.viewContainer.bounds, cornerRadius: Constants.cornerRadius)
-        self.viewContainer.layer.shadowPath = bezierPath.cgPath
-        self.viewContainer.layer.masksToBounds = false
-        self.viewContainer.layer.shadowColor = UIColor.black.cgColor
-        self.viewContainer.layer.shadowRadius = Constants.shadowRadius
-        self.viewContainer.layer.shadowOffset = Constants.shadowOffset
-        self.viewContainer.layer.shadowOpacity = Constants.shadowOpacity
-        self.viewContainer.backgroundColor = nil
+        viewContainer.layer.shadowPath = bezierPath.cgPath
+        viewContainer.layer.masksToBounds = false
+        viewContainer.layer.shadowColor = UIColor.black.cgColor
+        viewContainer.layer.shadowRadius = Constants.shadowRadius
+        viewContainer.layer.shadowOffset = Constants.shadowOffset
+        viewContainer.layer.shadowOpacity = Constants.shadowOpacity
+        viewContainer.backgroundColor = nil
     }
 
     func configure(with cardViewWithImageAndDetailsUIModel: CardViewWithImageAndDetailsUIModel) {

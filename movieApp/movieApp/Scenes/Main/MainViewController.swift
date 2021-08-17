@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
         static let cellIdentifier: String = "customFilmCell"
         static let limitForBarShowing: CGFloat = 107
         static let tableViewRowHeight: Double = 120
+        static let topViewHeightToSafeArea: CGFloat = 143
     }
     // MARK: - IBOutlet
     @IBOutlet private weak var filmTableView: UITableView!
@@ -28,28 +29,22 @@ class MainViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-        setupUITableView()
-        setupUIScrollView()
+        filmTableView.delegate = self
+        filmTableView.dataSource = self
+        scrollView.delegate = self
         viewModel = MainViewModel()
+        tableViewHeightConstraint.constant = CGFloat(count * Constants.tableViewRowHeight)
+        setupUI()
     }
 
     // MARK: - Business Logic
     func setupUI() {
         view.backgroundColor = UIColor.whiteTwo
-        headlineLabel.font = UIFont.headline2
-        headlineLabel.textColor = UIColor.almostBlack
     }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
-    func setupUITableView() {
-        filmTableView.delegate = self
-        filmTableView.dataSource = self
-        tableViewHeightConstraint.constant = CGFloat(count * Constants.tableViewRowHeight)
-    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         10
     }
@@ -65,13 +60,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: - UIScrollViewDelegate
 extension MainViewController: UIScrollViewDelegate {
-    func setupUIScrollView() {
-        scrollView.delegate = self
-    }
-
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let scrollViewStartPoint = scrollView.contentOffset.y
-        let scrollViewYConstant = 143 - (scrollViewStartPoint + 143)
+        let scrollViewYConstant = Constants.topViewHeightToSafeArea - (scrollViewStartPoint + Constants.topViewHeightToSafeArea)
 
         if scrollViewYConstant < Constants.limitForBarShowing {
             title = Constants.titleBarText
