@@ -43,8 +43,8 @@ class IconWithPointLabel: UIView {
         pointLabel.textColor = .white
     }
 
-    func configure(UIModel: IconWithPointLabelUIModel) {
-        iconImageView.image = UIModel.icon
-        pointLabel.text = UIModel.pointNumberText
+    func configure(uiModel: IconWithPointLabelUIModel) {
+        iconImageView.image = uiModel.icon
+        pointLabel.text = uiModel.pointNumberText
     }
 }

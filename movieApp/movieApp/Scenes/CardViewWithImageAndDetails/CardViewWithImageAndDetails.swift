@@ -50,11 +50,11 @@ class CardViewWithImageAndDetails: UIView {
         detailsLabel.textColor = .almostBlack
     }
 
-    func configure(UIModel: CardViewWithImageAndDetailsUIModel) {
-            coverImageView.image = UIImage(named: UIModel.coverImageText)
-            titleLabel.text = UIModel.titleText
-            detailsLabel.text = UIModel.detailsText
-            imageWithLabelView.configure(UIModel: UIModel.imageWithLabelView)
-            iconWithPointLabelView.configure(UIModel: UIModel.iconWithPointLabel)
+    func configure(uiModel: CardViewWithImageAndDetailsUIModel) {
+            coverImageView.image = UIImage(named: uiModel.coverImageText)
+            titleLabel.text = uiModel.titleText
+            detailsLabel.text = uiModel.detailsText
+            imageWithLabelView.configure(uiModel: uiModel.imageWithLabelView)
+            iconWithPointLabelView.configure(uiModel: uiModel.iconWithPointLabel)
     }
 }

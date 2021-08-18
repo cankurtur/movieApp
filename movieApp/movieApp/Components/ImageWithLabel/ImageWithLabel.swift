@@ -43,8 +43,8 @@ class ImageWithLabel: UIView {
         dateLabel.alpha = Constants.dateOpacity
     }
 
-    func configure(UIModel: ImageWithLabelUIModel) {
-        iconImageView.image = UIModel.image
-        dateLabel.text = UIModel.labelText
+    func configure(uiModel: ImageWithLabelUIModel) {
+        iconImageView.image = uiModel.image
+        dateLabel.text = uiModel.labelText
     }
 }

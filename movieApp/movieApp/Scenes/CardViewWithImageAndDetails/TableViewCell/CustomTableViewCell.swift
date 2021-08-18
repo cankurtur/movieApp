@@ -54,6 +54,6 @@ class CustomTableViewCell: UITableViewCell {
     }
 
     func configure(with cardViewWithImageAndDetailsUIModel: CardViewWithImageAndDetailsUIModel) {
-        cardViewWithImageAndDetails.configure(UIModel: cardViewWithImageAndDetailsUIModel)
+        cardViewWithImageAndDetails.configure(uiModel: cardViewWithImageAndDetailsUIModel)
     }
 }
