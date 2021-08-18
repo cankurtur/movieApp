@@ -19,7 +19,7 @@ extension UIColor {
     // MARK: - Business Logic
     static func getColor(colorName: String) -> UIColor {
         guard let color = UIColor(named: colorName) else {
-            return UIColor.white
+            return .white
         }
         return color
     }

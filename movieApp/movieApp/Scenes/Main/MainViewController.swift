@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
 
     // MARK: - Business Logic
     func setupUI() {
-        view.backgroundColor = UIColor.whiteTwo
+        view.backgroundColor = .whiteTwo
     }
 }
 

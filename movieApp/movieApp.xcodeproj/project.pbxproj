@@ -369,7 +369,6 @@
 			isa = PBXGroup;
 			children = (
 				26A37AB026C4070E00E539F8 /* Fonts */,
-				261882DB26C139AD003EF23C /* Colors.swift */,
 				26336F7B26BAED6D0010EA73 /* Assets.xcassets */,
 				26A37AA226C402DF00E539F8 /* Colors.xcassets */,
 				26A37AA926C4031800E539F8 /* Images.xcassets */,
@@ -487,6 +486,7 @@
 		26336F7126BAED6D0010EA73 /* movieApp */ = {
 			isa = PBXGroup;
 			children = (
+				26847B4226CD25310048ECB4 /* Theme */,
 				18D1D40726BB19EF002EEA11 /* Application */,
 				18D1D40A26BB1A03002EEA11 /* Scenes */,
 				2618825826C112E7003EF23C /* Components */,
@@ -513,6 +513,14 @@
 				26336F9626BAED6E0010EA73 /* Info.plist */,
 			);
 			path = movieAppUITests;
+			sourceTree = "<group>";
+		};
+		26847B4226CD25310048ECB4 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				261882DB26C139AD003EF23C /* Colors.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		26A37AB026C4070E00E539F8 /* Fonts */ = {

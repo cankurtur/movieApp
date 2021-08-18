@@ -37,9 +37,9 @@ class ImageWithLabel: UIView {
     }
 
     private func setupUI() {
-        backgroundColor = UIColor.white
-        dateLabel.font = UIFont.body2
-        dateLabel.textColor = UIColor.almostBlack
+        backgroundColor = .white
+        dateLabel.font = .body2
+        dateLabel.textColor = .almostBlack
     }
 
     func configure(UIModel: ImageWithLabelUIModel) {

@@ -42,12 +42,12 @@ class CardViewWithImageAndDetails: UIView {
 
     private func setupUI() {
         layer.cornerRadius = Constants.cornerRadius
-        backgroundColor = UIColor.white
-        titleLabel.font = UIFont.headline3
-        titleLabel.textColor = UIColor.almostBlack
-        detailsLabel.font = UIFont.body1
+        backgroundColor = .white
+        titleLabel.font = .headline3
+        titleLabel.textColor = .almostBlack
+        detailsLabel.font = .body1
         detailsLabel.alpha = Constants.detailsLabelOpacity
-        detailsLabel.textColor = UIColor.almostBlack
+        detailsLabel.textColor = .almostBlack
     }
 
     func configure(UIModel: CardViewWithImageAndDetailsUIModel) {
