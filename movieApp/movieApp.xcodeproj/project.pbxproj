@@ -23,9 +23,7 @@
 		261882CA26C124F3003EF23C /* ImageWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261882C926C124F3003EF23C /* ImageWithLabel.swift */; };
 		261882CB26C124F3003EF23C /* ImageWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261882C926C124F3003EF23C /* ImageWithLabel.swift */; };
 		261882CC26C124F3003EF23C /* ImageWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261882C926C124F3003EF23C /* ImageWithLabel.swift */; };
-		261882D226C137B5003EF23C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261882D126C137B5003EF23C /* UIColorExtension.swift */; };
-		261882D326C137B5003EF23C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261882D126C137B5003EF23C /* UIColorExtension.swift */; };
-		261882D426C137B5003EF23C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261882D126C137B5003EF23C /* UIColorExtension.swift */; };
+		261882D226C137B5003EF23C /* UIColorThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261882D126C137B5003EF23C /* UIColorThemeExtension.swift */; };
 		261882DC26C139AD003EF23C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261882DB26C139AD003EF23C /* Colors.swift */; };
 		261882E426C14521003EF23C /* CardViewWithImageAndDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261882E326C14521003EF23C /* CardViewWithImageAndDetails.swift */; };
 		261882E526C14521003EF23C /* CardViewWithImageAndDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261882E326C14521003EF23C /* CardViewWithImageAndDetails.swift */; };
@@ -45,15 +43,15 @@
 		26336F7F26BAED6D0010EA73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26336F7D26BAED6D0010EA73 /* LaunchScreen.storyboard */; };
 		26336F8A26BAED6D0010EA73 /* movieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26336F8926BAED6D0010EA73 /* movieAppTests.swift */; };
 		26336F9526BAED6E0010EA73 /* movieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26336F9426BAED6E0010EA73 /* movieAppUITests.swift */; };
-		264DF59426C8012D009A0665 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264DF59326C8012D009A0665 /* UIFontExtension.swift */; };
-		264DF59526C8012D009A0665 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264DF59326C8012D009A0665 /* UIFontExtension.swift */; };
-		264DF59626C8012D009A0665 /* UIFontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264DF59326C8012D009A0665 /* UIFontExtension.swift */; };
+		264DF59426C8012D009A0665 /* UIFontThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264DF59326C8012D009A0665 /* UIFontThemeExtension.swift */; };
+		264DF59526C8012D009A0665 /* UIFontThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264DF59326C8012D009A0665 /* UIFontThemeExtension.swift */; };
+		264DF59626C8012D009A0665 /* UIFontThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264DF59326C8012D009A0665 /* UIFontThemeExtension.swift */; };
 		26684F9626CD330200E5BAD9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684F9526CD330200E5BAD9 /* Fonts.swift */; };
 		26684F9726CD330200E5BAD9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684F9526CD330200E5BAD9 /* Fonts.swift */; };
 		26684F9826CD330200E5BAD9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684F9526CD330200E5BAD9 /* Fonts.swift */; };
-		26684FA326CD34F800E5BAD9 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684FA226CD34F800E5BAD9 /* UIImageExtension.swift */; };
-		26684FA426CD34F800E5BAD9 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684FA226CD34F800E5BAD9 /* UIImageExtension.swift */; };
-		26684FA526CD34F800E5BAD9 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684FA226CD34F800E5BAD9 /* UIImageExtension.swift */; };
+		26684FA326CD34F800E5BAD9 /* UIImageThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684FA226CD34F800E5BAD9 /* UIImageThemeExtension.swift */; };
+		26684FA426CD34F800E5BAD9 /* UIImageThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684FA226CD34F800E5BAD9 /* UIImageThemeExtension.swift */; };
+		26684FA526CD34F800E5BAD9 /* UIImageThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684FA226CD34F800E5BAD9 /* UIImageThemeExtension.swift */; };
 		26684FAD26CD351C00E5BAD9 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684FAC26CD351C00E5BAD9 /* Images.swift */; };
 		26684FAE26CD351C00E5BAD9 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684FAC26CD351C00E5BAD9 /* Images.swift */; };
 		26684FAF26CD351C00E5BAD9 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684FAC26CD351C00E5BAD9 /* Images.swift */; };
@@ -253,7 +251,7 @@
 		261882B526C11F7A003EF23C /* IconWithPointLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IconWithPointLabel.xib; sourceTree = "<group>"; };
 		261882BF26C124D0003EF23C /* IconWithPointLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconWithPointLabel.swift; sourceTree = "<group>"; };
 		261882C926C124F3003EF23C /* ImageWithLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithLabel.swift; sourceTree = "<group>"; };
-		261882D126C137B5003EF23C /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		261882D126C137B5003EF23C /* UIColorThemeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorThemeExtension.swift; sourceTree = "<group>"; };
 		261882DB26C139AD003EF23C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		261882E326C14521003EF23C /* CardViewWithImageAndDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewWithImageAndDetails.swift; sourceTree = "<group>"; };
 		261882ED26C14528003EF23C /* CardViewWithImageAndDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewWithImageAndDetails.xib; sourceTree = "<group>"; };
@@ -271,9 +269,9 @@
 		26336F9026BAED6E0010EA73 /* movieAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = movieAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26336F9426BAED6E0010EA73 /* movieAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movieAppUITests.swift; sourceTree = "<group>"; };
 		26336F9626BAED6E0010EA73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		264DF59326C8012D009A0665 /* UIFontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtension.swift; sourceTree = "<group>"; };
+		264DF59326C8012D009A0665 /* UIFontThemeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontThemeExtension.swift; sourceTree = "<group>"; };
 		26684F9526CD330200E5BAD9 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		26684FA226CD34F800E5BAD9 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		26684FA226CD34F800E5BAD9 /* UIImageThemeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageThemeExtension.swift; sourceTree = "<group>"; };
 		26684FAC26CD351C00E5BAD9 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		26684FC226CD43F200E5BAD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		26684FC726CD43F600E5BAD9 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -388,7 +386,6 @@
 		18D1D40926BB19FF002EEA11 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				26A37AB026C4070E00E539F8 /* Fonts */,
 				26336F7B26BAED6D0010EA73 /* Assets.xcassets */,
 				26A37AA226C402DF00E539F8 /* Colors.xcassets */,
 				26A37AA926C4031800E539F8 /* Images.xcassets */,
@@ -455,10 +452,7 @@
 		261882D026C1379B003EF23C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				261882D126C137B5003EF23C /* UIColorExtension.swift */,
 				2673B65626C2C0AB00E5659B /* UIViewExtension.swift */,
-				264DF59326C8012D009A0665 /* UIFontExtension.swift */,
-				26684FA226CD34F800E5BAD9 /* UIImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -513,7 +507,6 @@
 				18D1D40C26BB1A50002EEA11 /* Network */,
 				18D1D40826BB19F4002EEA11 /* Utility */,
 				26847B4226CD25310048ECB4 /* Theme */,
-				18D1D40926BB19FF002EEA11 /* Resources */,
 			);
 			path = movieApp;
 			sourceTree = "<group>";
@@ -539,6 +532,7 @@
 		26684F9F26CD34BF00E5BAD9 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
+				261882D126C137B5003EF23C /* UIColorThemeExtension.swift */,
 				261882DB26C139AD003EF23C /* Colors.swift */,
 			);
 			path = Colors;
@@ -547,6 +541,8 @@
 		26684FA026CD34C400E5BAD9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				26A37AB026C4070E00E539F8 /* SF-Pro-Display Fonts */,
+				264DF59326C8012D009A0665 /* UIFontThemeExtension.swift */,
 				26684F9526CD330200E5BAD9 /* Fonts.swift */,
 			);
 			path = Fonts;
@@ -555,6 +551,7 @@
 		26684FA126CD34C900E5BAD9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				26684FA226CD34F800E5BAD9 /* UIImageThemeExtension.swift */,
 				26684FAC26CD351C00E5BAD9 /* Images.swift */,
 			);
 			path = Images;
@@ -563,6 +560,7 @@
 		26847B4226CD25310048ECB4 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				18D1D40926BB19FF002EEA11 /* Resources */,
 				26684FA126CD34C900E5BAD9 /* Images */,
 				26684FA026CD34C400E5BAD9 /* Fonts */,
 				26684F9F26CD34BF00E5BAD9 /* Colors */,
@@ -570,7 +568,7 @@
 			path = Theme;
 			sourceTree = "<group>";
 		};
-		26A37AB026C4070E00E539F8 /* Fonts */ = {
+		26A37AB026C4070E00E539F8 /* SF-Pro-Display Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				26A37AC626C4095900E539F8 /* SF-Pro-Display-Black.otf */,
@@ -621,7 +619,7 @@
 				26A37AB126C4095500E539F8 /* SF-Pro-Text-UltralightItalic.otf */,
 				26A37AD426C4095C00E539F8 /* SF-Pro.ttf */,
 			);
-			path = Fonts;
+			path = "SF-Pro-Display Fonts";
 			sourceTree = "<group>";
 		};
 		AACDD6FDEF0D326DCCBDE413 /* Frameworks */ = {
@@ -1069,12 +1067,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				264DF59426C8012D009A0665 /* UIFontExtension.swift in Sources */,
+				264DF59426C8012D009A0665 /* UIFontThemeExtension.swift in Sources */,
 				26684F9626CD330200E5BAD9 /* Fonts.swift in Sources */,
 				261882A526C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
 				26684FAD26CD351C00E5BAD9 /* Images.swift in Sources */,
 				261882DC26C139AD003EF23C /* Colors.swift in Sources */,
-				261882D226C137B5003EF23C /* UIColorExtension.swift in Sources */,
+				261882D226C137B5003EF23C /* UIColorThemeExtension.swift in Sources */,
 				261882C026C124D0003EF23C /* IconWithPointLabel.swift in Sources */,
 				261882F526C14531003EF23C /* CardViewWithImageAndDetailsUIModel.swift in Sources */,
 				2699355F26C1C430008BB5A8 /* MainViewModel.swift in Sources */,
@@ -1085,7 +1083,7 @@
 				261882E426C14521003EF23C /* CardViewWithImageAndDetails.swift in Sources */,
 				26336F7326BAED6D0010EA73 /* AppDelegate.swift in Sources */,
 				2618834926C16E19003EF23C /* MainViewController.swift in Sources */,
-				26684FA326CD34F800E5BAD9 /* UIImageExtension.swift in Sources */,
+				26684FA326CD34F800E5BAD9 /* UIImageThemeExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1097,17 +1095,16 @@
 				26A99CEC26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */,
 				26684F9726CD330200E5BAD9 /* Fonts.swift in Sources */,
 				261882C126C124D0003EF23C /* IconWithPointLabel.swift in Sources */,
-				261882D326C137B5003EF23C /* UIColorExtension.swift in Sources */,
 				261882CB26C124F3003EF23C /* ImageWithLabel.swift in Sources */,
 				2673B65826C2C0AB00E5659B /* UIViewExtension.swift in Sources */,
 				26684FAE26CD351C00E5BAD9 /* Images.swift in Sources */,
 				261882E526C14521003EF23C /* CardViewWithImageAndDetails.swift in Sources */,
 				2618834A26C16E19003EF23C /* MainViewController.swift in Sources */,
-				26684FA426CD34F800E5BAD9 /* UIImageExtension.swift in Sources */,
+				26684FA426CD34F800E5BAD9 /* UIImageThemeExtension.swift in Sources */,
 				26336F8A26BAED6D0010EA73 /* movieAppTests.swift in Sources */,
 				261882F626C14532003EF23C /* CardViewWithImageAndDetailsUIModel.swift in Sources */,
 				2699356026C1C430008BB5A8 /* MainViewModel.swift in Sources */,
-				264DF59526C8012D009A0665 /* UIFontExtension.swift in Sources */,
+				264DF59526C8012D009A0665 /* UIFontThemeExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1119,17 +1116,16 @@
 				26A99CED26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */,
 				26684F9826CD330200E5BAD9 /* Fonts.swift in Sources */,
 				261882C226C124D0003EF23C /* IconWithPointLabel.swift in Sources */,
-				261882D426C137B5003EF23C /* UIColorExtension.swift in Sources */,
 				261882CC26C124F3003EF23C /* ImageWithLabel.swift in Sources */,
 				2673B65926C2C0AB00E5659B /* UIViewExtension.swift in Sources */,
 				26684FAF26CD351C00E5BAD9 /* Images.swift in Sources */,
 				261882E626C14521003EF23C /* CardViewWithImageAndDetails.swift in Sources */,
 				2618834B26C16E19003EF23C /* MainViewController.swift in Sources */,
-				26684FA526CD34F800E5BAD9 /* UIImageExtension.swift in Sources */,
+				26684FA526CD34F800E5BAD9 /* UIImageThemeExtension.swift in Sources */,
 				26336F9526BAED6E0010EA73 /* movieAppUITests.swift in Sources */,
 				261882F726C14532003EF23C /* CardViewWithImageAndDetailsUIModel.swift in Sources */,
 				2699356126C1C430008BB5A8 /* MainViewModel.swift in Sources */,
-				264DF59626C8012D009A0665 /* UIFontExtension.swift in Sources */,
+				264DF59626C8012D009A0665 /* UIFontThemeExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

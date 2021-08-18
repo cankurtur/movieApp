@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Fonts {
+class Fonts {
     // MARK: - Properties
     static let headline1 = getSFText(.bold, size: 34)
     static let headline2 = getSFText(.bold, size: 22)
@@ -21,6 +21,7 @@ struct Fonts {
         case regular = "-Regular"
         case black = "-Black"
     }
+    
     // To add new UIFont we have to use this function below
     static func getSFText(_ type: OpenSFProType = .regular, size: CGFloat = UIFont.systemFontSize) -> UIFont {
         UIFont(name: "SFProDisplay\(type.rawValue)", size: size) ?? UIFont.systemFont(ofSize: size)
