@@ -28,8 +28,15 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="job-IY-sTN" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="656.33333333333337"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BX2-Qd-LPa" userLabel="Top View">
+                                                <rect key="frame" x="0.0" y="-443" width="390" height="541"/>
+                                                <color key="backgroundColor" name="vibrantBlue"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="541" id="Yro-5o-TL2"/>
+                                                </constraints>
+                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSw-xF-DBp">
-                                                <rect key="frame" x="24" y="121.99999999999999" width="342" height="26.333333333333329"/>
+                                                <rect key="frame" x="24" y="122" width="342" height="26.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                                 <color key="textColor" name="almostBlack"/>
                                                 <nil key="highlightedColor"/>
@@ -41,20 +48,13 @@
                                                     <constraint firstAttribute="height" constant="448" id="5kc-xO-sgk"/>
                                                 </constraints>
                                             </tableView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BX2-Qd-LPa" userLabel="Top View">
-                                                <rect key="frame" x="0.0" y="-143" width="390" height="241"/>
-                                                <color key="backgroundColor" name="vibrantBlue"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="241" id="Yro-5o-TL2"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="zSw-xF-DBp" firstAttribute="leading" secondItem="job-IY-sTN" secondAttribute="leading" constant="24" id="198-Px-wwV"/>
                                             <constraint firstItem="nyT-si-VcP" firstAttribute="top" secondItem="zSw-xF-DBp" secondAttribute="bottom" constant="10" id="5f6-en-n3U"/>
                                             <constraint firstAttribute="bottom" secondItem="nyT-si-VcP" secondAttribute="bottom" constant="50" id="DQv-HX-AQl"/>
-                                            <constraint firstItem="BX2-Qd-LPa" firstAttribute="top" secondItem="job-IY-sTN" secondAttribute="top" constant="-143" id="MDE-GY-i3U"/>
+                                            <constraint firstItem="BX2-Qd-LPa" firstAttribute="top" secondItem="job-IY-sTN" secondAttribute="top" constant="-443" id="MDE-GY-i3U"/>
                                             <constraint firstItem="zSw-xF-DBp" firstAttribute="top" secondItem="BX2-Qd-LPa" secondAttribute="bottom" constant="24" id="R2e-V5-iCB"/>
                                             <constraint firstItem="nyT-si-VcP" firstAttribute="leading" secondItem="zSw-xF-DBp" secondAttribute="leading" id="VlP-FP-Fjj"/>
                                             <constraint firstItem="nyT-si-VcP" firstAttribute="top" secondItem="zSw-xF-DBp" secondAttribute="bottom" constant="10" id="ZC8-dX-GHy"/>
