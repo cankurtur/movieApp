@@ -8,7 +8,7 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    struct Constants {
+    private struct Constants {
         static let largeTitleBarText: String = "Movies"
         static let titleBarText: String = "Popular Movies"
         static let cellIdentifier: String = "customFilmCell"
