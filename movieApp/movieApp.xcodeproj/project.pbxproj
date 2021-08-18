@@ -222,6 +222,15 @@
 		26A99CEB26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A99CEA26C1C0110068D9A9 /* CustomTableViewCell.swift */; };
 		26A99CEC26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A99CEA26C1C0110068D9A9 /* CustomTableViewCell.swift */; };
 		26A99CED26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A99CEA26C1C0110068D9A9 /* CustomTableViewCell.swift */; };
+		26E6426326CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6426226CD7A6100E373B1 /* LocalizableStringExtension.swift */; };
+		26E6426426CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6426226CD7A6100E373B1 /* LocalizableStringExtension.swift */; };
+		26E6426526CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6426226CD7A6100E373B1 /* LocalizableStringExtension.swift */; };
+		26E6426A26CD7ACA00E373B1 /* LocalizableUILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6426926CD7ACA00E373B1 /* LocalizableUILabelExtension.swift */; };
+		26E6426B26CD7ACA00E373B1 /* LocalizableUILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6426926CD7ACA00E373B1 /* LocalizableUILabelExtension.swift */; };
+		26E6426C26CD7ACA00E373B1 /* LocalizableUILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6426926CD7ACA00E373B1 /* LocalizableUILabelExtension.swift */; };
+		26E6427126CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6427026CD7AE300E373B1 /* LocalizableUIButtonExtension.swift */; };
+		26E6427226CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6427026CD7AE300E373B1 /* LocalizableUIButtonExtension.swift */; };
+		26E6427326CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6427026CD7AE300E373B1 /* LocalizableUIButtonExtension.swift */; };
 		35A0617B2D37161B52B66DB0 /* Pods_movieApp_movieAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C60D4DADCB57520DAD2D44 /* Pods_movieApp_movieAppUITests.framework */; };
 		E83D499D87C6436B0AA0026A /* Pods_movieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FA64EABD7D1CF694A34212 /* Pods_movieApp.framework */; };
 		FECA65B10388F74D34EDD40F /* Pods_movieAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DBE357EECCCD42153009D35 /* Pods_movieAppTests.framework */; };
@@ -332,6 +341,9 @@
 		26A37ADF26C4095E00E539F8 /* SF-Pro-Text-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-BoldItalic.otf"; sourceTree = "<group>"; };
 		26A37B8026C4113800E539F8 /* LaunchScreen.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LaunchScreen.xcassets; sourceTree = "<group>"; };
 		26A99CEA26C1C0110068D9A9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		26E6426226CD7A6100E373B1 /* LocalizableStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStringExtension.swift; sourceTree = "<group>"; };
+		26E6426926CD7ACA00E373B1 /* LocalizableUILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableUILabelExtension.swift; sourceTree = "<group>"; };
+		26E6427026CD7AE300E373B1 /* LocalizableUIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableUIButtonExtension.swift; sourceTree = "<group>"; };
 		4E5F50B45F6D32679982EBF4 /* Pods-movieApp-movieAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieApp-movieAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-movieApp-movieAppUITests/Pods-movieApp-movieAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5201D7032223CF8F0D926B8E /* Pods-movieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieApp.debug.xcconfig"; path = "Target Support Files/Pods-movieApp/Pods-movieApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8AE8C0F4ADD4D6B69DDA3159 /* Pods-movieAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movieAppTests.debug.xcconfig"; path = "Target Support Files/Pods-movieAppTests/Pods-movieAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -457,6 +469,9 @@
 			isa = PBXGroup;
 			children = (
 				2673B65626C2C0AB00E5659B /* UIViewExtension.swift */,
+				26E6426226CD7A6100E373B1 /* LocalizableStringExtension.swift */,
+				26E6426926CD7ACA00E373B1 /* LocalizableUILabelExtension.swift */,
+				26E6427026CD7AE300E373B1 /* LocalizableUIButtonExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1077,8 +1092,10 @@
 			files = (
 				264DF59426C8012D009A0665 /* UIFontThemeExtension.swift in Sources */,
 				26684F9626CD330200E5BAD9 /* Fonts.swift in Sources */,
+				26E6426A26CD7ACA00E373B1 /* LocalizableUILabelExtension.swift in Sources */,
 				261882A526C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
 				26684FAD26CD351C00E5BAD9 /* Images.swift in Sources */,
+				26E6426326CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */,
 				261882DC26C139AD003EF23C /* Colors.swift in Sources */,
 				261882D226C137B5003EF23C /* UIColorThemeExtension.swift in Sources */,
 				261882C026C124D0003EF23C /* IconWithPointLabel.swift in Sources */,
@@ -1091,6 +1108,7 @@
 				261882E426C14521003EF23C /* CardViewWithImageAndDetails.swift in Sources */,
 				26336F7326BAED6D0010EA73 /* AppDelegate.swift in Sources */,
 				2618834926C16E19003EF23C /* MainViewController.swift in Sources */,
+				26E6427126CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */,
 				26684FA326CD34F800E5BAD9 /* UIImageThemeExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1099,6 +1117,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E6427226CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */,
 				261882A626C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
 				26A99CEC26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */,
 				26684F9726CD330200E5BAD9 /* Fonts.swift in Sources */,
@@ -1109,6 +1128,8 @@
 				261882E526C14521003EF23C /* CardViewWithImageAndDetails.swift in Sources */,
 				2618834A26C16E19003EF23C /* MainViewController.swift in Sources */,
 				26684FA426CD34F800E5BAD9 /* UIImageThemeExtension.swift in Sources */,
+				26E6426426CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */,
+				26E6426B26CD7ACA00E373B1 /* LocalizableUILabelExtension.swift in Sources */,
 				26336F8A26BAED6D0010EA73 /* movieAppTests.swift in Sources */,
 				261882F626C14532003EF23C /* CardViewWithImageAndDetailsUIModel.swift in Sources */,
 				2699356026C1C430008BB5A8 /* MainViewModel.swift in Sources */,
@@ -1120,6 +1141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E6427326CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */,
 				261882A726C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
 				26A99CED26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */,
 				26684F9826CD330200E5BAD9 /* Fonts.swift in Sources */,
@@ -1130,6 +1152,8 @@
 				261882E626C14521003EF23C /* CardViewWithImageAndDetails.swift in Sources */,
 				2618834B26C16E19003EF23C /* MainViewController.swift in Sources */,
 				26684FA526CD34F800E5BAD9 /* UIImageThemeExtension.swift in Sources */,
+				26E6426526CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */,
+				26E6426C26CD7ACA00E373B1 /* LocalizableUILabelExtension.swift in Sources */,
 				26336F9526BAED6E0010EA73 /* movieAppUITests.swift in Sources */,
 				261882F726C14532003EF23C /* CardViewWithImageAndDetailsUIModel.swift in Sources */,
 				2699356126C1C430008BB5A8 /* MainViewModel.swift in Sources */,

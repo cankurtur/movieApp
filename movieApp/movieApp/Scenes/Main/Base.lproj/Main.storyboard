@@ -36,7 +36,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSw-xF-DBp">
-                                                <rect key="frame" x="24" y="122" width="342" height="26.333333333333329"/>
+                                                <rect key="frame" x="24" y="121.99999999999999" width="342" height="26.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
                                                 <color key="textColor" name="almostBlack"/>
                                                 <nil key="highlightedColor"/>
