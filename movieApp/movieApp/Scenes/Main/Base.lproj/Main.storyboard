@@ -40,44 +40,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="448" id="5kc-xO-sgk"/>
                                                 </constraints>
-                                                <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="customFilmCell" rowHeight="100" id="u9C-NN-eyf" customClass="CustomTableViewCell" customModule="movieApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="342" height="100"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u9C-NN-eyf" id="TEW-JM-fLz">
-                                                            <rect key="frame" x="0.0" y="0.0" width="342" height="100"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u2k-gB-1Gk" userLabel="View Container">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="100"/>
-                                                                    <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szw-W1-qKI" customClass="CardViewWithImageAndDetails" customModule="movieApp" customModuleProvider="target">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="337" height="95"/>
-                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                        </view>
-                                                                    </subviews>
-                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="trailing" secondItem="szw-W1-qKI" secondAttribute="trailing" constant="5" id="Xl5-as-hjF"/>
-                                                                        <constraint firstItem="szw-W1-qKI" firstAttribute="leading" secondItem="u2k-gB-1Gk" secondAttribute="leading" id="aHb-gW-zhZ"/>
-                                                                        <constraint firstItem="szw-W1-qKI" firstAttribute="top" secondItem="u2k-gB-1Gk" secondAttribute="top" id="mUo-EY-Ijc"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="szw-W1-qKI" secondAttribute="bottom" constant="5" id="obL-I7-T0E"/>
-                                                                    </constraints>
-                                                                </view>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="u2k-gB-1Gk" firstAttribute="top" secondItem="TEW-JM-fLz" secondAttribute="top" id="DZH-Ar-i2w"/>
-                                                                <constraint firstItem="u2k-gB-1Gk" firstAttribute="leading" secondItem="TEW-JM-fLz" secondAttribute="leading" id="LfS-A6-zem"/>
-                                                                <constraint firstAttribute="bottom" secondItem="u2k-gB-1Gk" secondAttribute="bottom" id="QHJ-zT-ldm"/>
-                                                                <constraint firstAttribute="trailing" secondItem="u2k-gB-1Gk" secondAttribute="trailing" id="dNt-Yh-25k"/>
-                                                            </constraints>
-                                                        </tableViewCellContentView>
-                                                        <connections>
-                                                            <outlet property="cardViewWithImageAndDetails" destination="szw-W1-qKI" id="f7s-N2-q8S"/>
-                                                            <outlet property="viewContainer" destination="u2k-gB-1Gk" id="jhi-iq-VXq"/>
-                                                        </connections>
-                                                    </tableViewCell>
-                                                </prototypes>
                                             </tableView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BX2-Qd-LPa" userLabel="Top View">
                                                 <rect key="frame" x="0.0" y="-143" width="390" height="241"/>

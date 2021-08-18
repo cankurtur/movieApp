@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2608D6C626CD722900FFBF20 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2608D6C526CD722900FFBF20 /* CustomTableViewCell.xib */; };
+		2608D6C726CD722900FFBF20 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2608D6C526CD722900FFBF20 /* CustomTableViewCell.xib */; };
+		2608D6C826CD722900FFBF20 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2608D6C526CD722900FFBF20 /* CustomTableViewCell.xib */; };
 		2618825B26C11318003EF23C /* ImageWithLabelUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618825A26C11318003EF23C /* ImageWithLabelUIModel.swift */; };
 		2618828126C114BD003EF23C /* ImageWithLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2618828026C114BD003EF23C /* ImageWithLabel.xib */; };
 		2618828226C114BD003EF23C /* ImageWithLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2618828026C114BD003EF23C /* ImageWithLabel.xib */; };
@@ -245,6 +248,7 @@
 		00C60D4DADCB57520DAD2D44 /* Pods_movieApp_movieAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movieApp_movieAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DBE357EECCCD42153009D35 /* Pods_movieAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movieAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10FA64EABD7D1CF694A34212 /* Pods_movieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2608D6C526CD722900FFBF20 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		2618825A26C11318003EF23C /* ImageWithLabelUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithLabelUIModel.swift; sourceTree = "<group>"; };
 		2618828026C114BD003EF23C /* ImageWithLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageWithLabel.xib; sourceTree = "<group>"; };
 		261882A426C11F67003EF23C /* IconWithPointLabelUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconWithPointLabelUIModel.swift; sourceTree = "<group>"; };
@@ -397,7 +401,6 @@
 		18D1D40A26BB1A03002EEA11 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				261882E226C144D5003EF23C /* CardViewWithImageAndDetails */,
 				18D1D40B26BB1A15002EEA11 /* Main */,
 			);
 			path = Scenes;
@@ -423,6 +426,7 @@
 		2618825826C112E7003EF23C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				261882E226C144D5003EF23C /* CardViewWithImageAndDetails */,
 				261882A326C11F51003EF23C /* IconWithPointLabel */,
 				2618825926C112FF003EF23C /* ImageWithLabel */,
 			);
@@ -472,6 +476,7 @@
 			isa = PBXGroup;
 			children = (
 				26A99CEA26C1C0110068D9A9 /* CustomTableViewCell.swift */,
+				2608D6C526CD722900FFBF20 /* CustomTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -765,6 +770,7 @@
 				26336F7F26BAED6D0010EA73 /* LaunchScreen.storyboard in Resources */,
 				26A37B4326C4095E00E539F8 /* SF-Pro-Text-Bold.otf in Resources */,
 				26A37B1C26C4095E00E539F8 /* SF-Pro-Text-Medium.otf in Resources */,
+				2608D6C626CD722900FFBF20 /* CustomTableViewCell.xib in Resources */,
 				26A37B1926C4095E00E539F8 /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
 				26A37B5E26C4095E00E539F8 /* SF-Pro-Rounded-Regular.otf in Resources */,
 				26A37AE926C4095E00E539F8 /* SF-Pro-Text-BlackItalic.otf in Resources */,
@@ -841,6 +847,7 @@
 				26A37B0826C4095E00E539F8 /* SF-Pro-Text-Regular.otf in Resources */,
 				26A37B6226C4095E00E539F8 /* SF-Pro-Text-Light.otf in Resources */,
 				26A37B5326C4095E00E539F8 /* SF-Pro-Display-Light.otf in Resources */,
+				2608D6C726CD722900FFBF20 /* CustomTableViewCell.xib in Resources */,
 				26A37AFF26C4095E00E539F8 /* SF-Pro-Text-LightItalic.otf in Resources */,
 				26A37B1426C4095E00E539F8 /* SF-Pro-Text-Black.otf in Resources */,
 				26A37AE426C4095E00E539F8 /* SF-Pro-Rounded-Bold.otf in Resources */,
@@ -903,6 +910,7 @@
 				26A37B0926C4095E00E539F8 /* SF-Pro-Text-Regular.otf in Resources */,
 				26A37B6326C4095E00E539F8 /* SF-Pro-Text-Light.otf in Resources */,
 				26A37B5426C4095E00E539F8 /* SF-Pro-Display-Light.otf in Resources */,
+				2608D6C826CD722900FFBF20 /* CustomTableViewCell.xib in Resources */,
 				26A37B0026C4095E00E539F8 /* SF-Pro-Text-LightItalic.otf in Resources */,
 				26A37B1526C4095E00E539F8 /* SF-Pro-Text-Black.otf in Resources */,
 				26A37AE526C4095E00E539F8 /* SF-Pro-Rounded-Bold.otf in Resources */,

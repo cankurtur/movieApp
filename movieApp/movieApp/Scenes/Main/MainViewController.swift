@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
         static let largeTitleBarText: String = "Movies"
         static let titleBarText: String = "Popular Movies"
         static let cellIdentifier: String = "customFilmCell"
+        static let cellNibName: String = "CustomTableViewCell"
         static let limitForBarShowing: CGFloat = 107
         static let tableViewRowHeight: Double = 120
         static let navigationBarHeight: CGFloat = 143
@@ -33,6 +34,7 @@ class MainViewController: UIViewController {
         filmTableView.dataSource = self
         scrollView.delegate = self
         viewModel = MainViewModel()
+        filmTableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
         tableViewHeightConstraint.constant = CGFloat(count * Constants.tableViewRowHeight)
         setupUI()
     }
