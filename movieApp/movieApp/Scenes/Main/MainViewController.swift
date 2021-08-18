@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
         static let cellIdentifier: String = "customFilmCell"
         static let limitForBarShowing: CGFloat = 107
         static let tableViewRowHeight: Double = 120
-        static let topViewHeightToSafeArea: CGFloat = 143
+        static let navigationBarHeight: CGFloat = 143
     }
     // MARK: - IBOutlet
     @IBOutlet private weak var filmTableView: UITableView!
@@ -61,10 +61,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - UIScrollViewDelegate
 extension MainViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let scrollViewStartPoint = scrollView.contentOffset.y
-        let scrollViewYConstant = Constants.topViewHeightToSafeArea - (scrollViewStartPoint + Constants.topViewHeightToSafeArea)
+        let scrollViewYConstant = scrollView.contentOffset.y
+        let positiveScrollViewYConstant = Constants.navigationBarHeight - (scrollViewYConstant + Constants.navigationBarHeight)
 
-        if scrollViewYConstant < Constants.limitForBarShowing {
+        if positiveScrollViewYConstant < Constants.limitForBarShowing {
             title = Constants.titleBarText
         } else {
             title = Constants.largeTitleBarText

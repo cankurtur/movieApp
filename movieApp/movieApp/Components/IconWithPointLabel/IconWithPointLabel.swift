@@ -37,7 +37,7 @@ class IconWithPointLabel: UIView {
     }
 
     private func setupUI() {
-        self.layer.cornerRadius = Constants.cornerRadius
+        layer.cornerRadius = Constants.cornerRadius
         backgroundColor = .electricBlue
         pointLabel.font = .point
         pointLabel.textColor = .white
