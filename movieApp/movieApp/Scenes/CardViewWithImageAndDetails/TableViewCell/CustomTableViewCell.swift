@@ -44,8 +44,9 @@ class CustomTableViewCell: UITableViewCell {
 
         let bezierPath = UIBezierPath.init(roundedRect: self.viewContainer.bounds, cornerRadius: Constants.cornerRadius)
         viewContainer.layer.shadowPath = bezierPath.cgPath
-        viewContainer.layer.masksToBounds = false
         viewContainer.layer.shadowColor = UIColor.black.cgColor
+        viewContainer.layer.cornerRadius = Constants.cornerRadius
+        viewContainer.layer.masksToBounds = true
         viewContainer.layer.shadowRadius = Constants.shadowRadius
         viewContainer.layer.shadowOffset = Constants.shadowOffset
         viewContainer.layer.shadowOpacity = Constants.shadowOpacity
