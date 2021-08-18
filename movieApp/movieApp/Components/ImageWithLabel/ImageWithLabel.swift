@@ -40,11 +40,11 @@ class ImageWithLabel: UIView {
         backgroundColor = .white
         dateLabel.font = .body2
         dateLabel.textColor = .almostBlack
+        dateLabel.alpha = Constants.dateOpacity
     }
 
     func configure(UIModel: ImageWithLabelUIModel) {
-        iconImageView.image = UIImage(named: UIModel.imageName)
+        iconImageView.image = UIModel.image
         dateLabel.text = UIModel.labelText
-        dateLabel.alpha = Constants.dateOpacity
     }
 }

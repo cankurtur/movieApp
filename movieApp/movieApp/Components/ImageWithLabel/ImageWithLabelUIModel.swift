@@ -5,16 +5,16 @@
 //  Created by Can Kurtur on 9.08.2021.
 //
 
-import Foundation
+import UIKit
 
 struct ImageWithLabelUIModel {
     // MARK: - Properties
-    var imageName: String
+    var image: UIImage
     var labelText: String
 
     // MARK: - Business Logic
-    init(imageName: String = "", labelText: String = "") {
-        self.imageName = imageName
+    init(image: UIImage = UIImage(), labelText: String = "") {
+        self.image = image
         self.labelText = labelText
     }
 }

@@ -15,11 +15,11 @@ struct MainViewModel {
             titleText: "Joker",
             detailsText: "Crime, Drama, Thriller ",
             imageWithLabelView: ImageWithLabelUIModel(
-                imageName: "calendar",
+                image: .calendarIcon,
                 labelText: "04.11.2019"
             ),
             iconWithPointLabel: IconWithPointLabelUIModel(
-                iconName: "shape",
+                icon: .starIcon, 
                 pointNumberText: "9.8"
             )
         )

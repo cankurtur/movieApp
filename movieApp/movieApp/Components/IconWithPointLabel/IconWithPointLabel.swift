@@ -44,7 +44,7 @@ class IconWithPointLabel: UIView {
     }
 
     func configure(UIModel: IconWithPointLabelUIModel) {
-        iconImageView.image = UIImage(named: UIModel.iconName)
+        iconImageView.image = UIModel.icon
         pointLabel.text = UIModel.pointNumberText
     }
 }
