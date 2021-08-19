@@ -34,20 +34,26 @@
                         <constraint firstAttribute="width" secondItem="L2s-ge-olk" secondAttribute="height" multiplier="7:10" id="vDK-8R-2Oh"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9W-2l-rS6" userLabel="Title Label">
-                    <rect key="frame" x="88.5" y="10" width="257.5" height="0.0"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="U9W-2l-rS6" userLabel="Title Label">
+                    <rect key="frame" x="88.5" y="10" width="242.5" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="Udr-Hw-HWh"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
                     <color key="textColor" name="AlmostBlack"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSE-il-Zkb" userLabel="Details Label">
-                    <rect key="frame" x="88.5" y="15" width="257.5" height="0.0"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="oSE-il-Zkb" userLabel="Details Label">
+                    <rect key="frame" x="88.5" y="41" width="242.5" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="kg7-6m-510"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" name="AlmostBlack"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="15" translatesAutoresizingMaskIntoConstraints="NO" id="UAH-Dr-Wod" userLabel="Image With Label View" customClass="ImageWithLabel" customModule="movieApp" customModuleProvider="target">
-                    <rect key="frame" x="88.5" y="25" width="80" height="14"/>
+                    <rect key="frame" x="88.5" y="71" width="80" height="14"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="14" id="hrb-Nn-KTX"/>
@@ -55,7 +61,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="2" placeholderIntrinsicHeight="31" translatesAutoresizingMaskIntoConstraints="NO" id="f4f-pC-KLT" userLabel="Separator">
-                    <rect key="frame" x="178.5" y="25" width="1" height="14"/>
+                    <rect key="frame" x="178.5" y="71" width="1" height="14"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="1" id="riO-uv-umW"/>
@@ -63,7 +69,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="52" placeholderIntrinsicHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SUd-Sa-3fx" userLabel="Icon With Point Label View" customClass="IconWithPointLabel" customModule="movieApp" customModuleProvider="target">
-                    <rect key="frame" x="189.5" y="22" width="55" height="22"/>
+                    <rect key="frame" x="189.5" y="68" width="55" height="22"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="55" id="ePY-Ok-8k8"/>
@@ -75,11 +81,11 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="U9W-2l-rS6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="6dt-aR-dpK"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="U9W-2l-rS6" secondAttribute="trailing" id="DP5-e0-dA0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="U9W-2l-rS6" secondAttribute="trailing" constant="15" id="DP5-e0-dA0"/>
                 <constraint firstItem="UAH-Dr-Wod" firstAttribute="top" secondItem="oSE-il-Zkb" secondAttribute="bottom" constant="10" id="FFY-CX-vg6"/>
                 <constraint firstItem="f4f-pC-KLT" firstAttribute="leading" secondItem="UAH-Dr-Wod" secondAttribute="trailing" constant="10" id="KqY-M6-mkg"/>
                 <constraint firstItem="f4f-pC-KLT" firstAttribute="top" secondItem="oSE-il-Zkb" secondAttribute="bottom" constant="10" id="Moe-YP-sXe"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oSE-il-Zkb" secondAttribute="trailing" id="NPg-w7-qyp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oSE-il-Zkb" secondAttribute="trailing" constant="15" id="NPg-w7-qyp"/>
                 <constraint firstItem="L2s-ge-olk" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Wxa-BP-ZaD"/>
                 <constraint firstItem="U9W-2l-rS6" firstAttribute="leading" secondItem="L2s-ge-olk" secondAttribute="trailing" constant="10" id="ZUV-WT-36y"/>
                 <constraint firstItem="L2s-ge-olk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZwO-UF-n7Z"/>
