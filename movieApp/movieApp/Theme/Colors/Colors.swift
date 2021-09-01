@@ -19,7 +19,7 @@ class Colors {
     // To add new UIColor we have to use this function below
     static func getColor(colorName: String) -> UIColor {
         guard let color = UIColor(named: colorName) else {
-            return .white
+            return UIColor()
         }
         return color
     }
