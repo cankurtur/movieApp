@@ -37,14 +37,14 @@ class IconWithPointLabel: UIView {
     }
 
     private func setupUI() {
-        self.layer.cornerRadius = Constants.cornerRadius
-        self.backgroundColor = UIColor.electricBlue
-        pointLabel.font = UIFont(name: pointLabel.font.fontName, size: Constants.pointLabelTextSize)
-        pointLabel.textColor = UIColor.white
+        layer.cornerRadius = Constants.cornerRadius
+        backgroundColor = .electricBlue
+        pointLabel.font = .point
+        pointLabel.textColor = .white
     }
 
-    func configure(UIModel: IconWithPointLabelUIModel) {
-        iconImageView.image = UIImage(named: UIModel.iconName)
-        pointLabel.text = UIModel.pointNumberText
+    func configure(uiModel: IconWithPointLabelUIModel) {
+        iconImageView.image = uiModel.icon
+        pointLabel.text = uiModel.pointNumberText
     }
 }

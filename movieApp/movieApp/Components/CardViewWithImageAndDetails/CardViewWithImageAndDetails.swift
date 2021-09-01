@@ -11,6 +11,7 @@ class CardViewWithImageAndDetails: UIView {
     // MARK: - Constant
     private struct Constants {
         static let cornerRadius: CGFloat = 8
+        static let detailsLabelOpacity: CGFloat = 0.8
     }
 
     // MARK: - IBOutlet
@@ -40,21 +41,20 @@ class CardViewWithImageAndDetails: UIView {
     }
 
     private func setupUI() {
-        self.backgroundColor = UIColor.white
-        self.layer.cornerRadius = Constants.cornerRadius
+        layer.cornerRadius = Constants.cornerRadius
+        backgroundColor = .white
+        titleLabel.font = .headline3
+        titleLabel.textColor = .almostBlack
+        detailsLabel.font = .body1
+        detailsLabel.alpha = Constants.detailsLabelOpacity
+        detailsLabel.textColor = .almostBlack
     }
 
-    func configure(UIModel: CardViewWithImageAndDetailsUIModel) {
-        if let coverImageView = coverImageView,
-           let titleLabel = titleLabel,
-           let detailsLabel = detailsLabel,
-           let imageWithLabelView = imageWithLabelView,
-           let iconWithPointLabelView = iconWithPointLabelView {
-            coverImageView.image = UIImage(named: UIModel.coverImageText)
-            titleLabel.text = UIModel.titleText
-            detailsLabel.text = UIModel.detailsText
-            imageWithLabelView.configure(UIModel: UIModel.imageWithLabelView)
-            iconWithPointLabelView.configure(UIModel: UIModel.iconWithPointLabel)
-        }
+    func configure(uiModel: CardViewWithImageAndDetailsUIModel) {
+            coverImageView.image = UIImage(named: uiModel.coverImageText)
+            titleLabel.text = uiModel.titleText
+            detailsLabel.text = uiModel.detailsText
+            imageWithLabelView.configure(uiModel: uiModel.imageWithLabelView)
+            iconWithPointLabelView.configure(uiModel: uiModel.iconWithPointLabel)
     }
 }

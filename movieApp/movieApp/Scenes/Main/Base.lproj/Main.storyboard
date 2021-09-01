@@ -3,10 +3,16 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -16,76 +22,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSw-xF-DBp">
-                                <rect key="frame" x="24" y="164" width="80" height="27"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nyT-si-VcP">
-                                <rect key="frame" x="24" y="201" width="342" height="567"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="customFilmCell" rowHeight="100" id="u9C-NN-eyf" customClass="CustomTableViewCell" customModule="movieApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="342" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u9C-NN-eyf" id="TEW-JM-fLz">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="100"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szw-W1-qKI" customClass="CardViewWithImageAndDetails" customModule="movieApp" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="342" height="100"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="szw-W1-qKI" secondAttribute="bottom" id="ABB-fK-FFT"/>
-                                                <constraint firstAttribute="trailing" secondItem="szw-W1-qKI" secondAttribute="trailing" id="Ehb-Gq-Hva"/>
-                                                <constraint firstItem="szw-W1-qKI" firstAttribute="leading" secondItem="TEW-JM-fLz" secondAttribute="leading" id="d8F-3h-onH"/>
-                                                <constraint firstItem="szw-W1-qKI" firstAttribute="top" secondItem="TEW-JM-fLz" secondAttribute="top" id="dcV-I9-raj"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="cardViewWithImageAndDetails" destination="szw-W1-qKI" id="f7s-N2-q8S"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZP-ZI-mDw">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="810"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="job-IY-sTN" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="656.33333333333337"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BX2-Qd-LPa" userLabel="Top View">
+                                                <rect key="frame" x="0.0" y="-443" width="390" height="541"/>
+                                                <color key="backgroundColor" name="vibrantBlue"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="541" id="Yro-5o-TL2"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSw-xF-DBp">
+                                                <rect key="frame" x="24" y="121.99999999999999" width="342" height="26.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="22"/>
+                                                <color key="textColor" name="almostBlack"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nyT-si-VcP">
+                                                <rect key="frame" x="24" y="158.33333333333337" width="342" height="448"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="448" id="5kc-xO-sgk"/>
+                                                </constraints>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="zSw-xF-DBp" firstAttribute="leading" secondItem="job-IY-sTN" secondAttribute="leading" constant="24" id="198-Px-wwV"/>
+                                            <constraint firstItem="nyT-si-VcP" firstAttribute="top" secondItem="zSw-xF-DBp" secondAttribute="bottom" constant="10" id="5f6-en-n3U"/>
+                                            <constraint firstAttribute="bottom" secondItem="nyT-si-VcP" secondAttribute="bottom" constant="50" id="DQv-HX-AQl"/>
+                                            <constraint firstItem="BX2-Qd-LPa" firstAttribute="top" secondItem="job-IY-sTN" secondAttribute="top" constant="-443" id="MDE-GY-i3U"/>
+                                            <constraint firstItem="zSw-xF-DBp" firstAttribute="top" secondItem="BX2-Qd-LPa" secondAttribute="bottom" constant="24" id="R2e-V5-iCB"/>
+                                            <constraint firstItem="nyT-si-VcP" firstAttribute="leading" secondItem="zSw-xF-DBp" secondAttribute="leading" id="VlP-FP-Fjj"/>
+                                            <constraint firstItem="nyT-si-VcP" firstAttribute="top" secondItem="zSw-xF-DBp" secondAttribute="bottom" constant="10" id="ZC8-dX-GHy"/>
+                                            <constraint firstAttribute="trailing" secondItem="zSw-xF-DBp" secondAttribute="trailing" constant="24" id="gOj-TM-OSa"/>
+                                            <constraint firstItem="nyT-si-VcP" firstAttribute="trailing" secondItem="zSw-xF-DBp" secondAttribute="trailing" id="gbX-UQ-Y5K"/>
+                                            <constraint firstAttribute="trailing" secondItem="BX2-Qd-LPa" secondAttribute="trailing" id="hBd-Pe-7Gz"/>
+                                            <constraint firstItem="zSw-xF-DBp" firstAttribute="top" secondItem="BX2-Qd-LPa" secondAttribute="bottom" constant="24" id="kZE-Di-itV"/>
+                                            <constraint firstItem="BX2-Qd-LPa" firstAttribute="leading" secondItem="job-IY-sTN" secondAttribute="leading" id="oZD-Nk-tYg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="job-IY-sTN" secondAttribute="bottom" id="LFl-qd-aFx"/>
+                                    <constraint firstAttribute="trailing" secondItem="job-IY-sTN" secondAttribute="trailing" id="MwX-BX-Bfq"/>
+                                    <constraint firstItem="job-IY-sTN" firstAttribute="top" secondItem="vZP-ZI-mDw" secondAttribute="top" id="dft-nk-u8Y"/>
+                                    <constraint firstItem="job-IY-sTN" firstAttribute="width" secondItem="vZP-ZI-mDw" secondAttribute="width" id="mtB-vP-DQe"/>
+                                    <constraint firstItem="job-IY-sTN" firstAttribute="leading" secondItem="vZP-ZI-mDw" secondAttribute="leading" id="rFc-4a-ixm"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Wqk-vI-lDk"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="fch-jt-JoY"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zSw-xF-DBp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="0ty-1c-1cT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nyT-si-VcP" secondAttribute="trailing" constant="24" id="2Lu-QA-eL1"/>
-                            <constraint firstItem="nyT-si-VcP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="N4z-WJ-5Q0"/>
-                            <constraint firstItem="zSw-xF-DBp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="XtG-tL-6aR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nyT-si-VcP" secondAttribute="bottom" constant="42" id="t0N-qN-RbE"/>
-                            <constraint firstItem="nyT-si-VcP" firstAttribute="top" secondItem="zSw-xF-DBp" secondAttribute="bottom" constant="10" id="usD-rh-urs"/>
+                            <constraint firstItem="vZP-ZI-mDw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5vr-1n-HrX"/>
+                            <constraint firstItem="vZP-ZI-mDw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BNw-Zc-Oyw"/>
+                            <constraint firstItem="vZP-ZI-mDw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Jrr-9d-22l"/>
+                            <constraint firstItem="vZP-ZI-mDw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="si1-10-qfO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6dG-jF-FNd"/>
                     <connections>
                         <outlet property="filmTableView" destination="nyT-si-VcP" id="lnE-hE-Bea"/>
+                        <outlet property="headlineLabel" destination="zSw-xF-DBp" id="3Oy-5M-7OY"/>
+                        <outlet property="scrollView" destination="vZP-ZI-mDw" id="JXD-bb-JAh"/>
+                        <outlet property="tableViewHeightConstraint" destination="5kc-xO-sgk" id="DrU-Eg-jy6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050.7246376811595" y="94.419642857142847"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="r3f-Ux-nBh">
-            <objects>
-                <viewController id="uoi-Ir-siI" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="F8q-jQ-xiM">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="y11-vb-kW8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eqP-vT-Z2n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1861" y="94"/>
+            <point key="canvasLocation" x="1049.2307692307693" y="93.838862559241704"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CXb-BP-dtn">
@@ -95,13 +106,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="HCY-V1-0vw">
                         <rect key="frame" x="0.0" y="44" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
-                        <color key="barTintColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" name="vibrantBlue"/>
+                        <color key="barTintColor" name="vibrantBlue"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" systemColor="systemPinkColor"/>
+                            <color key="textColor" name="white"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" systemColor="systemBlueColor"/>
+                            <color key="textColor" name="white"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -115,20 +126,17 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="almostBlack">
+            <color red="0.030999999493360519" green="0.035000000149011612" blue="0.039000000804662704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="vibrantBlue">
+            <color red="0.0" green="0.23899999260902405" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

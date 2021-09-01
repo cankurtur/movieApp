@@ -5,16 +5,16 @@
 //  Created by Can Kurtur on 9.08.2021.
 //
 
-import Foundation
+import UIKit
 
 struct IconWithPointLabelUIModel {
     // MARK: - Properties
-    let iconName: String
+    let icon: UIImage
     let pointNumberText: String
 
     // MARK: - Business Logic
-    init(iconName: String = "error", pointNumberText: String = "") {
-        self.iconName = iconName
+    init(icon: UIImage = UIImage(), pointNumberText: String = "") {
+        self.icon = icon
         self.pointNumberText = pointNumberText
     }
 }

@@ -8,46 +8,65 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    private struct Constants {
+        static let largeTitleBarText: String = "Movies"
+        static let titleBarText: String = "Popular Movies"
+        static let cellIdentifier: String = "customFilmCell"
+        static let cellNibName: String = "CustomTableViewCell"
+        static let limitForBarShowing: CGFloat = 107
+        static let tableViewRowHeight: Double = 120
+    }
     // MARK: - IBOutlet
     @IBOutlet private weak var filmTableView: UITableView!
+    @IBOutlet private weak var tableViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var headlineLabel: UILabel!
 
     // MARK: - Properties
-    var viewModel: MainViewModel!
+    private var viewModel: MainViewModel!
+    private var count: Double = 10
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Moviessss"
-//        navigationController?.navigationBar.
-//        navigationController?.title = "Movies"
-//        navigationController?.navigationBar.barTintColor = UIColor.vibrantBlue
         filmTableView.delegate = self
         filmTableView.dataSource = self
+        scrollView.delegate = self
         viewModel = MainViewModel()
-        // Do any additional setup after loading the view.
+        filmTableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
+        tableViewHeightConstraint.constant = CGFloat(count * Constants.tableViewRowHeight)
+        setupUI()
     }
-    /*
-     // MARK: - Navigation
 
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // MARK: - Business Logic
+    func setupUI() {
+        view.backgroundColor = .whiteTwo
+    }
 }
 
-// MARK: - UITableViewDelegate
+// MARK: - UITableViewDelegate, UITableViewDataSource
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        4
+        10
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = filmTableView.dequeueReusableCell(withIdentifier: "customFilmCell") as? CustomTableViewCell, let model = viewModel else {
+        guard let cell = filmTableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier) as? CustomTableViewCell, let model = viewModel else {
             return UITableViewCell()
         }
         cell.configure(with: model.cardViewWithImageAndDetailsData)
         return cell
+    }
+}
+
+// MARK: - UIScrollViewDelegate
+extension MainViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let positiveScrollViewYConstant = -scrollView.contentOffset.y
+        if positiveScrollViewYConstant < Constants.limitForBarShowing {
+            title = Constants.titleBarText
+        } else {
+            title = Constants.largeTitleBarText
+        }
     }
 }
