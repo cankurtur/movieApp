@@ -11,7 +11,7 @@ struct MainViewModel {
     // MARK: - Properties
     var cardViewWithImageAndDetailsData: CardViewWithImageAndDetailsUIModel {
         let cardViewWithImageAndDetailsModel = CardViewWithImageAndDetailsUIModel(
-            coverImageText: "Joker",
+            coverImage: .dummyImage,
             titleText: "Joker",
             detailsText: "Crime, Drama, Thriller ",
             imageWithLabelView: ImageWithLabelUIModel(

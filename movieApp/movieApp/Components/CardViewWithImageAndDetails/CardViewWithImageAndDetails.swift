@@ -51,10 +51,10 @@ class CardViewWithImageAndDetails: UIView {
     }
 
     func configure(uiModel: CardViewWithImageAndDetailsUIModel) {
-            coverImageView.image = UIImage(named: uiModel.coverImageText)
-            titleLabel.text = uiModel.titleText
-            detailsLabel.text = uiModel.detailsText
-            imageWithLabelView.configure(uiModel: uiModel.imageWithLabelView)
-            iconWithPointLabelView.configure(uiModel: uiModel.iconWithPointLabel)
+        coverImageView.image = uiModel.coverImage
+        titleLabel.text = uiModel.titleText
+        detailsLabel.text = uiModel.detailsText
+        imageWithLabelView.configure(uiModel: uiModel.imageWithLabelView)
+        iconWithPointLabelView.configure(uiModel: uiModel.iconWithPointLabel)
     }
 }

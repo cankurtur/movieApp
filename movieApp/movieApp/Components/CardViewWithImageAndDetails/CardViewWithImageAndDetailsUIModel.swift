@@ -5,23 +5,23 @@
 //  Created by Can Kurtur on 9.08.2021.
 //
 
-import Foundation
+import UIKit
 
 struct CardViewWithImageAndDetailsUIModel {
     // MARK: - Properties
-    let coverImageText: String
+    let coverImage: UIImage
     let titleText: String
     let detailsText: String
     let imageWithLabelView: ImageWithLabelUIModel
     let iconWithPointLabel: IconWithPointLabelUIModel
 
     // MARK: - Business Logic
-    init(coverImageText: String,
+    init(coverImage: UIImage,
          titleText: String,
          detailsText: String,
          imageWithLabelView: ImageWithLabelUIModel,
          iconWithPointLabel: IconWithPointLabelUIModel) {
-        self.coverImageText = coverImageText
+        self.coverImage = coverImage
         self.titleText = titleText
         self.detailsText = detailsText
         self.imageWithLabelView = imageWithLabelView
