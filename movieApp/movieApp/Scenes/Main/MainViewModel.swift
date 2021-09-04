@@ -9,20 +9,25 @@ import UIKit
 
 struct MainViewModel {
     // MARK: - Properties
-    var cardViewWithImageAndDetailsData: CardViewWithImageAndDetailsUIModel {
-        let cardViewWithImageAndDetailsModel = CardViewWithImageAndDetailsUIModel(
-            coverImageText: "Joker",
-            titleText: "Joker",
-            detailsText: "Crime, Drama, Thriller ",
-            imageWithLabelView: ImageWithLabelUIModel(
-                image: .calendarIcon,
-                labelText: "04.11.2019"
-            ),
-            iconWithPointLabel: IconWithPointLabelUIModel(
-                icon: .starIcon, 
-                pointNumberText: "9.8"
+    let networking = Networking()
+    
+    func getPopularMovies(completion: @escaping(CardViewWithImageAndDetailsUIModel) -> Void) {
+        networking.performRequest { popularMovies in
+            let title = popularMovies.results.first?.title ?? ""
+            let cardViewWithImageAndDetailsModel = CardViewWithImageAndDetailsUIModel(
+                coverImageText: "Joker",
+                titleText: title,
+                detailsText: "Crime, Drama, Thriller ",
+                imageWithLabelView: ImageWithLabelUIModel(
+                    image: .calendarIcon,
+                    labelText: "04.11.2019"
+                ),
+                iconWithPointLabel: IconWithPointLabelUIModel(
+                    icon: .starIcon,
+                    pointNumberText: "9.8"
+                )
             )
-        )
-        return cardViewWithImageAndDetailsModel
+            completion(cardViewWithImageAndDetailsModel)
+        }
     }
 }

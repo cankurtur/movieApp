@@ -23,24 +23,31 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var headlineLabel: UILabel!
 
     // MARK: - Properties
-    private var viewModel: MainViewModel!
+    private var viewModel: MainViewModel = MainViewModel()
     private var count: Double = 10
-
+    private var cardViewUIModel: CardViewWithImageAndDetailsUIModel?
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        filmTableView.delegate = self
-        filmTableView.dataSource = self
-        scrollView.delegate = self
-        viewModel = MainViewModel()
-        filmTableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
-        tableViewHeightConstraint.constant = CGFloat(count * Constants.tableViewRowHeight)
         setupUI()
+        setupBinding()
     }
 
     // MARK: - Business Logic
     func setupUI() {
+        scrollView.delegate = self
         view.backgroundColor = .whiteTwo
+        filmTableView.delegate = self
+        filmTableView.dataSource = self
+        filmTableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
+        tableViewHeightConstraint.constant = CGFloat(count * Constants.tableViewRowHeight)
+    }
+
+    func setupBinding() {
+        viewModel.getPopularMovies { cardViewUIModel in
+            self.cardViewUIModel = cardViewUIModel
+            self.filmTableView.reloadData()
+        }
     }
 }
 
@@ -51,10 +58,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = filmTableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier) as? CustomTableViewCell, let model = viewModel else {
+        guard let cell = filmTableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier) as? CustomTableViewCell, let model = cardViewUIModel else {
             return UITableViewCell()
         }
-        cell.configure(with: model.cardViewWithImageAndDetailsData)
+        cell.configure(with: model)
         return cell
     }
 }

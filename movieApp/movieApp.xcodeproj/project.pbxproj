@@ -10,6 +10,12 @@
 		2608D6C626CD722900FFBF20 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2608D6C526CD722900FFBF20 /* CustomTableViewCell.xib */; };
 		2608D6C726CD722900FFBF20 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2608D6C526CD722900FFBF20 /* CustomTableViewCell.xib */; };
 		2608D6C826CD722900FFBF20 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2608D6C526CD722900FFBF20 /* CustomTableViewCell.xib */; };
+		260A7C6426E1FC56004194FA /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260A7C6326E1FC56004194FA /* Networking.swift */; };
+		260A7C6526E1FC56004194FA /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260A7C6326E1FC56004194FA /* Networking.swift */; };
+		260A7C6626E1FC56004194FA /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260A7C6326E1FC56004194FA /* Networking.swift */; };
+		260A7C7326E2121C004194FA /* PopularMoviesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260A7C7226E2121C004194FA /* PopularMoviesResponseModel.swift */; };
+		260A7C7426E2121C004194FA /* PopularMoviesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260A7C7226E2121C004194FA /* PopularMoviesResponseModel.swift */; };
+		260A7C7526E2121C004194FA /* PopularMoviesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260A7C7226E2121C004194FA /* PopularMoviesResponseModel.swift */; };
 		2618825B26C11318003EF23C /* ImageWithLabelUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2618825A26C11318003EF23C /* ImageWithLabelUIModel.swift */; };
 		2618828126C114BD003EF23C /* ImageWithLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2618828026C114BD003EF23C /* ImageWithLabel.xib */; };
 		2618828226C114BD003EF23C /* ImageWithLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2618828026C114BD003EF23C /* ImageWithLabel.xib */; };
@@ -66,6 +72,9 @@
 		2673B65726C2C0AB00E5659B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2673B65626C2C0AB00E5659B /* UIViewExtension.swift */; };
 		2673B65826C2C0AB00E5659B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2673B65626C2C0AB00E5659B /* UIViewExtension.swift */; };
 		2673B65926C2C0AB00E5659B /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2673B65626C2C0AB00E5659B /* UIViewExtension.swift */; };
+		269917CE26E25690001510A1 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269917CD26E25690001510A1 /* APIConstants.swift */; };
+		269917CF26E25690001510A1 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269917CD26E25690001510A1 /* APIConstants.swift */; };
+		269917D026E25690001510A1 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269917CD26E25690001510A1 /* APIConstants.swift */; };
 		2699355F26C1C430008BB5A8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2699355E26C1C430008BB5A8 /* MainViewModel.swift */; };
 		2699356026C1C430008BB5A8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2699355E26C1C430008BB5A8 /* MainViewModel.swift */; };
 		2699356126C1C430008BB5A8 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2699355E26C1C430008BB5A8 /* MainViewModel.swift */; };
@@ -258,6 +267,8 @@
 		0DBE357EECCCD42153009D35 /* Pods_movieAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movieAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10FA64EABD7D1CF694A34212 /* Pods_movieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2608D6C526CD722900FFBF20 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		260A7C6326E1FC56004194FA /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		260A7C7226E2121C004194FA /* PopularMoviesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesResponseModel.swift; sourceTree = "<group>"; };
 		2618825A26C11318003EF23C /* ImageWithLabelUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithLabelUIModel.swift; sourceTree = "<group>"; };
 		2618828026C114BD003EF23C /* ImageWithLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageWithLabel.xib; sourceTree = "<group>"; };
 		261882A426C11F67003EF23C /* IconWithPointLabelUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconWithPointLabelUIModel.swift; sourceTree = "<group>"; };
@@ -289,6 +300,7 @@
 		26684FC226CD43F200E5BAD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		26684FC726CD43F600E5BAD9 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2673B65626C2C0AB00E5659B /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		269917CD26E25690001510A1 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		2699355E26C1C430008BB5A8 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		26A37AA226C402DF00E539F8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		26A37AA926C4031800E539F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -431,6 +443,9 @@
 		18D1D40C26BB1A50002EEA11 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				269917D726E26288001510A1 /* ResponseModels */,
+				260A7C6326E1FC56004194FA /* Networking.swift */,
+				269917CD26E25690001510A1 /* APIConstants.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -586,6 +601,14 @@
 				26684F9F26CD34BF00E5BAD9 /* Colors */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		269917D726E26288001510A1 /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				260A7C7226E2121C004194FA /* PopularMoviesResponseModel.swift */,
+			);
+			path = ResponseModels;
 			sourceTree = "<group>";
 		};
 		26A37AB026C4070E00E539F8 /* SF-Pro-Display Fonts */ = {
@@ -1096,6 +1119,7 @@
 				261882A526C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
 				26684FAD26CD351C00E5BAD9 /* Images.swift in Sources */,
 				26E6426326CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */,
+				260A7C6426E1FC56004194FA /* Networking.swift in Sources */,
 				261882DC26C139AD003EF23C /* Colors.swift in Sources */,
 				261882D226C137B5003EF23C /* UIColorThemeExtension.swift in Sources */,
 				261882C026C124D0003EF23C /* IconWithPointLabel.swift in Sources */,
@@ -1108,6 +1132,8 @@
 				261882E426C14521003EF23C /* CardViewWithImageAndDetails.swift in Sources */,
 				26336F7326BAED6D0010EA73 /* AppDelegate.swift in Sources */,
 				2618834926C16E19003EF23C /* MainViewController.swift in Sources */,
+				269917CE26E25690001510A1 /* APIConstants.swift in Sources */,
+				260A7C7326E2121C004194FA /* PopularMoviesResponseModel.swift in Sources */,
 				26E6427126CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */,
 				26684FA326CD34F800E5BAD9 /* UIImageThemeExtension.swift in Sources */,
 			);
@@ -1120,14 +1146,17 @@
 				26E6427226CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */,
 				261882A626C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
 				26A99CEC26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */,
+				260A7C6526E1FC56004194FA /* Networking.swift in Sources */,
 				26684F9726CD330200E5BAD9 /* Fonts.swift in Sources */,
 				261882C126C124D0003EF23C /* IconWithPointLabel.swift in Sources */,
 				261882CB26C124F3003EF23C /* ImageWithLabel.swift in Sources */,
 				2673B65826C2C0AB00E5659B /* UIViewExtension.swift in Sources */,
+				269917CF26E25690001510A1 /* APIConstants.swift in Sources */,
 				26684FAE26CD351C00E5BAD9 /* Images.swift in Sources */,
 				261882E526C14521003EF23C /* CardViewWithImageAndDetails.swift in Sources */,
 				2618834A26C16E19003EF23C /* MainViewController.swift in Sources */,
 				26684FA426CD34F800E5BAD9 /* UIImageThemeExtension.swift in Sources */,
+				260A7C7426E2121C004194FA /* PopularMoviesResponseModel.swift in Sources */,
 				26E6426426CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */,
 				26E6426B26CD7ACA00E373B1 /* LocalizableUILabelExtension.swift in Sources */,
 				26336F8A26BAED6D0010EA73 /* movieAppTests.swift in Sources */,
@@ -1144,14 +1173,17 @@
 				26E6427326CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */,
 				261882A726C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
 				26A99CED26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */,
+				260A7C6626E1FC56004194FA /* Networking.swift in Sources */,
 				26684F9826CD330200E5BAD9 /* Fonts.swift in Sources */,
 				261882C226C124D0003EF23C /* IconWithPointLabel.swift in Sources */,
 				261882CC26C124F3003EF23C /* ImageWithLabel.swift in Sources */,
 				2673B65926C2C0AB00E5659B /* UIViewExtension.swift in Sources */,
+				269917D026E25690001510A1 /* APIConstants.swift in Sources */,
 				26684FAF26CD351C00E5BAD9 /* Images.swift in Sources */,
 				261882E626C14521003EF23C /* CardViewWithImageAndDetails.swift in Sources */,
 				2618834B26C16E19003EF23C /* MainViewController.swift in Sources */,
 				26684FA526CD34F800E5BAD9 /* UIImageThemeExtension.swift in Sources */,
+				260A7C7526E2121C004194FA /* PopularMoviesResponseModel.swift in Sources */,
 				26E6426526CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */,
 				26E6426C26CD7ACA00E373B1 /* LocalizableUILabelExtension.swift in Sources */,
 				26336F9526BAED6E0010EA73 /* movieAppUITests.swift in Sources */,
