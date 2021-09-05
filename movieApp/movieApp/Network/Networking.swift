@@ -9,28 +9,20 @@ import Foundation
 import Alamofire
 
 class Networking {
-    func performRequest(completion: @escaping(PopularMoviesResponseModel) -> Void) {
-        let url = "\(APIConstants.baseURL)api_key=\(APIConstants.apiKey)&language=en-US&page=1"
+    func performRequest<T: Codable>(url: String, completion: @escaping((Result<T, Error>) -> Void)) {
+        let url = url
         AF.request(url, method: .get).validate().response { responseData in
             if responseData.error != nil {
                 print(responseData.error)
             } else {
-                guard let data = responseData.data else { return }
-
-                guard let popularMovies = self.parseJSON(data: data) else { return }
-                completion(popularMovies)
+                do {
+                    guard let data = responseData.data else { return }
+                    let object = try JSONDecoder().decode(T.self, from: data)
+                    completion(Result.success(object))
+                } catch {
+                    completion(Result.failure(error))
+                }
             }
-        }
-    }
-
-    func parseJSON(data: Data) -> PopularMoviesResponseModel? {
-        let decoder = JSONDecoder()
-
-        do {
-            let decodedData = try decoder.decode(PopularMoviesResponseModel.self, from: data)
-            return decodedData
-        } catch {
-            return nil
         }
     }
 }

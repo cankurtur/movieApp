@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PopularMoviesResponseModel: Decodable {
+struct PopularMoviesResponseModel: Codable {
     let page: Int
     let results: [MovieResponseModel]
     let totalPages: Int
@@ -21,8 +21,18 @@ struct PopularMoviesResponseModel: Decodable {
     }
 }
 
-struct MovieResponseModel: Decodable {
-    let adult: Bool
+struct MovieResponseModel: Codable {
     let id: Int
     let title: String
+    let releaseDate: String
+    let voteAverage: Double
+    let genreIds: [Int]
+
+    private enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case title = "title"
+        case releaseDate = "release_date"
+        case voteAverage = "vote_average"
+        case genreIds = "genre_ids"
+    }
 }
