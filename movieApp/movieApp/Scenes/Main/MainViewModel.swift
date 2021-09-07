@@ -28,8 +28,9 @@ struct MainViewModel {
                     let releaseDate = popularMovies.releaseDate
                     let genreIds = popularMovies.genreIds
                     let detailsText = self.genresIdToString(intArray: genreIds)
+
                     let cardViewModel = CardViewWithImageAndDetailsUIModel(
-                        coverImageText: "Joker",
+                        coverImage: .dummyImage,
                         titleText: titleText,
                         detailsText: detailsText,
                         imageWithLabelView: ImageWithLabelUIModel(

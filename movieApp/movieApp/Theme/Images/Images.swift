@@ -11,6 +11,7 @@ class Images {
     // MARK: - Properties
     static let calendar: UIImage = getImage(imageName: "calendar")
     static let star: UIImage = getImage(imageName: "shape")
+    static let dummyImage: UIImage = getImage(imageName: "dummyImage")
 
     // To add new UIImage we have to use this function below
     static func getImage(imageName: String) -> UIImage {

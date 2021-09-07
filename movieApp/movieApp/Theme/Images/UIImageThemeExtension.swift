@@ -10,4 +10,5 @@ import UIKit
 extension UIImage {
     static let calendarIcon = Images.calendar
     static let starIcon = Images.star
+    static let dummyImage = Images.dummyImage
 }
