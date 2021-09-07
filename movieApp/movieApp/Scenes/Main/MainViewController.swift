@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
 
     // MARK: - Properties
     private var viewModel: MainViewModel = MainViewModel()
-    private var count: Double = 10
+    private var count: Double = 0
     private var cardViewUIModel: [CardViewWithImageAndDetailsUIModel]?
     // MARK: - Life Cycle
     override func viewDidLoad() {
