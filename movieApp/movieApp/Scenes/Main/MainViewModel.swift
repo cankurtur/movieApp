@@ -76,8 +76,8 @@ struct MainViewModel {
         var editedString = ""
         if movieGenresUserDefault.checkUserDefault(key: UserDefaultsConstants.genresDict) {
             let dict = movieGenresUserDefault.getUserDefault(key: UserDefaultsConstants.genresDict)
-            for index in 0..<(intArray.count) {
-                let key = intArray[index].description
+            intArray.forEach { element in
+                let key = element.description
                 if dict.keys.contains(key), let value = dict[key], !value.isEmpty {
                     detailsString += "\(value), "
                 }
