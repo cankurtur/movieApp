@@ -10,7 +10,7 @@ import UIKit
 struct MainViewModel {
     // MARK: - Properties
     let networking = Networking()
-    var genreUserDefault = GenreUserDefault()
+    var movieGenresUserDefault = MovieGenresUserDefaults()
 
 
     init() {
@@ -52,7 +52,7 @@ struct MainViewModel {
     }
 
     func getMovieGenres() {
-        if genreUserDefault.checkUserDefault(key: UserDefaultsConstant.genresDict) {
+        if movieGenresUserDefault.checkUserDefault(key: UserDefaultsConstants.genresDict) {
             return
         }
         networking.performRequest(url: APIConstants.movieGenresURL) { (result: Result<MovieGenresResponseModel, Error>) in
@@ -64,7 +64,7 @@ struct MainViewModel {
                     let name = movieGenres.name
                     movieGenresDict[id] = name
                 }
-                genreUserDefault.setUserDefault(value: movieGenresDict, key: UserDefaultsConstant.genresDict)
+                movieGenresUserDefault.setUserDefault(value: movieGenresDict, key: UserDefaultsConstants.genresDict)
             case .failure(let error):
                 print(error)
             }
@@ -74,8 +74,8 @@ struct MainViewModel {
     func genresIdToString(intArray: [Int]) -> String {
         var detailsString = ""
         var editedString = ""
-        if genreUserDefault.checkUserDefault(key: UserDefaultsConstant.genresDict) {
-            let dict = genreUserDefault.getUserDefault(key: UserDefaultsConstant.genresDict)
+        if movieGenresUserDefault.checkUserDefault(key: UserDefaultsConstants.genresDict) {
+            let dict = movieGenresUserDefault.getUserDefault(key: UserDefaultsConstants.genresDict)
             for index in 0..<(intArray.count) {
                 let key = intArray[index].description
                 if dict.keys.contains(key), let value = dict[key], !value.isEmpty {
@@ -85,37 +85,5 @@ struct MainViewModel {
             editedString = String(detailsString.dropLast(2))
         }
         return editedString
-    }
-}
-
-struct UserDefaultsConstant {
-    static let genresDict = "genresDict"
-}
-
-class GenreUserDefault {
-    var userDefaults = UserDefaults.standard
-
-    func setUserDefault(value: [String: String], key: String) {
-        userDefaults.setValue(value, forKey: key)
-    }
-
-    func getUserDefault(key: String) -> [String: String] {
-        if let object = userDefaults.object(forKey: key) {
-            return object as? [String: String] ?? ["": ""]
-        } else {
-            return ["": ""]
-        }
-    }
-
-    func checkUserDefault(key: String) -> Bool {
-        if userDefaults.dictionary(forKey: key) != nil {
-            return true
-        } else {
-            return false
-        }
-    }
-
-    func deleteUserDefault(key: String) {
-        userDefaults.removeObject(forKey: key)
     }
 }

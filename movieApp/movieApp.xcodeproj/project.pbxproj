@@ -234,6 +234,12 @@
 		26A99CEB26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A99CEA26C1C0110068D9A9 /* CustomTableViewCell.swift */; };
 		26A99CEC26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A99CEA26C1C0110068D9A9 /* CustomTableViewCell.swift */; };
 		26A99CED26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A99CEA26C1C0110068D9A9 /* CustomTableViewCell.swift */; };
+		26B45AD726E8AFFE00D5BAA4 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B45AD626E8AFFE00D5BAA4 /* UserDefaultsConstants.swift */; };
+		26B45AD826E8AFFE00D5BAA4 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B45AD626E8AFFE00D5BAA4 /* UserDefaultsConstants.swift */; };
+		26B45AD926E8AFFE00D5BAA4 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B45AD626E8AFFE00D5BAA4 /* UserDefaultsConstants.swift */; };
+		26B45AE126E8B06A00D5BAA4 /* MovieGenresUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B45AE026E8B06A00D5BAA4 /* MovieGenresUserDefaults.swift */; };
+		26B45AE226E8B06A00D5BAA4 /* MovieGenresUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B45AE026E8B06A00D5BAA4 /* MovieGenresUserDefaults.swift */; };
+		26B45AE326E8B06A00D5BAA4 /* MovieGenresUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B45AE026E8B06A00D5BAA4 /* MovieGenresUserDefaults.swift */; };
 		26E6426326CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6426226CD7A6100E373B1 /* LocalizableStringExtension.swift */; };
 		26E6426426CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6426226CD7A6100E373B1 /* LocalizableStringExtension.swift */; };
 		26E6426526CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6426226CD7A6100E373B1 /* LocalizableStringExtension.swift */; };
@@ -357,6 +363,8 @@
 		26A37ADF26C4095E00E539F8 /* SF-Pro-Text-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-BoldItalic.otf"; sourceTree = "<group>"; };
 		26A37B8026C4113800E539F8 /* LaunchScreen.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LaunchScreen.xcassets; sourceTree = "<group>"; };
 		26A99CEA26C1C0110068D9A9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		26B45AD626E8AFFE00D5BAA4 /* UserDefaultsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstants.swift; sourceTree = "<group>"; };
+		26B45AE026E8B06A00D5BAA4 /* MovieGenresUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGenresUserDefaults.swift; sourceTree = "<group>"; };
 		26E6426226CD7A6100E373B1 /* LocalizableStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStringExtension.swift; sourceTree = "<group>"; };
 		26E6426926CD7ACA00E373B1 /* LocalizableUILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableUILabelExtension.swift; sourceTree = "<group>"; };
 		26E6427026CD7AE300E373B1 /* LocalizableUIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableUIButtonExtension.swift; sourceTree = "<group>"; };
@@ -409,6 +417,7 @@
 		18D1D40826BB19F4002EEA11 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				26B45AD526E8AFD200D5BAA4 /* UserDefaultsManager */,
 				26684FC326CD43F200E5BAD9 /* Localizable.strings */,
 				261882D026C1379B003EF23C /* Extensions */,
 			);
@@ -668,6 +677,15 @@
 				26A37AD426C4095C00E539F8 /* SF-Pro.ttf */,
 			);
 			path = "SF-Pro-Display Fonts";
+			sourceTree = "<group>";
+		};
+		26B45AD526E8AFD200D5BAA4 /* UserDefaultsManager */ = {
+			isa = PBXGroup;
+			children = (
+				26B45AD626E8AFFE00D5BAA4 /* UserDefaultsConstants.swift */,
+				26B45AE026E8B06A00D5BAA4 /* MovieGenresUserDefaults.swift */,
+			);
+			path = UserDefaultsManager;
 			sourceTree = "<group>";
 		};
 		AACDD6FDEF0D326DCCBDE413 /* Frameworks */ = {
@@ -1125,6 +1143,7 @@
 				261882A526C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
 				26684FAD26CD351C00E5BAD9 /* Images.swift in Sources */,
 				26E6426326CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */,
+				26B45AE126E8B06A00D5BAA4 /* MovieGenresUserDefaults.swift in Sources */,
 				260A7C6426E1FC56004194FA /* Networking.swift in Sources */,
 				261882DC26C139AD003EF23C /* Colors.swift in Sources */,
 				261882D226C137B5003EF23C /* UIColorThemeExtension.swift in Sources */,
@@ -1140,6 +1159,7 @@
 				2618834926C16E19003EF23C /* MainViewController.swift in Sources */,
 				269917CE26E25690001510A1 /* APIConstants.swift in Sources */,
 				260A7C7326E2121C004194FA /* PopularMoviesResponseModel.swift in Sources */,
+				26B45AD726E8AFFE00D5BAA4 /* UserDefaultsConstants.swift in Sources */,
 				26E6427126CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */,
 				26684FA326CD34F800E5BAD9 /* UIImageThemeExtension.swift in Sources */,
 			);
@@ -1149,10 +1169,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26B45AD826E8AFFE00D5BAA4 /* UserDefaultsConstants.swift in Sources */,
 				26E6427226CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */,
 				261882A626C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
 				26A99CEC26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */,
 				260A7C6526E1FC56004194FA /* Networking.swift in Sources */,
+				26B45AE226E8B06A00D5BAA4 /* MovieGenresUserDefaults.swift in Sources */,
 				26684F9726CD330200E5BAD9 /* Fonts.swift in Sources */,
 				261882C126C124D0003EF23C /* IconWithPointLabel.swift in Sources */,
 				261882CB26C124F3003EF23C /* ImageWithLabel.swift in Sources */,
@@ -1177,10 +1199,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26B45AD926E8AFFE00D5BAA4 /* UserDefaultsConstants.swift in Sources */,
 				26E6427326CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */,
 				261882A726C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
 				26A99CED26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */,
 				260A7C6626E1FC56004194FA /* Networking.swift in Sources */,
+				26B45AE326E8B06A00D5BAA4 /* MovieGenresUserDefaults.swift in Sources */,
 				26684F9826CD330200E5BAD9 /* Fonts.swift in Sources */,
 				261882C226C124D0003EF23C /* IconWithPointLabel.swift in Sources */,
 				261882CC26C124F3003EF23C /* ImageWithLabel.swift in Sources */,
