@@ -34,12 +34,12 @@ class MainViewController: UIViewController {
     }
 
     // MARK: - Business Logic
-    func setupUI() {
+    private func setupUI() {
         scrollView.delegate = self
         view.backgroundColor = .whiteTwo
     }
 
-    func setupBinding() {
+    private func setupBinding() {
         viewModel.getPopularMovies { cardViewUIModel in
             self.cardViewUIModel = cardViewUIModel
             self.count = Double(cardViewUIModel.count)
@@ -48,7 +48,7 @@ class MainViewController: UIViewController {
         }
     }
 
-    func setupTableView() {
+    private func setupTableView() {
         filmTableView.delegate = self
         filmTableView.dataSource = self
         filmTableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
