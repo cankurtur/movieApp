@@ -8,8 +8,11 @@
 import Foundation
 
 struct APIConstants {
-    static let baseURL = "https://api.themoviedb.org/3/movie/popular?"
     static let apiKey = "d6c77054336371f41e11b6450daae907"
-    static let popularMovieURL = "\(APIConstants.baseURL)api_key=\(APIConstants.apiKey)&language=en-US&page=1"
-    static let movieGenresURL = "https://api.themoviedb.org/3/genre/movie/list?api_key=\(APIConstants.apiKey)&language=en-US"
+    
+    static let popularMoviesBaseURL = "https://api.themoviedb.org/3/movie/popular?"
+    static let movieGenresBaseURL = "https://api.themoviedb.org/3/genre/movie/list?"
+
+    static let popularMoviesURL = "\(popularMoviesBaseURL)api_key=\(apiKey)&language=en-US&page=1"
+    static let movieGenresURL = "\(movieGenresBaseURL)api_key=\(apiKey)&language=en-US"
 }

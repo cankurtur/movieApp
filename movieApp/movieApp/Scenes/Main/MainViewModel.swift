@@ -19,7 +19,7 @@ struct MainViewModel {
 
     func getPopularMovies(completion: @escaping([CardViewWithImageAndDetailsUIModel]) -> Void) {
         var cardViewArray: [CardViewWithImageAndDetailsUIModel] = []
-        networking.performRequest(url: APIConstants.popularMovieURL) {(result: Result<PopularMoviesResponseModel, Error>) in
+        networking.performRequest(url: APIConstants.popularMoviesURL) {(result: Result<PopularMoviesResponseModel, Error>) in
             switch result {
             case .success(let popularMoviesResponseModel):
                 for popularMovies in popularMoviesResponseModel.results {
