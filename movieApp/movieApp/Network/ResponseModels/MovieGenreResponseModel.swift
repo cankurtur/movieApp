@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MovieGenresResponseModel: Codable {
+struct MovieGenreResponseModel: Codable {
     let genres: [GenresResponseModel]
 }
 

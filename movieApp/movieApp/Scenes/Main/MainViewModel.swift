@@ -55,7 +55,7 @@ struct MainViewModel {
         if movieGenresUserDefault.checkUserDefault(key: UserDefaultsConstants.genresDict) {
             return
         }
-        networking.performRequest(url: APIConstants.movieGenresURL) { (result: Result<MovieGenresResponseModel, Error>) in
+        networking.performRequest(url: APIConstants.movieGenresURL) { (result: Result<MovieGenreResponseModel, Error>) in
             var movieGenresDict: [String: String] = [:]
             switch result {
             case .success(let genresResponseModel):
