@@ -46,5 +46,6 @@ class IconWithPointLabel: UIView {
     func configure(uiModel: IconWithPointLabelUIModel) {
         iconImageView.image = uiModel.icon
         pointLabel.text = uiModel.pointNumberText
+        pointLabel.font = pointLabel.font.withSize(uiModel.fontSize)
     }
 }

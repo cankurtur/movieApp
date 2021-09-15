@@ -14,4 +14,5 @@ extension UIColor {
     static let vibrantBlue = Colors.vibrantBlue
     static let whiteTwo = Colors.whiteTwo
     static let electricBlue = Colors.electricBlue
+    static let separator = Colors.separator
 }
