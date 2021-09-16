@@ -76,9 +76,9 @@ extension MainViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let positiveScrollViewYConstant = -scrollView.contentOffset.y
         if positiveScrollViewYConstant < Constants.limitForBarShowing {
-            title = Constants.titleBarText
+            navigationItem.title = Constants.titleBarText
         } else {
-            title = Constants.largeTitleBarText
+            navigationItem.title = Constants.largeTitleBarText
         }
     }
 }

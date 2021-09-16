@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GGF-2U-5hF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ttk-BV-6W8">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZP-ZI-mDw">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="810"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="job-IY-sTN" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="656.33333333333337"/>
@@ -98,10 +98,28 @@
             </objects>
             <point key="canvasLocation" x="1049.2307692307693" y="93.838862559241704"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="EEu-PI-Xl2">
+            <objects>
+                <tabBarController id="ttk-BV-6W8" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QKw-YA-Cg3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="GGF-2U-5hF" kind="relationship" relationship="viewControllers" id="bB5-zw-QpX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vgx-YL-641" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-934" y="94"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="CXb-BP-dtn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GGF-2U-5hF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="iconsTabbarMovie" selectedImage="iconsTabbarMovieSelected" id="d0e-d7-Nb8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="HCY-V1-0vw">
                         <rect key="frame" x="0.0" y="44" width="390" height="96"/>
@@ -109,10 +127,10 @@
                         <color key="backgroundColor" name="vibrantBlue"/>
                         <color key="barTintColor" name="vibrantBlue"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" name="white"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" name="white"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -126,14 +144,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="iconsTabbarMovie" width="48" height="34"/>
+        <image name="iconsTabbarMovieSelected" width="48" height="34"/>
         <namedColor name="almostBlack">
             <color red="0.030999999493360519" green="0.035000000149011612" blue="0.039000000804662704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="vibrantBlue">
             <color red="0.0" green="0.23899999260902405" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="white">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
