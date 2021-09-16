@@ -55,6 +55,15 @@
 		264DF59426C8012D009A0665 /* UIFontThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264DF59326C8012D009A0665 /* UIFontThemeExtension.swift */; };
 		264DF59526C8012D009A0665 /* UIFontThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264DF59326C8012D009A0665 /* UIFontThemeExtension.swift */; };
 		264DF59626C8012D009A0665 /* UIFontThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264DF59326C8012D009A0665 /* UIFontThemeExtension.swift */; };
+		2653F52126F36DD70062EA74 /* VerticalCardViewWithImageAndDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2653F52026F36DD70062EA74 /* VerticalCardViewWithImageAndDetails.xib */; };
+		2653F52226F36DD70062EA74 /* VerticalCardViewWithImageAndDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2653F52026F36DD70062EA74 /* VerticalCardViewWithImageAndDetails.xib */; };
+		2653F52326F36DD70062EA74 /* VerticalCardViewWithImageAndDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2653F52026F36DD70062EA74 /* VerticalCardViewWithImageAndDetails.xib */; };
+		2653F52B26F36F0D0062EA74 /* VerticalCardViewWithImageAndDetailsUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2653F52A26F36F0D0062EA74 /* VerticalCardViewWithImageAndDetailsUIModel.swift */; };
+		2653F52C26F36F0D0062EA74 /* VerticalCardViewWithImageAndDetailsUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2653F52A26F36F0D0062EA74 /* VerticalCardViewWithImageAndDetailsUIModel.swift */; };
+		2653F52D26F36F0D0062EA74 /* VerticalCardViewWithImageAndDetailsUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2653F52A26F36F0D0062EA74 /* VerticalCardViewWithImageAndDetailsUIModel.swift */; };
+		2653F53226F36F460062EA74 /* VerticalCardViewWithImageAndDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2653F53126F36F460062EA74 /* VerticalCardViewWithImageAndDetails.swift */; };
+		2653F53326F36F460062EA74 /* VerticalCardViewWithImageAndDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2653F53126F36F460062EA74 /* VerticalCardViewWithImageAndDetails.swift */; };
+		2653F53426F36F460062EA74 /* VerticalCardViewWithImageAndDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2653F53126F36F460062EA74 /* VerticalCardViewWithImageAndDetails.swift */; };
 		26684F9626CD330200E5BAD9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684F9526CD330200E5BAD9 /* Fonts.swift */; };
 		26684F9726CD330200E5BAD9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684F9526CD330200E5BAD9 /* Fonts.swift */; };
 		26684F9826CD330200E5BAD9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684F9526CD330200E5BAD9 /* Fonts.swift */; };
@@ -303,6 +312,9 @@
 		26336F9426BAED6E0010EA73 /* movieAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movieAppUITests.swift; sourceTree = "<group>"; };
 		26336F9626BAED6E0010EA73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		264DF59326C8012D009A0665 /* UIFontThemeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontThemeExtension.swift; sourceTree = "<group>"; };
+		2653F52026F36DD70062EA74 /* VerticalCardViewWithImageAndDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerticalCardViewWithImageAndDetails.xib; sourceTree = "<group>"; };
+		2653F52A26F36F0D0062EA74 /* VerticalCardViewWithImageAndDetailsUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCardViewWithImageAndDetailsUIModel.swift; sourceTree = "<group>"; };
+		2653F53126F36F460062EA74 /* VerticalCardViewWithImageAndDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCardViewWithImageAndDetails.swift; sourceTree = "<group>"; };
 		26684F9526CD330200E5BAD9 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		26684FA226CD34F800E5BAD9 /* UIImageThemeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageThemeExtension.swift; sourceTree = "<group>"; };
 		26684FAC26CD351C00E5BAD9 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -466,6 +478,7 @@
 		2618825826C112E7003EF23C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2653F51F26F36DC40062EA74 /* VerticalCardViewWithImageAndDetails */,
 				261882E226C144D5003EF23C /* CardViewWithImageAndDetails */,
 				261882A326C11F51003EF23C /* IconWithPointLabel */,
 				2618825926C112FF003EF23C /* ImageWithLabel */,
@@ -575,6 +588,16 @@
 				26336F9626BAED6E0010EA73 /* Info.plist */,
 			);
 			path = movieAppUITests;
+			sourceTree = "<group>";
+		};
+		2653F51F26F36DC40062EA74 /* VerticalCardViewWithImageAndDetails */ = {
+			isa = PBXGroup;
+			children = (
+				2653F52026F36DD70062EA74 /* VerticalCardViewWithImageAndDetails.xib */,
+				2653F52A26F36F0D0062EA74 /* VerticalCardViewWithImageAndDetailsUIModel.swift */,
+				2653F53126F36F460062EA74 /* VerticalCardViewWithImageAndDetails.swift */,
+			);
+			path = VerticalCardViewWithImageAndDetails;
 			sourceTree = "<group>";
 		};
 		26684F9F26CD34BF00E5BAD9 /* Colors */ = {
@@ -876,6 +899,7 @@
 				26A37AF226C4095E00E539F8 /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
 				26A37AF826C4095E00E539F8 /* SF-Pro-Display-Medium.otf in Resources */,
 				26A37B8126C4113800E539F8 /* LaunchScreen.xcassets in Resources */,
+				2653F52126F36DD70062EA74 /* VerticalCardViewWithImageAndDetails.xib in Resources */,
 				26A37B2226C4095E00E539F8 /* SF-Pro-Display-BlackItalic.otf in Resources */,
 				26A37B6426C4095E00E539F8 /* SF-Pro-Display-BoldItalic.otf in Resources */,
 				26A37B4F26C4095E00E539F8 /* SF-Pro-Rounded-Thin.otf in Resources */,
@@ -939,6 +963,7 @@
 				26A37AE726C4095E00E539F8 /* SF-Pro-Rounded-Ultralight.otf in Resources */,
 				2618828226C114BD003EF23C /* ImageWithLabel.xib in Resources */,
 				26A37B2C26C4095E00E539F8 /* SF-Pro-Display-Heavy.otf in Resources */,
+				2653F52226F36DD70062EA74 /* VerticalCardViewWithImageAndDetails.xib in Resources */,
 				26A37B3B26C4095E00E539F8 /* SF-Pro-Display-Regular.otf in Resources */,
 				26A37B5926C4095E00E539F8 /* SF-Pro-Display-ThinItalic.otf in Resources */,
 				26A37AED26C4095E00E539F8 /* SF-Pro-Text-Ultralight.otf in Resources */,
@@ -1002,6 +1027,7 @@
 				26A37AE826C4095E00E539F8 /* SF-Pro-Rounded-Ultralight.otf in Resources */,
 				2618828326C114BD003EF23C /* ImageWithLabel.xib in Resources */,
 				26A37B2D26C4095E00E539F8 /* SF-Pro-Display-Heavy.otf in Resources */,
+				2653F52326F36DD70062EA74 /* VerticalCardViewWithImageAndDetails.xib in Resources */,
 				26A37B3C26C4095E00E539F8 /* SF-Pro-Display-Regular.otf in Resources */,
 				26A37B5A26C4095E00E539F8 /* SF-Pro-Display-ThinItalic.otf in Resources */,
 				26A37AEE26C4095E00E539F8 /* SF-Pro-Text-Ultralight.otf in Resources */,
@@ -1157,11 +1183,13 @@
 				261882E426C14521003EF23C /* CardViewWithImageAndDetails.swift in Sources */,
 				26336F7326BAED6D0010EA73 /* AppDelegate.swift in Sources */,
 				2618834926C16E19003EF23C /* MainViewController.swift in Sources */,
+				2653F52B26F36F0D0062EA74 /* VerticalCardViewWithImageAndDetailsUIModel.swift in Sources */,
 				269917CE26E25690001510A1 /* APIConstants.swift in Sources */,
 				260A7C7326E2121C004194FA /* PopularMoviesResponseModel.swift in Sources */,
 				26B45AD726E8AFFE00D5BAA4 /* UserDefaultsConstants.swift in Sources */,
 				26E6427126CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */,
 				26684FA326CD34F800E5BAD9 /* UIImageThemeExtension.swift in Sources */,
+				2653F53226F36F460062EA74 /* VerticalCardViewWithImageAndDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1172,12 +1200,14 @@
 				26B45AD826E8AFFE00D5BAA4 /* UserDefaultsConstants.swift in Sources */,
 				26E6427226CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */,
 				261882A626C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
+				2653F53326F36F460062EA74 /* VerticalCardViewWithImageAndDetails.swift in Sources */,
 				26A99CEC26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */,
 				260A7C6526E1FC56004194FA /* Networking.swift in Sources */,
 				26B45AE226E8B06A00D5BAA4 /* MovieGenresUserDefaults.swift in Sources */,
 				26684F9726CD330200E5BAD9 /* Fonts.swift in Sources */,
 				261882C126C124D0003EF23C /* IconWithPointLabel.swift in Sources */,
 				261882CB26C124F3003EF23C /* ImageWithLabel.swift in Sources */,
+				2653F52C26F36F0D0062EA74 /* VerticalCardViewWithImageAndDetailsUIModel.swift in Sources */,
 				2673B65826C2C0AB00E5659B /* UIViewExtension.swift in Sources */,
 				269917CF26E25690001510A1 /* APIConstants.swift in Sources */,
 				26684FAE26CD351C00E5BAD9 /* Images.swift in Sources */,
@@ -1202,12 +1232,14 @@
 				26B45AD926E8AFFE00D5BAA4 /* UserDefaultsConstants.swift in Sources */,
 				26E6427326CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */,
 				261882A726C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
+				2653F53426F36F460062EA74 /* VerticalCardViewWithImageAndDetails.swift in Sources */,
 				26A99CED26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */,
 				260A7C6626E1FC56004194FA /* Networking.swift in Sources */,
 				26B45AE326E8B06A00D5BAA4 /* MovieGenresUserDefaults.swift in Sources */,
 				26684F9826CD330200E5BAD9 /* Fonts.swift in Sources */,
 				261882C226C124D0003EF23C /* IconWithPointLabel.swift in Sources */,
 				261882CC26C124F3003EF23C /* ImageWithLabel.swift in Sources */,
+				2653F52D26F36F0D0062EA74 /* VerticalCardViewWithImageAndDetailsUIModel.swift in Sources */,
 				2673B65926C2C0AB00E5659B /* UIViewExtension.swift in Sources */,
 				269917D026E25690001510A1 /* APIConstants.swift in Sources */,
 				26684FAF26CD351C00E5BAD9 /* Images.swift in Sources */,
