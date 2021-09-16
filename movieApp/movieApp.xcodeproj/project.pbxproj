@@ -277,6 +277,15 @@
 		26D5FEB526ECC69F00636E33 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D5FEB126ECC69F00636E33 /* CustomCollectionViewCell.xib */; };
 		26D5FEB626ECC69F00636E33 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D5FEB126ECC69F00636E33 /* CustomCollectionViewCell.xib */; };
 		26D5FEB726ECC69F00636E33 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26D5FEB126ECC69F00636E33 /* CustomCollectionViewCell.xib */; };
+		26E4BA8826F3595900560653 /* VerticalCardViewWithImageAndDetailsUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4BA8726F3595900560653 /* VerticalCardViewWithImageAndDetailsUIModel.swift */; };
+		26E4BA8926F3595900560653 /* VerticalCardViewWithImageAndDetailsUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4BA8726F3595900560653 /* VerticalCardViewWithImageAndDetailsUIModel.swift */; };
+		26E4BA8A26F3595900560653 /* VerticalCardViewWithImageAndDetailsUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4BA8726F3595900560653 /* VerticalCardViewWithImageAndDetailsUIModel.swift */; };
+		26E4BAC126F35D5100560653 /* VerticalCardViewWithImageAndDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4BAC026F35D5100560653 /* VerticalCardViewWithImageAndDetails.swift */; };
+		26E4BAC226F35D5100560653 /* VerticalCardViewWithImageAndDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4BAC026F35D5100560653 /* VerticalCardViewWithImageAndDetails.swift */; };
+		26E4BAC326F35D5100560653 /* VerticalCardViewWithImageAndDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E4BAC026F35D5100560653 /* VerticalCardViewWithImageAndDetails.swift */; };
+		26E4BAC826F35E6900560653 /* VerticalCardViewWithImageAndDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E4BAC726F35E6900560653 /* VerticalCardViewWithImageAndDetails.xib */; };
+		26E4BAC926F35E6900560653 /* VerticalCardViewWithImageAndDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E4BAC726F35E6900560653 /* VerticalCardViewWithImageAndDetails.xib */; };
+		26E4BACA26F35E6900560653 /* VerticalCardViewWithImageAndDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E4BAC726F35E6900560653 /* VerticalCardViewWithImageAndDetails.xib */; };
 		26E6426326CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6426226CD7A6100E373B1 /* LocalizableStringExtension.swift */; };
 		26E6426426CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6426226CD7A6100E373B1 /* LocalizableStringExtension.swift */; };
 		26E6426526CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E6426226CD7A6100E373B1 /* LocalizableStringExtension.swift */; };
@@ -415,6 +424,9 @@
 		26D5FEA426ECC05A00636E33 /* ImageCollectionViewWithPointAndDetailsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewWithPointAndDetailsContainerView.swift; sourceTree = "<group>"; };
 		26D5FEB026ECC69F00636E33 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		26D5FEB126ECC69F00636E33 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
+		26E4BA8726F3595900560653 /* VerticalCardViewWithImageAndDetailsUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCardViewWithImageAndDetailsUIModel.swift; sourceTree = "<group>"; };
+		26E4BAC026F35D5100560653 /* VerticalCardViewWithImageAndDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCardViewWithImageAndDetails.swift; sourceTree = "<group>"; };
+		26E4BAC726F35E6900560653 /* VerticalCardViewWithImageAndDetails.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerticalCardViewWithImageAndDetails.xib; sourceTree = "<group>"; };
 		26E6426226CD7A6100E373B1 /* LocalizableStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStringExtension.swift; sourceTree = "<group>"; };
 		26E6426926CD7ACA00E373B1 /* LocalizableUILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableUILabelExtension.swift; sourceTree = "<group>"; };
 		26E6427026CD7AE300E373B1 /* LocalizableUIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableUIButtonExtension.swift; sourceTree = "<group>"; };
@@ -517,6 +529,7 @@
 		2618825826C112E7003EF23C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				26E4BA8626F3587B00560653 /* VerticalCardViewWithImageAndDetails */,
 				2626DC0E26F1F9B100C7CC65 /* FetchImageView */,
 				26D5FE9226ECC00200636E33 /* ImageCollectionViewWithPointAndDetailsContainerView */,
 				2685168026EB66E4009D5576 /* PointAndDetailsContainerView */,
@@ -783,6 +796,16 @@
 			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
+		26E4BA8626F3587B00560653 /* VerticalCardViewWithImageAndDetails */ = {
+			isa = PBXGroup;
+			children = (
+				26E4BA8726F3595900560653 /* VerticalCardViewWithImageAndDetailsUIModel.swift */,
+				26E4BAC026F35D5100560653 /* VerticalCardViewWithImageAndDetails.swift */,
+				26E4BAC726F35E6900560653 /* VerticalCardViewWithImageAndDetails.xib */,
+			);
+			path = VerticalCardViewWithImageAndDetails;
+			sourceTree = "<group>";
+		};
 		AACDD6FDEF0D326DCCBDE413 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -972,6 +995,7 @@
 				26A37AE326C4095E00E539F8 /* SF-Pro-Rounded-Bold.otf in Resources */,
 				26A37B2826C4095E00E539F8 /* SF-Pro-Display-MediumItalic.otf in Resources */,
 				26A37B1026C4095E00E539F8 /* SF-Pro-Rounded-Black.otf in Resources */,
+				26E4BAC826F35E6900560653 /* VerticalCardViewWithImageAndDetails.xib in Resources */,
 				26A37AF226C4095E00E539F8 /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
 				26A37AF826C4095E00E539F8 /* SF-Pro-Display-Medium.otf in Resources */,
 				26A37B8126C4113800E539F8 /* LaunchScreen.xcassets in Resources */,
@@ -994,6 +1018,7 @@
 				26A37AE126C4095E00E539F8 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
 				261882EF26C14528003EF23C /* CardViewWithImageAndDetails.xib in Resources */,
 				26A37B0526C4095E00E539F8 /* SF-Pro-Display-Ultralight.otf in Resources */,
+				26E4BAC926F35E6900560653 /* VerticalCardViewWithImageAndDetails.xib in Resources */,
 				26A37B0B26C4095E00E539F8 /* SF-Pro-Text-ThinItalic.otf in Resources */,
 				26A37B3226C4095E00E539F8 /* SF-Pro-Display-RegularItalic.otf in Resources */,
 				26A37B3826C4095E00E539F8 /* SF-Pro-Display-HeavyItalic.otf in Resources */,
@@ -1061,6 +1086,7 @@
 				26A37AE226C4095E00E539F8 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
 				261882F026C14528003EF23C /* CardViewWithImageAndDetails.xib in Resources */,
 				26A37B0626C4095E00E539F8 /* SF-Pro-Display-Ultralight.otf in Resources */,
+				26E4BACA26F35E6900560653 /* VerticalCardViewWithImageAndDetails.xib in Resources */,
 				26A37B0C26C4095E00E539F8 /* SF-Pro-Text-ThinItalic.otf in Resources */,
 				26A37B3326C4095E00E539F8 /* SF-Pro-Display-RegularItalic.otf in Resources */,
 				26A37B3926C4095E00E539F8 /* SF-Pro-Display-HeavyItalic.otf in Resources */,
@@ -1252,6 +1278,7 @@
 				2626DC1026F1F9E600C7CC65 /* FetchImageViewUIModel.swift in Sources */,
 				26D5FEA526ECC05A00636E33 /* ImageCollectionViewWithPointAndDetailsContainerView.swift in Sources */,
 				261882A526C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
+				26E4BAC126F35D5100560653 /* VerticalCardViewWithImageAndDetails.swift in Sources */,
 				26684FAD26CD351C00E5BAD9 /* Images.swift in Sources */,
 				26E6426326CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */,
 				26B45AE126E8B06A00D5BAA4 /* MovieGenresUserDefaults.swift in Sources */,
@@ -1264,6 +1291,7 @@
 				261882F526C14531003EF23C /* CardViewWithImageAndDetailsUIModel.swift in Sources */,
 				2699355F26C1C430008BB5A8 /* MainViewModel.swift in Sources */,
 				2618825B26C11318003EF23C /* ImageWithLabelUIModel.swift in Sources */,
+				26E4BA8826F3595900560653 /* VerticalCardViewWithImageAndDetailsUIModel.swift in Sources */,
 				26A99CEB26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */,
 				268516B326EBA5BE009D5576 /* AutoSizedTableView.swift in Sources */,
 				261882CA26C124F3003EF23C /* ImageWithLabel.swift in Sources */,
@@ -1286,6 +1314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26B45AD826E8AFFE00D5BAA4 /* UserDefaultsConstants.swift in Sources */,
+				26E4BA8926F3595900560653 /* VerticalCardViewWithImageAndDetailsUIModel.swift in Sources */,
 				26E6427226CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */,
 				261882A626C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
 				2626DC1B26F1F9FB00C7CC65 /* FetchImageView.swift in Sources */,
@@ -1312,6 +1341,7 @@
 				266E5FAC26E51884000C4DD5 /* MovieGenreResponseModel.swift in Sources */,
 				2626DC1126F1F9E600C7CC65 /* FetchImageViewUIModel.swift in Sources */,
 				26E6426B26CD7ACA00E373B1 /* LocalizableUILabelExtension.swift in Sources */,
+				26E4BAC226F35D5100560653 /* VerticalCardViewWithImageAndDetails.swift in Sources */,
 				26336F8A26BAED6D0010EA73 /* movieAppTests.swift in Sources */,
 				261882F626C14532003EF23C /* CardViewWithImageAndDetailsUIModel.swift in Sources */,
 				2699356026C1C430008BB5A8 /* MainViewModel.swift in Sources */,
@@ -1324,6 +1354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26B45AD926E8AFFE00D5BAA4 /* UserDefaultsConstants.swift in Sources */,
+				26E4BA8A26F3595900560653 /* VerticalCardViewWithImageAndDetailsUIModel.swift in Sources */,
 				26E6427326CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */,
 				261882A726C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
 				2626DC1C26F1F9FB00C7CC65 /* FetchImageView.swift in Sources */,
@@ -1350,6 +1381,7 @@
 				266E5FAD26E51884000C4DD5 /* MovieGenreResponseModel.swift in Sources */,
 				2626DC1226F1F9E600C7CC65 /* FetchImageViewUIModel.swift in Sources */,
 				26E6426C26CD7ACA00E373B1 /* LocalizableUILabelExtension.swift in Sources */,
+				26E4BAC326F35D5100560653 /* VerticalCardViewWithImageAndDetails.swift in Sources */,
 				26336F9526BAED6E0010EA73 /* movieAppUITests.swift in Sources */,
 				261882F726C14532003EF23C /* CardViewWithImageAndDetailsUIModel.swift in Sources */,
 				2699356126C1C430008BB5A8 /* MainViewModel.swift in Sources */,
