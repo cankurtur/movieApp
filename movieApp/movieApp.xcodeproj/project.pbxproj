@@ -489,19 +489,19 @@
 		18D1D40A26BB1A03002EEA11 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				18D1D40B26BB1A15002EEA11 /* Main */,
+				26336F7826BAED6D0010EA73 /* Main.storyboard */,
+				18D1D40B26BB1A15002EEA11 /* MainViewController */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		18D1D40B26BB1A15002EEA11 /* Main */ = {
+		18D1D40B26BB1A15002EEA11 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
-				26336F7826BAED6D0010EA73 /* Main.storyboard */,
 				2618834826C16E19003EF23C /* MainViewController.swift */,
 				2699355E26C1C430008BB5A8 /* MainViewModel.swift */,
 			);
-			path = Main;
+			path = MainViewController;
 			sourceTree = "<group>";
 		};
 		18D1D40C26BB1A50002EEA11 /* Network */ = {
