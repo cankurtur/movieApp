@@ -14,17 +14,20 @@ struct CardViewWithImageAndDetailsUIModel {
     let detailsText: String
     let imageWithLabelView: ImageWithLabelUIModel
     let iconWithPointLabel: IconWithPointLabelUIModel
+    let posterPath: FetchImageViewUIModel
 
     // MARK: - Business Logic
     init(coverImage: UIImage,
          titleText: String,
          detailsText: String,
          imageWithLabelView: ImageWithLabelUIModel,
-         iconWithPointLabel: IconWithPointLabelUIModel) {
+         iconWithPointLabel: IconWithPointLabelUIModel,
+         posterPath: FetchImageViewUIModel) {
         self.coverImage = coverImage
         self.titleText = titleText
         self.detailsText = detailsText
         self.imageWithLabelView = imageWithLabelView
         self.iconWithPointLabel = iconWithPointLabel
+        self.posterPath = posterPath
     }
 }

@@ -28,7 +28,7 @@
             <rect key="frame" x="0.0" y="0.0" width="346" height="112"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L2s-ge-olk" userLabel="Cover Image View">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L2s-ge-olk" userLabel="Cover Image View" customClass="FetchImageView" customModule="movieApp" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="78.5" height="112"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="L2s-ge-olk" secondAttribute="height" multiplier="7:10" id="vDK-8R-2Oh"/>
