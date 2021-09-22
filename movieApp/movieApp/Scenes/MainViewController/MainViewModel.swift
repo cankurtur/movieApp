@@ -10,7 +10,7 @@ import UIKit
 struct MainViewModel {
     // MARK: - Properties
     let networking = Networking()
-    var movieGenresUserDefault = MovieGenresUserDefaults()
+    var genresUserDefault = GenresUserDefaults()
 
     init() {
         getMovieGenres()
@@ -26,7 +26,7 @@ struct MainViewModel {
                     let voteAverage = String(format: "%.1f", nowPlayingMovies.voteAverage)
                     let genreIds = nowPlayingMovies.genreIds
                     let posterPath = nowPlayingMovies.posterPath
-                    let detailsText = self.genresIdToString(intArray: genreIds)
+                    let detailsText = self.movieGenresIdToString(intArray: genreIds)
 
                     let imageCollectionWithPDModel = SliderContents(
                         image: .dummyImage,
@@ -58,7 +58,7 @@ struct MainViewModel {
                     let voteAverage = String(format: "%.1f", popularMovies.voteAverage)
                     let releaseDate = popularMovies.releaseDate
                     let genreIds = popularMovies.genreIds
-                    let detailsText = self.genresIdToString(intArray: genreIds)
+                    let detailsText = self.movieGenresIdToString(intArray: genreIds)
                     let posterPath = popularMovies.posterPath
 
                     let cardViewModel = CardViewWithImageAndDetailsUIModel(
@@ -85,7 +85,7 @@ struct MainViewModel {
     }
 
     func getMovieGenres() {
-        if movieGenresUserDefault.checkUserDefault(key: UserDefaultsConstants.genresDict) {
+        if genresUserDefault.checkUserDefault(key: UserDefaultsConstants.movieGenresDict) {
             return
         }
         networking.performRequest(url: APIConstants.movieGenresURL) { (result: Result<MovieGenreResponseModel, Error>) in
@@ -97,18 +97,18 @@ struct MainViewModel {
                     let name = movieGenres.name
                     movieGenresDict[id] = name
                 }
-                movieGenresUserDefault.setUserDefault(value: movieGenresDict, key: UserDefaultsConstants.genresDict)
+                genresUserDefault.setUserDefault(value: movieGenresDict, key: UserDefaultsConstants.movieGenresDict)
             case .failure(let error):
                 print(error)
             }
         }
     }
 
-    func genresIdToString(intArray: [Int]) -> String {
+    func movieGenresIdToString(intArray: [Int]) -> String {
         var detailsString = ""
         var editedString = ""
-        if movieGenresUserDefault.checkUserDefault(key: UserDefaultsConstants.genresDict) {
-            let dict = movieGenresUserDefault.getUserDefault(key: UserDefaultsConstants.genresDict)
+        if genresUserDefault.checkUserDefault(key: UserDefaultsConstants.movieGenresDict) {
+            let dict = genresUserDefault.getUserDefault(key: UserDefaultsConstants.movieGenresDict)
             intArray.forEach { element in
                 let key = element.description
                 if dict.keys.contains(key), let value = dict[key], !value.isEmpty {

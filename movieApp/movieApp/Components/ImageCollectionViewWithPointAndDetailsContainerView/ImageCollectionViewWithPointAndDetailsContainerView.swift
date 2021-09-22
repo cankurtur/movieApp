@@ -58,8 +58,8 @@ class ImageCollectionViewWithPointAndDetailsContainerView: UIView {
     }
 }
 
-// MARK: - UICollectionView
-extension ImageCollectionViewWithPointAndDetailsContainerView: UICollectionViewDataSource, UICollectionViewDelegate {
+// MARK: - UICollectionViewDataSource, UICollectionViewDelegate
+extension ImageCollectionViewWithPointAndDetailsContainerView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         imageArray?.count ?? 0
     }
@@ -79,6 +79,7 @@ extension ImageCollectionViewWithPointAndDetailsContainerView: UICollectionViewD
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension ImageCollectionViewWithPointAndDetailsContainerView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -94,6 +95,7 @@ extension ImageCollectionViewWithPointAndDetailsContainerView: UICollectionViewD
         0.0
     }
 
+    // MARK: - UIScrollView
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let centerPoint = CGPoint(
             x: imageCollectionView.center.x + imageCollectionView.contentOffset.x,

@@ -47,7 +47,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="PSX-KC-luF" userLabel="Details Label">
-                    <rect key="frame" x="0.0" y="73" width="327" height="18"/>
+                    <rect key="frame" x="0.0" y="73" width="327" height="28"/>
                     <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="15"/>
                     <color key="textColor" name="almostBlack"/>
                     <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="PSX-KC-luF" secondAttribute="trailing" id="00U-xU-jjR"/>
-                <constraint firstItem="9pZ-Ih-G5J" firstAttribute="top" secondItem="PSX-KC-luF" secondAttribute="bottom" constant="20" id="0xj-hx-SVX"/>
+                <constraint firstItem="9pZ-Ih-G5J" firstAttribute="top" secondItem="PSX-KC-luF" secondAttribute="bottom" constant="10" id="0xj-hx-SVX"/>
                 <constraint firstItem="90R-s7-cRp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2DB-tt-rwA"/>
                 <constraint firstItem="PSX-KC-luF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5LF-NQ-BwV"/>
                 <constraint firstItem="9pZ-Ih-G5J" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QOz-6p-l3f"/>

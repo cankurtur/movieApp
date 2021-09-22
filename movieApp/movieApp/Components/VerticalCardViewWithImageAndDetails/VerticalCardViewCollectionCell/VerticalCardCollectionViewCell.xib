@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerticalCardCollectionViewCell" customModule="movieApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="verticalCardIdentifier" id="gTV-IL-0wX" customClass="VerticalCardCollectionViewCell" customModule="movieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="158" height="315"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="158" height="315"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y35-pv-8J9" userLabel="Container View">
+                        <rect key="frame" x="0.0" y="0.0" width="158" height="315"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oDV-zE-RCg" customClass="VerticalCardViewWithImageAndDetails" customModule="movieApp" customModuleProvider="target">
+                                <rect key="frame" x="1" y="0.0" width="156" height="310"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oDV-zE-RCg" secondAttribute="trailing" constant="1" id="5eu-GG-eb4"/>
+                            <constraint firstItem="oDV-zE-RCg" firstAttribute="top" secondItem="Y35-pv-8J9" secondAttribute="top" id="UwA-kT-yQ9"/>
+                            <constraint firstAttribute="bottom" secondItem="oDV-zE-RCg" secondAttribute="bottom" constant="5" id="h0m-KX-ZD9"/>
+                            <constraint firstItem="oDV-zE-RCg" firstAttribute="leading" secondItem="Y35-pv-8J9" secondAttribute="leading" constant="1" id="y94-Wk-rqn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Y35-pv-8J9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Gi3-7I-MHQ"/>
+                <constraint firstAttribute="bottom" secondItem="Y35-pv-8J9" secondAttribute="bottom" id="LYd-EV-hRN"/>
+                <constraint firstItem="Y35-pv-8J9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RE3-hO-n7N"/>
+                <constraint firstAttribute="trailing" secondItem="Y35-pv-8J9" secondAttribute="trailing" id="ebW-Dn-8uL"/>
+            </constraints>
+            <connections>
+                <outlet property="containerView" destination="Y35-pv-8J9" id="YvI-hO-eOB"/>
+                <outlet property="verticalCardView" destination="oDV-zE-RCg" id="0hu-Ry-H68"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="63.950892857142854"/>
+        </collectionViewCell>
+    </objects>
+</document>

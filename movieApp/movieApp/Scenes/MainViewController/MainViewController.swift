@@ -24,7 +24,6 @@ class MainViewController: UIViewController {
 
     // MARK: - Properties
     private var viewModel: MainViewModel = MainViewModel()
-    private var count: Double = 20
     private var cardViewUIModel: [CardViewWithImageAndDetailsUIModel]?
 
     // MARK: - Life Cycle
@@ -44,7 +43,6 @@ class MainViewController: UIViewController {
     private func setupBinding() {
         viewModel.getPopularMovies { cardViewUIModel in
             self.cardViewUIModel = cardViewUIModel
-            self.count = Double(cardViewUIModel.count)
             self.filmTableView.reloadData()
         }
 

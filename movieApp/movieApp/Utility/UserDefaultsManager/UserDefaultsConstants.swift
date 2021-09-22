@@ -8,5 +8,6 @@
 import Foundation
 
 struct UserDefaultsConstants {
-    static let genresDict = "genresDict"
+    static let movieGenresDict = "movieGenresDict"
+    static let tvSeriesGenresDict = "tvSeriesGenresDict"
 }

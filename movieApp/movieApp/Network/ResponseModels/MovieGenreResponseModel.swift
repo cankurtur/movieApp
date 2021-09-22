@@ -8,10 +8,10 @@
 import Foundation
 
 struct MovieGenreResponseModel: Codable {
-    let genres: [GenresResponseModel]
+    let genres: [GenresForMovieResponseModel]
 }
 
-struct GenresResponseModel: Codable {
+struct GenresForMovieResponseModel: Codable {
     let id: Int
     let name: String
 }

@@ -1,13 +1,13 @@
 //
-//  MovieGenreUserDefaults.swift
+//  GenresUserDefaults.swift
 //  movieApp
 //
-//  Created by Can Kurtur on 8.09.2021.
+//  Created by Can Kurtur on 17.09.2021.
 //
 
 import Foundation
 
-class MovieGenresUserDefaults {
+class GenresUserDefaults {
     var userDefaults = UserDefaults.standard
 
     func setUserDefault(value: [String: String], key: String) {
