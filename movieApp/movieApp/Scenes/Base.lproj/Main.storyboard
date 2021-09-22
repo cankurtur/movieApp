@@ -155,7 +155,7 @@
         <scene sceneID="Apk-yq-aKh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WdH-Ic-yVM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="iconsTabbarMovie" selectedImage="iconsTabbarMovieSelected" id="Vru-VC-cAz"/>
+                    <tabBarItem key="tabBarItem" title="" image="iconsTabbarSerie" selectedImage="iconsTabbarSerieSelected" id="Vru-VC-cAz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="6LJ-6z-89n">
                         <rect key="frame" x="0.0" y="44" width="390" height="96"/>
@@ -282,6 +282,8 @@
     <resources>
         <image name="iconsTabbarMovie" width="48" height="34"/>
         <image name="iconsTabbarMovieSelected" width="48" height="34"/>
+        <image name="iconsTabbarSerie" width="48" height="34"/>
+        <image name="iconsTabbarSerieSelected" width="48" height="34"/>
         <namedColor name="almostBlack">
             <color red="0.030999999493360519" green="0.035000000149011612" blue="0.039000000804662704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
