@@ -38,6 +38,7 @@ class TitleAndDetailsContainerView: UIView {
         titleLabel.textColor = .almostBlack
         detailsLabel.font = . subtitle1
         detailsLabel.textColor = .almostBlack
+        separatorView.backgroundColor = .separator
     }
 
     func configure(with viewModel: TitleAndDetailsContainerViewUIModel?) {
