@@ -31,7 +31,7 @@
                                     <view contentMode="scaleToFill" misplaced="YES" restorationIdentifier="detailsVC" translatesAutoresizingMaskIntoConstraints="NO" id="9qb-nx-kCq" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="-140" width="390" height="1192"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v45-V4-G5T" customClass="FetchImageView" customModule="movieApp" customModuleProvider="target">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v45-V4-G5T" customClass="FetchImageView" customModule="movieApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="-68" width="390" height="468"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="468" id="1xo-2l-xqB"/>
