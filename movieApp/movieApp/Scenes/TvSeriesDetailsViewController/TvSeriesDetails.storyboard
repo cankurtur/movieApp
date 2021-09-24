@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Details View Controller-->
+        <!--Tv Series Details View Controller-->
         <scene sceneID="gmd-km-3bj">
             <objects>
-                <viewController id="9lf-KH-xGs" customClass="DetailsViewController" customModule="movieApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9lf-KH-xGs" customClass="TvSeriesDetailsViewController" customModule="movieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QyM-Yy-2Dv">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

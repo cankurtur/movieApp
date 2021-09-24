@@ -1,5 +1,5 @@
 //
-//  DetailsUIModel.swift
+//  TvSeriesDetailsUIModel.swift
 //  movieApp
 //
 //  Created by Can Kurtur on 23.09.2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DetailsUIModel {
+struct TvSeriesDetailsUIModel {
     let posterPath: String
     let voteAverage: String
     let name: String

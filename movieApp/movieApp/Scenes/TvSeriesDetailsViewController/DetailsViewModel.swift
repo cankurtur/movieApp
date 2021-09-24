@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct DetailsViewModel {
+struct TvSeriesDetailsViewModel {
     let networking = Networking()
     var genresUserDefault = GenresUserDefaults()
 
-    func getDetails(id: Int, completion: @escaping(DetailsUIModel) -> Void ) {
+    func getTvSeriesDetails(id: Int, completion: @escaping(DetailsUIModel) -> Void ) {
         let endPointString = "\(APIConstants.tvSeriesDetailsBaseURL)\(id)\(APIConstants.tvSeriesDetailsLastURL)"
         networking.performRequest(url: endPointString) { (result: Result<TvSeriesDetailsResponseModel, Error>) in
             switch result {

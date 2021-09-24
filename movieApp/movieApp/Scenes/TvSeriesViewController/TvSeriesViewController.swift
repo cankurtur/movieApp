@@ -115,7 +115,7 @@ extension TvSeriesViewController {
 //        detailVC.tvSeriesID = id
 //        navigationController?.pushViewController(detailVC, animated: true)
 
-        if let detailVC = UIStoryboard(name: "Details", bundle: nil).instantiateInitialViewController() as? DetailsViewController {
+        if let detailVC = UIStoryboard(name: "TvSeriesDetails", bundle: nil).instantiateInitialViewController() as? TvSeriesDetailsViewController {
             detailVC.tvSeriesID = id
             navigationController?.pushViewController(detailVC, animated: true)
         }

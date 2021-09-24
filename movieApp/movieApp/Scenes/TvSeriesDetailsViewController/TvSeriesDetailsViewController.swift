@@ -1,5 +1,5 @@
 //
-//  DetailsViewController.swift
+//  TvSeriesDetailsViewController.swift
 //  movieApp
 //
 //  Created by Can Kurtur on 22.09.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
+class TvSeriesDetailsViewController: UIViewController {
     struct Constants {
         static let cornerRadius: CGFloat = 12
     }
@@ -19,7 +19,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet private weak var seasonView: UIView!
     @IBOutlet private weak var seasonLabel: UILabel!
 
-    private var viewModel: DetailsViewModel = DetailsViewModel()
+    private var viewModel: TvSeriesDetailsViewModel = TvSeriesDetailsViewModel()
     var tvSeriesID: Int?
 
     override func viewDidLoad() {
@@ -53,7 +53,7 @@ class DetailsViewController: UIViewController {
 
     func configure() {
         guard let tvID = tvSeriesID else { return }
-        viewModel.getDetails(id: tvID) { detailsUIModel in
+        viewModel.getTvSeriesDetails(id: tvID) { detailsUIModel in
             self.posterImageView.configure(viewModel: FetchImageViewUIModel(imageLink: detailsUIModel.posterPath))
             self.iconWithPointLabelView.configure(uiModel: IconWithPointLabelUIModel(pointNumberText: detailsUIModel.voteAverage))
             self.titleAndDetailsView.configure(
