@@ -15,7 +15,7 @@ class CustomCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
-    func configure(image: FetchImageViewUIModel) {
-        imageView.configure(viewModel: image)
+    func configure(uiModel: FetchImageViewUIModel) {
+        imageView.configure(viewModel: uiModel)
     }
 }

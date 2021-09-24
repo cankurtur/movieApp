@@ -30,14 +30,14 @@ class ImageCollectionViewWithPointAndDetailsContainerView: UIView {
         commonInit()
     }
 
-    func commonInit() {
+    private func commonInit() {
         let view = nibInstantiate(autoResizingMask: [.flexibleHeight, .flexibleHeight])
         view.frame = self.bounds
         addSubview(view)
         setupUICollectionView()
     }
 
-    func setupUICollectionView() {
+    private func setupUICollectionView() {
         imageCollectionView.delegate = self
         imageCollectionView.dataSource = self
         imageCollectionView.register(
@@ -73,7 +73,7 @@ extension ImageCollectionViewWithPointAndDetailsContainerView: UICollectionViewD
         }
         if let safeContentArray = contentArray {
             let imagePosterPath = safeContentArray[indexPath .row].posterPath
-            cell.configure(image: FetchImageViewUIModel(imageLink: imagePosterPath))
+            cell.configure(uiModel: FetchImageViewUIModel(imageLink: imagePosterPath))
         }
         return cell
     }
