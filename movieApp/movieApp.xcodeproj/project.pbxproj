@@ -100,6 +100,21 @@
 		2666979C26FE0FD0009A717B /* TvSeriesCastResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2666979B26FE0FD0009A717B /* TvSeriesCastResponseModel.swift */; };
 		2666979D26FE0FD0009A717B /* TvSeriesCastResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2666979B26FE0FD0009A717B /* TvSeriesCastResponseModel.swift */; };
 		2666979E26FE0FD0009A717B /* TvSeriesCastResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2666979B26FE0FD0009A717B /* TvSeriesCastResponseModel.swift */; };
+		266697A426FE13FF009A717B /* LabelWithCircleImageViewUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266697A326FE13FF009A717B /* LabelWithCircleImageViewUIModel.swift */; };
+		266697A526FE13FF009A717B /* LabelWithCircleImageViewUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266697A326FE13FF009A717B /* LabelWithCircleImageViewUIModel.swift */; };
+		266697A626FE13FF009A717B /* LabelWithCircleImageViewUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266697A326FE13FF009A717B /* LabelWithCircleImageViewUIModel.swift */; };
+		266697AE26FE1439009A717B /* LabelWithCircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266697AD26FE1439009A717B /* LabelWithCircleImageView.swift */; };
+		266697AF26FE1439009A717B /* LabelWithCircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266697AD26FE1439009A717B /* LabelWithCircleImageView.swift */; };
+		266697B026FE1439009A717B /* LabelWithCircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266697AD26FE1439009A717B /* LabelWithCircleImageView.swift */; };
+		266697B526FE14A0009A717B /* LabelWithCircleImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 266697B426FE14A0009A717B /* LabelWithCircleImageView.xib */; };
+		266697B626FE14A0009A717B /* LabelWithCircleImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 266697B426FE14A0009A717B /* LabelWithCircleImageView.xib */; };
+		266697B726FE14A0009A717B /* LabelWithCircleImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 266697B426FE14A0009A717B /* LabelWithCircleImageView.xib */; };
+		266697BE26FE1667009A717B /* CircleImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266697BC26FE1667009A717B /* CircleImageCollectionViewCell.swift */; };
+		266697BF26FE1667009A717B /* CircleImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266697BC26FE1667009A717B /* CircleImageCollectionViewCell.swift */; };
+		266697C026FE1667009A717B /* CircleImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266697BC26FE1667009A717B /* CircleImageCollectionViewCell.swift */; };
+		266697C126FE1667009A717B /* CircleImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 266697BD26FE1667009A717B /* CircleImageCollectionViewCell.xib */; };
+		266697C226FE1667009A717B /* CircleImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 266697BD26FE1667009A717B /* CircleImageCollectionViewCell.xib */; };
+		266697C326FE1667009A717B /* CircleImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 266697BD26FE1667009A717B /* CircleImageCollectionViewCell.xib */; };
 		26684F9626CD330200E5BAD9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684F9526CD330200E5BAD9 /* Fonts.swift */; };
 		26684F9726CD330200E5BAD9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684F9526CD330200E5BAD9 /* Fonts.swift */; };
 		26684F9826CD330200E5BAD9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684F9526CD330200E5BAD9 /* Fonts.swift */; };
@@ -421,6 +436,11 @@
 		2666978326FE04D8009A717B /* TvSeries.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TvSeries.storyboard; sourceTree = "<group>"; };
 		2666979426FE05C3009A717B /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
 		2666979B26FE0FD0009A717B /* TvSeriesCastResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvSeriesCastResponseModel.swift; sourceTree = "<group>"; };
+		266697A326FE13FF009A717B /* LabelWithCircleImageViewUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithCircleImageViewUIModel.swift; sourceTree = "<group>"; };
+		266697AD26FE1439009A717B /* LabelWithCircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithCircleImageView.swift; sourceTree = "<group>"; };
+		266697B426FE14A0009A717B /* LabelWithCircleImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelWithCircleImageView.xib; sourceTree = "<group>"; };
+		266697BC26FE1667009A717B /* CircleImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		266697BD26FE1667009A717B /* CircleImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		26684F9526CD330200E5BAD9 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		26684FA226CD34F800E5BAD9 /* UIImageThemeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageThemeExtension.swift; sourceTree = "<group>"; };
 		26684FAC26CD351C00E5BAD9 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -609,6 +629,7 @@
 		2618825826C112E7003EF23C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				266697A226FE13A6009A717B /* LabelWithCircleImageView */,
 				26790B5F26FB55F50069E2FC /* TitleAndDetailsContainerView */,
 				26FFFFC626F7536200A6CD2E /* VerticalCardViewWithImageAndDetails */,
 				2626DC0E26F1F9B100C7CC65 /* FetchImageView */,
@@ -743,6 +764,26 @@
 				26336F9626BAED6E0010EA73 /* Info.plist */,
 			);
 			path = movieAppUITests;
+			sourceTree = "<group>";
+		};
+		266697A226FE13A6009A717B /* LabelWithCircleImageView */ = {
+			isa = PBXGroup;
+			children = (
+				266697BB26FE1646009A717B /* CircleImageCollectionViewCell */,
+				266697A326FE13FF009A717B /* LabelWithCircleImageViewUIModel.swift */,
+				266697AD26FE1439009A717B /* LabelWithCircleImageView.swift */,
+				266697B426FE14A0009A717B /* LabelWithCircleImageView.xib */,
+			);
+			path = LabelWithCircleImageView;
+			sourceTree = "<group>";
+		};
+		266697BB26FE1646009A717B /* CircleImageCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				266697BC26FE1667009A717B /* CircleImageCollectionViewCell.swift */,
+				266697BD26FE1667009A717B /* CircleImageCollectionViewCell.xib */,
+			);
+			path = CircleImageCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		26684F9F26CD34BF00E5BAD9 /* Colors */ = {
@@ -1104,9 +1145,11 @@
 				2618828126C114BD003EF23C /* ImageWithLabel.xib in Resources */,
 				26A37B4626C4095E00E539F8 /* SF-Pro-Display-LightItalic.otf in Resources */,
 				26A37B5226C4095E00E539F8 /* SF-Pro-Display-Light.otf in Resources */,
+				266697B526FE14A0009A717B /* LabelWithCircleImageView.xib in Resources */,
 				2666973E26FDE48A009A717B /* Details.storyboard in Resources */,
 				26A37B4926C4095E00E539F8 /* SF-Pro.ttf in Resources */,
 				26E5FC8F26F790480063F094 /* VerticalCardCollectionViewCell.xib in Resources */,
+				266697C126FE1667009A717B /* CircleImageCollectionViewCell.xib in Resources */,
 				26A37B1F26C4095E00E539F8 /* SF-Pro-Display-Black.otf in Resources */,
 				26A37B1626C4095E00E539F8 /* SF-Pro-Display-Semibold.otf in Resources */,
 				26A37B3726C4095E00E539F8 /* SF-Pro-Display-HeavyItalic.otf in Resources */,
@@ -1182,10 +1225,12 @@
 				26A37B0226C4095E00E539F8 /* SF-Pro-Text-Semibold.otf in Resources */,
 				26684FC026CD43F200E5BAD9 /* Localizable.strings in Resources */,
 				26A37AF926C4095E00E539F8 /* SF-Pro-Display-Medium.otf in Resources */,
+				266697B626FE14A0009A717B /* LabelWithCircleImageView.xib in Resources */,
 				26A37B3E26C4095E00E539F8 /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				26A37B3526C4095E00E539F8 /* SF-Pro-Rounded-Light.otf in Resources */,
 				26A37B6826C4095E00E539F8 /* SF-Pro-Display-Thin.otf in Resources */,
 				26A37B5C26C4095E00E539F8 /* SF-Pro-Text-Thin.otf in Resources */,
+				266697C226FE1667009A717B /* CircleImageCollectionViewCell.xib in Resources */,
 				26A37AEA26C4095E00E539F8 /* SF-Pro-Text-BlackItalic.otf in Resources */,
 				26A37AF626C4095E00E539F8 /* SF-Pro-Text-HeavyItalic.otf in Resources */,
 				26A37B2F26C4095E00E539F8 /* SF-Pro-Display-Bold.otf in Resources */,
@@ -1255,10 +1300,12 @@
 				26A37B0326C4095E00E539F8 /* SF-Pro-Text-Semibold.otf in Resources */,
 				26684FC126CD43F200E5BAD9 /* Localizable.strings in Resources */,
 				26A37AFA26C4095E00E539F8 /* SF-Pro-Display-Medium.otf in Resources */,
+				266697B726FE14A0009A717B /* LabelWithCircleImageView.xib in Resources */,
 				26A37B3F26C4095E00E539F8 /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				26A37B3626C4095E00E539F8 /* SF-Pro-Rounded-Light.otf in Resources */,
 				26A37B6926C4095E00E539F8 /* SF-Pro-Display-Thin.otf in Resources */,
 				26A37B5D26C4095E00E539F8 /* SF-Pro-Text-Thin.otf in Resources */,
+				266697C326FE1667009A717B /* CircleImageCollectionViewCell.xib in Resources */,
 				26A37AEB26C4095E00E539F8 /* SF-Pro-Text-BlackItalic.otf in Resources */,
 				26A37AF726C4095E00E539F8 /* SF-Pro-Text-HeavyItalic.otf in Resources */,
 				26A37B3026C4095E00E539F8 /* SF-Pro-Display-Bold.otf in Resources */,
@@ -1418,6 +1465,7 @@
 				26D5FE9426ECC04300636E33 /* ImageCollectionViewWithPointAndDetailsContainerViewUIModel.swift in Sources */,
 				2653B82D26F214CC006B8655 /* NowPlayingResponseModel.swift in Sources */,
 				2626DC1026F1F9E600C7CC65 /* FetchImageViewUIModel.swift in Sources */,
+				266697AE26FE1439009A717B /* LabelWithCircleImageView.swift in Sources */,
 				26790B6126FB564C0069E2FC /* TitleAndDetailsContainerViewUIModel.swift in Sources */,
 				261D7EE226F4731B002C21F2 /* TvSeriesViewModel.swift in Sources */,
 				26D5FEA526ECC05A00636E33 /* ImageCollectionViewWithPointAndDetailsContainerView.swift in Sources */,
@@ -1434,6 +1482,7 @@
 				261882D226C137B5003EF23C /* UIColorThemeExtension.swift in Sources */,
 				2602C2CA26F496BF008F44A2 /* AutoSizedCollectionView.swift in Sources */,
 				264E913E26FC5EAF00327B00 /* TvSeriesDetailsResponseModel.swift in Sources */,
+				266697BE26FE1667009A717B /* CircleImageCollectionViewCell.swift in Sources */,
 				2602C2D126F4A30B008F44A2 /* TvSeriesResponseModel.swift in Sources */,
 				2626DC1A26F1F9FB00C7CC65 /* FetchImageView.swift in Sources */,
 				261882C026C124D0003EF23C /* IconWithPointLabel.swift in Sources */,
@@ -1442,6 +1491,7 @@
 				2618825B26C11318003EF23C /* ImageWithLabelUIModel.swift in Sources */,
 				26A99CEB26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */,
 				268516B326EBA5BE009D5576 /* AutoSizedTableView.swift in Sources */,
+				266697A426FE13FF009A717B /* LabelWithCircleImageViewUIModel.swift in Sources */,
 				26790B7226FB566D0069E2FC /* TitleAndDetailsContainerView.swift in Sources */,
 				26790B4F26FB530C0069E2FC /* DetailsViewController.swift in Sources */,
 				261D7ED826F4730B002C21F2 /* TvSeriesViewController.swift in Sources */,
@@ -1480,9 +1530,11 @@
 				2685169726EB6A84009D5576 /* PointAndDetailsContainerViewUIModel.swift in Sources */,
 				26E5FC7526F789250063F094 /* TopRatedSeriesResponseModel.swift in Sources */,
 				260A7C6526E1FC56004194FA /* Networking.swift in Sources */,
+				266697A526FE13FF009A717B /* LabelWithCircleImageViewUIModel.swift in Sources */,
 				26D5FE9526ECC04300636E33 /* ImageCollectionViewWithPointAndDetailsContainerViewUIModel.swift in Sources */,
 				264E913F26FC5EAF00327B00 /* TvSeriesDetailsResponseModel.swift in Sources */,
 				26684F9726CD330200E5BAD9 /* Fonts.swift in Sources */,
+				266697AF26FE1439009A717B /* LabelWithCircleImageView.swift in Sources */,
 				26790B5A26FB53200069E2FC /* DetailsViewModel.swift in Sources */,
 				261882C126C124D0003EF23C /* IconWithPointLabel.swift in Sources */,
 				2602C2D226F4A30B008F44A2 /* TvSeriesResponseModel.swift in Sources */,
@@ -1501,6 +1553,7 @@
 				26790B7326FB566D0069E2FC /* TitleAndDetailsContainerView.swift in Sources */,
 				260A7C7426E2121C004194FA /* PopularMoviesResponseModel.swift in Sources */,
 				2685169E26EB6A9F009D5576 /* PointAndDetailsContainerView.swift in Sources */,
+				266697BF26FE1667009A717B /* CircleImageCollectionViewCell.swift in Sources */,
 				26E6426426CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */,
 				2602C2F726F4C515008F44A2 /* GenresUserDefaults.swift in Sources */,
 				2602C30126F4C5EC008F44A2 /* TvSeriesGenreResponseModel.swift in Sources */,
@@ -1534,9 +1587,11 @@
 				2685169826EB6A84009D5576 /* PointAndDetailsContainerViewUIModel.swift in Sources */,
 				26E5FC7626F789250063F094 /* TopRatedSeriesResponseModel.swift in Sources */,
 				260A7C6626E1FC56004194FA /* Networking.swift in Sources */,
+				266697A626FE13FF009A717B /* LabelWithCircleImageViewUIModel.swift in Sources */,
 				26D5FE9626ECC04300636E33 /* ImageCollectionViewWithPointAndDetailsContainerViewUIModel.swift in Sources */,
 				264E914026FC5EAF00327B00 /* TvSeriesDetailsResponseModel.swift in Sources */,
 				26684F9826CD330200E5BAD9 /* Fonts.swift in Sources */,
+				266697B026FE1439009A717B /* LabelWithCircleImageView.swift in Sources */,
 				26790B5B26FB53200069E2FC /* DetailsViewModel.swift in Sources */,
 				261882C226C124D0003EF23C /* IconWithPointLabel.swift in Sources */,
 				2602C2D326F4A30B008F44A2 /* TvSeriesResponseModel.swift in Sources */,
@@ -1555,6 +1610,7 @@
 				26790B7426FB566D0069E2FC /* TitleAndDetailsContainerView.swift in Sources */,
 				260A7C7526E2121C004194FA /* PopularMoviesResponseModel.swift in Sources */,
 				2685169F26EB6A9F009D5576 /* PointAndDetailsContainerView.swift in Sources */,
+				266697C026FE1667009A717B /* CircleImageCollectionViewCell.swift in Sources */,
 				26E6426526CD7A6100E373B1 /* LocalizableStringExtension.swift in Sources */,
 				2602C2F826F4C515008F44A2 /* GenresUserDefaults.swift in Sources */,
 				2602C30226F4C5EC008F44A2 /* TvSeriesGenreResponseModel.swift in Sources */,
