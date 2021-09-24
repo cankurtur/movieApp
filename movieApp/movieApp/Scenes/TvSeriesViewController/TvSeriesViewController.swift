@@ -25,7 +25,7 @@ class TvSeriesViewController: UIViewController {
 
     private var viewModel = TvSeriesViewModel()
     private var verticalCardViewUIModel: [VerticalCardViewWithImageAndDetailsUIModel]?
-    
+    private var tvID: Int?
     // MARK: - Business Logic
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,6 +90,13 @@ extension TvSeriesViewController: UICollectionViewDelegate, UICollectionViewData
         cell.configure(with: model[indexPath.row])
         return cell
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let model = verticalCardViewUIModel {
+            let tvID = model[indexPath.row].id
+            showDetailVC(id: tvID)
+        }
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
@@ -99,5 +106,18 @@ extension TvSeriesViewController: UICollectionViewDelegateFlowLayout {
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: 153, height: 310)
+    }
+}
+
+extension TvSeriesViewController {
+    func showDetailVC(id: Int) {
+//        let detailVC = DetailsViewController()
+//        detailVC.tvSeriesID = id
+//        navigationController?.pushViewController(detailVC, animated: true)
+
+        if let detailVC = UIStoryboard(name: "Details", bundle: nil).instantiateInitialViewController() as? DetailsViewController {
+            detailVC.tvSeriesID = id
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
 }

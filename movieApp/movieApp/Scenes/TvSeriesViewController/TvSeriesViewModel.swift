@@ -53,11 +53,13 @@ struct TvSeriesViewModel {
             switch result {
             case .success(let topRatedSeriesResponseModel):
                 for topRatedSeries in topRatedSeriesResponseModel.results {
+                    let id = topRatedSeries.id
                     let name = topRatedSeries.name
                     let voteAverage = String(format: "%.1f", topRatedSeries.voteAverage)
                     let posterPath = topRatedSeries.posterPath
                     
                     let verticalCardView = VerticalCardViewWithImageAndDetailsUIModel(
+                        id: id,
                         title: name,
                         iconWithPointLabelUIModel: IconWithPointLabelUIModel(
                             pointNumberText: voteAverage

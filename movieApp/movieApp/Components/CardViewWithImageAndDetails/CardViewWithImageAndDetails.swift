@@ -43,9 +43,9 @@ class CardViewWithImageAndDetails: UIView {
     private func setupUI() {
         layer.cornerRadius = Constants.cornerRadius
         backgroundColor = .white
-        titleLabel.font = .headline3
+        titleLabel.font = .headline4
         titleLabel.textColor = .almostBlack
-        detailsLabel.font = .body1
+        detailsLabel.font = .body2
         detailsLabel.alpha = Constants.detailsLabelOpacity
         detailsLabel.textColor = .almostBlack
     }

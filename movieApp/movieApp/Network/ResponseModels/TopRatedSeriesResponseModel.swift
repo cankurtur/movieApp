@@ -13,11 +13,13 @@ struct TopRatedSeriesResponseModel: Codable {
 }
 
 struct TopRatedResponseModel: Codable {
+    let id: Int
     let posterPath: String
     let name: String
     let voteAverage: Double
 
     private enum CodingKeys: String, CodingKey {
+        case id = "id"
         case posterPath = "poster_path"
         case name = "name"
         case voteAverage = "vote_average"
