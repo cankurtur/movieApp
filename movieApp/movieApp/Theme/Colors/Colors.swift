@@ -15,7 +15,8 @@ class Colors {
     static let whiteTwo: UIColor = getColor(colorName: "whiteTwo")
     static let electricBlue: UIColor = getColor(colorName: "electricBlue")
     static let separator: UIColor = getColor(colorName: "separator")
-    
+    static let deepGray: UIColor = getColor(colorName: "deepGray")
+
     // To add new UIColor we have to use this function below
     static func getColor(colorName: String) -> UIColor {
         guard let color = UIColor(named: colorName) else {
