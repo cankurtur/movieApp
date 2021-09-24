@@ -8,6 +8,7 @@
 import UIKit
 
 class MoviesViewController: UIViewController {
+    // MARK: - Constants
     private struct Constants {
         static let largeTitleBarText: String = "Movies"
         static let titleBarText: String = "Popular Movies"
@@ -16,7 +17,7 @@ class MoviesViewController: UIViewController {
         static let limitForBarShowing: CGFloat = 107
         static let tableViewRowHeight: Double = 120
     }
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var filmTableView: UITableView!
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var headlineLabel: UILabel!
@@ -79,6 +80,12 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(with: model[indexPath.row])
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let model = cardViewUIModel {
+            let moviesID = model[indexPath.row].id
+            showMoviesDetailVC(id: moviesID)
+        }
+    }
 }
 
 // MARK: - UIScrollViewDelegate
@@ -89,6 +96,16 @@ extension MoviesViewController: UIScrollViewDelegate {
             navigationItem.title = Constants.titleBarText
         } else {
             navigationItem.title = Constants.largeTitleBarText
+        }
+    }
+}
+
+// MARK: - PushViewController
+extension MoviesViewController {
+    func showMoviesDetailVC(id: Int) {
+        if let moviesDetailVC = UIStoryboard(name: "MoviesDetails", bundle: nil).instantiateInitialViewController() as? MoviesDetailsViewController {
+            moviesDetailVC.moviesID = id
+            navigationController?.pushViewController(moviesDetailVC, animated: true)
         }
     }
 }

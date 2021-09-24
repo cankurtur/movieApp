@@ -9,6 +9,7 @@ import UIKit
 
 struct CardViewWithImageAndDetailsUIModel {
     // MARK: - Properties
+    let id: Int
     let coverImage: UIImage
     let titleText: String
     let detailsText: String
@@ -17,12 +18,14 @@ struct CardViewWithImageAndDetailsUIModel {
     let posterPath: FetchImageViewUIModel
 
     // MARK: - Business Logic
-    init(coverImage: UIImage,
+    init(id: Int,
+         coverImage: UIImage,
          titleText: String,
          detailsText: String,
          imageWithLabelView: ImageWithLabelUIModel,
          iconWithPointLabel: IconWithPointLabelUIModel,
          posterPath: FetchImageViewUIModel) {
+        self.id = id
         self.coverImage = coverImage
         self.titleText = titleText
         self.detailsText = detailsText

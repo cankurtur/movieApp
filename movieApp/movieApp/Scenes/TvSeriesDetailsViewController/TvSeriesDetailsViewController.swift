@@ -8,10 +8,13 @@
 import UIKit
 
 class TvSeriesDetailsViewController: UIViewController {
+
+    // MARK: - Constants
     struct Constants {
         static let cornerRadius: CGFloat = 12
     }
 
+    // MARK: - IBOutlets
     @IBOutlet private weak var posterImageView: FetchImageView!
     @IBOutlet private weak var iconWithPointLabelView: IconWithPointLabel!
     @IBOutlet private weak var titleAndDetailsView: TitleAndDetailsContainerView!
@@ -19,9 +22,11 @@ class TvSeriesDetailsViewController: UIViewController {
     @IBOutlet private weak var seasonView: UIView!
     @IBOutlet private weak var seasonLabel: UILabel!
 
+    // MARK: - Properties
     private var viewModel: TvSeriesDetailsViewModel = TvSeriesDetailsViewModel()
     var tvSeriesID: Int?
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
@@ -33,6 +38,7 @@ class TvSeriesDetailsViewController: UIViewController {
         configure()
     }
 
+    // MARK: - Business Logic
     private func setupNavigationBar() {
         navigationController?.navigationBar.backgroundColor = .clear
         navigationController?.navigationBar.prefersLargeTitles = false
@@ -53,6 +59,7 @@ class TvSeriesDetailsViewController: UIViewController {
 
     func configure() {
         guard let tvID = tvSeriesID else { return }
+        
         viewModel.getTvSeriesDetails(id: tvID) { detailsUIModel in
             self.posterImageView.configure(viewModel: FetchImageViewUIModel(imageLink: detailsUIModel.posterPath))
             self.iconWithPointLabelView.configure(uiModel: IconWithPointLabelUIModel(pointNumberText: detailsUIModel.voteAverage))
@@ -66,7 +73,6 @@ class TvSeriesDetailsViewController: UIViewController {
                 )
             )
             self.subjectLabel.text = detailsUIModel.overview
-            self.seasonLabel.isHidden = false
             self.seasonLabel.text = detailsUIModel.numberOfSeasons
         }
     }

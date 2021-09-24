@@ -33,9 +33,10 @@ class TvSeriesViewController: UIViewController {
         setupBindings()
     }
 
+    // MARK: - Business Logic
     private func setupUI() {
-        view.backgroundColor = .whiteTwo
         scrollView.delegate = self
+        view.backgroundColor = .whiteTwo
         setupCollectionView()
     }
 
@@ -61,7 +62,7 @@ class TvSeriesViewController: UIViewController {
         topRatedSeriesCollectionView.delegate = self
         topRatedSeriesCollectionView.dataSource = self
         topRatedSeriesCollectionView.register(UINib(nibName: Constants.verticalCardNibName, bundle: nil), forCellWithReuseIdentifier: Constants.verticalCardCellIdentifier)
-        topRatedSeriesCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "test")
+        topRatedSeriesCollectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "ifNot")
     }
 }
 // MARK: - UIScrollViewDelegate
@@ -85,7 +86,7 @@ extension TvSeriesViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = topRatedSeriesCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.verticalCardCellIdentifier, for: indexPath)
                 as? VerticalCardCollectionViewCell, let model = verticalCardViewUIModel else {
-            return topRatedSeriesCollectionView.dequeueReusableCell(withReuseIdentifier: "test", for: indexPath)
+            return topRatedSeriesCollectionView.dequeueReusableCell(withReuseIdentifier: "ifNot", for: indexPath)
         }
         cell.configure(with: model[indexPath.row])
         return cell
@@ -94,7 +95,7 @@ extension TvSeriesViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let model = verticalCardViewUIModel {
             let tvID = model[indexPath.row].id
-            showDetailVC(id: tvID)
+            showTvSeriesDetailVC(id: tvID)
         }
     }
 }
@@ -109,15 +110,12 @@ extension TvSeriesViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// MARK: - PushViewController
 extension TvSeriesViewController {
-    func showDetailVC(id: Int) {
-//        let detailVC = DetailsViewController()
-//        detailVC.tvSeriesID = id
-//        navigationController?.pushViewController(detailVC, animated: true)
-
-        if let detailVC = UIStoryboard(name: "TvSeriesDetails", bundle: nil).instantiateInitialViewController() as? TvSeriesDetailsViewController {
-            detailVC.tvSeriesID = id
-            navigationController?.pushViewController(detailVC, animated: true)
+    func showTvSeriesDetailVC(id: Int) {
+        if let tvSeriesDetailsVC = UIStoryboard(name: "TvSeriesDetails", bundle: nil).instantiateInitialViewController() as? TvSeriesDetailsViewController {
+            tvSeriesDetailsVC.tvSeriesID = id
+            navigationController?.pushViewController(tvSeriesDetailsVC, animated: true)
         }
     }
 }

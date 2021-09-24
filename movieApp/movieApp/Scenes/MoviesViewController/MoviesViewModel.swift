@@ -54,6 +54,7 @@ struct MoviesViewModel {
             switch result {
             case .success(let popularMoviesResponseModel):
                 for popularMovies in popularMoviesResponseModel.results {
+                    let id = popularMovies.id
                     let titleText = popularMovies.title
                     let voteAverage = String(format: "%.1f", popularMovies.voteAverage)
                     let releaseDate = popularMovies.releaseDate
@@ -62,6 +63,7 @@ struct MoviesViewModel {
                     let posterPath = popularMovies.posterPath
 
                     let cardViewModel = CardViewWithImageAndDetailsUIModel(
+                        id: id,
                         coverImage: .dummyImage,
                         titleText: titleText,
                         detailsText: detailsText,
