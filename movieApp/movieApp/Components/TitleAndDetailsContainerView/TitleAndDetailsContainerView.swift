@@ -38,6 +38,7 @@ class TitleAndDetailsContainerView: UIView {
         titleLabel.textColor = .almostBlack
         detailsLabel.font = . subtitle1
         detailsLabel.textColor = .almostBlack
+        stackViewSeparatorView.backgroundColor = .separator
         separatorView.backgroundColor = .separator
     }
 
@@ -49,6 +50,5 @@ class TitleAndDetailsContainerView: UIView {
         durationView.configure(uiModel: model.durationViewUIModel)
         typeView.configure(uiModel: model.typeViewUIModel)
         separatorView.isHidden = model.separatorIsHidden
-        stackViewSeparatorView.backgroundColor = .almostBlack
     }
 }

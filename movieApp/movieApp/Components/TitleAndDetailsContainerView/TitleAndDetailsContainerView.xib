@@ -48,20 +48,29 @@
                     <color key="textColor" name="almostBlack"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qiA-hR-eMj">
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qiA-hR-eMj">
                     <rect key="frame" x="0.0" y="67" width="327" height="20"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkj-BX-IzX" userLabel="Duration View" customClass="ImageWithLabel" customModule="movieApp" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="103.5" height="20"/>
+                            <rect key="frame" x="0.0" y="0.0" width="72" height="20"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="72" id="J4F-ob-lyt"/>
+                            </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjD-v7-blw" userLabel="Separator View">
-                            <rect key="frame" x="111.5" y="0.0" width="104" height="20"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <rect key="frame" x="80" y="0.0" width="1" height="20"/>
+                            <color key="backgroundColor" name="separator"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="Eyp-pT-TfN"/>
+                            </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rs-L9-fxl" userLabel="Type View" customClass="ImageWithLabel" customModule="movieApp" customModuleProvider="target">
-                            <rect key="frame" x="223.5" y="0.0" width="103.5" height="20"/>
+                            <rect key="frame" x="89" y="0.0" width="238" height="20"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="238" id="wLe-Gl-W7X"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
