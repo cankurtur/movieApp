@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Main View Controller-->
+        <!--Movies View Controller-->
         <scene sceneID="KLB-ej-U3w">
             <objects>
-                <viewController id="jfh-YA-MJW" customClass="MainViewController" customModule="movieApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jfh-YA-MJW" customClass="MoviesViewController" customModule="movieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uPh-54-1gw">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="3000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

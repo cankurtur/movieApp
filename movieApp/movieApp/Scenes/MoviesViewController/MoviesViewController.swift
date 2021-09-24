@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  MoviesViewController.swift
 //  movieApp
 //
 //  Created by Can Kurtur on 9.08.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MoviesViewController: UIViewController {
     private struct Constants {
         static let largeTitleBarText: String = "Movies"
         static let titleBarText: String = "Popular Movies"
@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
     @IBOutlet private weak var imageCollectionViewAndDetails: ImageCollectionViewWithPointAndDetailsContainerView!
 
     // MARK: - Properties
-    private var viewModel: MainViewModel = MainViewModel()
+    private var viewModel: MoviesViewModel = MoviesViewModel()
     private var cardViewUIModel: [CardViewWithImageAndDetailsUIModel]?
 
     // MARK: - Life Cycle
@@ -67,7 +67,7 @@ class MainViewController: UIViewController {
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
-extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         cardViewUIModel?.count ?? 0
     }
@@ -82,7 +82,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 // MARK: - UIScrollViewDelegate
-extension MainViewController: UIScrollViewDelegate {
+extension MoviesViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let positiveScrollViewYConstant = -scrollView.contentOffset.y
         if positiveScrollViewYConstant < Constants.limitForBarShowing {

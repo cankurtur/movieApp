@@ -1,5 +1,5 @@
 //
-//  MainViewModel.swift
+//  MoviesViewModel.swift
 //  movieApp
 //
 //  Created by Can Kurtur on 9.08.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct MainViewModel {
+struct MoviesViewModel {
     // MARK: - Properties
     let networking = Networking()
     var genresUserDefault = GenresUserDefaults()
