@@ -15,6 +15,9 @@ struct APIConstants {
     static let tvSeriesDetailsBaseURL = "https://api.themoviedb.org/3/tv/"
     static let tvSeriesDetailsLastURL = "?api_key=\(apiKey)&language=en-US"
 
+    static let tvSeriesCastBaseURL = "https://api.themoviedb.org/3/tv/"
+    static let tvSeriesCastLastURL = "/credits?api_key=\(apiKey)&language=en-US"
+
     static let popularMoviesBaseURL = "https://api.themoviedb.org/3/movie/popular?"
     static let movieGenresBaseURL = "https://api.themoviedb.org/3/genre/movie/list?"
     static let nowPlayingBaseURL = "https://api.themoviedb.org/3/movie/now_playing?"

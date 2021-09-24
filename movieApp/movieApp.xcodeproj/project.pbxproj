@@ -97,6 +97,9 @@
 		2666979526FE05C3009A717B /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2666979426FE05C3009A717B /* Movie.storyboard */; };
 		2666979626FE05C3009A717B /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2666979426FE05C3009A717B /* Movie.storyboard */; };
 		2666979726FE05C3009A717B /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2666979426FE05C3009A717B /* Movie.storyboard */; };
+		2666979C26FE0FD0009A717B /* TvSeriesCastResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2666979B26FE0FD0009A717B /* TvSeriesCastResponseModel.swift */; };
+		2666979D26FE0FD0009A717B /* TvSeriesCastResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2666979B26FE0FD0009A717B /* TvSeriesCastResponseModel.swift */; };
+		2666979E26FE0FD0009A717B /* TvSeriesCastResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2666979B26FE0FD0009A717B /* TvSeriesCastResponseModel.swift */; };
 		26684F9626CD330200E5BAD9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684F9526CD330200E5BAD9 /* Fonts.swift */; };
 		26684F9726CD330200E5BAD9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684F9526CD330200E5BAD9 /* Fonts.swift */; };
 		26684F9826CD330200E5BAD9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684F9526CD330200E5BAD9 /* Fonts.swift */; };
@@ -417,6 +420,7 @@
 		2666973D26FDE48A009A717B /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
 		2666978326FE04D8009A717B /* TvSeries.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TvSeries.storyboard; sourceTree = "<group>"; };
 		2666979426FE05C3009A717B /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
+		2666979B26FE0FD0009A717B /* TvSeriesCastResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvSeriesCastResponseModel.swift; sourceTree = "<group>"; };
 		26684F9526CD330200E5BAD9 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		26684FA226CD34F800E5BAD9 /* UIImageThemeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageThemeExtension.swift; sourceTree = "<group>"; };
 		26684FAC26CD351C00E5BAD9 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -821,6 +825,7 @@
 				2602C2FF26F4C5EC008F44A2 /* TvSeriesGenreResponseModel.swift */,
 				26E5FC7326F789250063F094 /* TopRatedSeriesResponseModel.swift */,
 				264E913D26FC5EAF00327B00 /* TvSeriesDetailsResponseModel.swift */,
+				2666979B26FE0FD0009A717B /* TvSeriesCastResponseModel.swift */,
 			);
 			path = ResponseModels;
 			sourceTree = "<group>";
@@ -1447,6 +1452,7 @@
 				261882E426C14521003EF23C /* CardViewWithImageAndDetails.swift in Sources */,
 				26336F7326BAED6D0010EA73 /* AppDelegate.swift in Sources */,
 				2618834926C16E19003EF23C /* MainViewController.swift in Sources */,
+				2666979C26FE0FD0009A717B /* TvSeriesCastResponseModel.swift in Sources */,
 				269917CE26E25690001510A1 /* APIConstants.swift in Sources */,
 				2685169626EB6A84009D5576 /* PointAndDetailsContainerViewUIModel.swift in Sources */,
 				26D5FEB226ECC69F00636E33 /* CustomCollectionViewCell.swift in Sources */,
@@ -1465,6 +1471,7 @@
 			files = (
 				26790B6226FB564C0069E2FC /* TitleAndDetailsContainerViewUIModel.swift in Sources */,
 				26B45AD826E8AFFE00D5BAA4 /* UserDefaultsConstants.swift in Sources */,
+				2666979D26FE0FD0009A717B /* TvSeriesCastResponseModel.swift in Sources */,
 				26790B5026FB530C0069E2FC /* DetailsViewController.swift in Sources */,
 				26E6427226CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */,
 				261882A626C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
@@ -1518,6 +1525,7 @@
 			files = (
 				26790B6326FB564C0069E2FC /* TitleAndDetailsContainerViewUIModel.swift in Sources */,
 				26B45AD926E8AFFE00D5BAA4 /* UserDefaultsConstants.swift in Sources */,
+				2666979E26FE0FD0009A717B /* TvSeriesCastResponseModel.swift in Sources */,
 				26790B5126FB530C0069E2FC /* DetailsViewController.swift in Sources */,
 				26E6427326CD7AE300E373B1 /* LocalizableUIButtonExtension.swift in Sources */,
 				261882A726C11F67003EF23C /* IconWithPointLabelUIModel.swift in Sources */,
