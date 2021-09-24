@@ -8,11 +8,13 @@
 import Foundation
 
 struct PointAndDetailsContainerViewUIModel {
+    // MARK: - Properties
     let iconWithPointLabelView: IconWithPointLabelUIModel
     let titleText: String
     let detailsText: String
     let separator: Bool
 
+    // MARK: - Business Logic
     init(iconWithPointLabelView: IconWithPointLabelUIModel, titleText: String, detailsText: String, separator: Bool = true) {
         self.iconWithPointLabelView = iconWithPointLabelView
         self.titleText = titleText

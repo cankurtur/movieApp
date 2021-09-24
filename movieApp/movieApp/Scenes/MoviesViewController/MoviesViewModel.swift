@@ -16,6 +16,7 @@ struct MoviesViewModel {
         getMovieGenres()
     }
 
+    // MARK: - Business Logic
     func getNowPlayingMovies(completion: @escaping([SliderContents]) -> Void) {
         var imageCollectionWithPDArray: [SliderContents] = []
         networking.performRequest(url: APIConstants.nowPlayingMoviesURL) { (result: Result<NowPlayingMoviesResponseModel, Error>) in

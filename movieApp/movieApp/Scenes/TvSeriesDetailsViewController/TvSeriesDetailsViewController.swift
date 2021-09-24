@@ -8,7 +8,6 @@
 import UIKit
 
 class TvSeriesDetailsViewController: UIViewController {
-
     // MARK: - Constants
     struct Constants {
         static let cornerRadius: CGFloat = 12
@@ -57,7 +56,7 @@ class TvSeriesDetailsViewController: UIViewController {
         seasonLabel.textColor = .white
     }
 
-    func configure() {
+    private func configure() {
         guard let tvID = tvSeriesID else { return }
         
         viewModel.getTvSeriesDetails(id: tvID) { detailsUIModel in

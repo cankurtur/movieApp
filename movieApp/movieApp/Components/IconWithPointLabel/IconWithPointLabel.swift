@@ -14,7 +14,7 @@ class IconWithPointLabel: UIView {
         static let cornerRadius: CGFloat = 11
     }
 
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var iconImageView: UIImageView!
     @IBOutlet private weak var pointLabel: UILabel!
 

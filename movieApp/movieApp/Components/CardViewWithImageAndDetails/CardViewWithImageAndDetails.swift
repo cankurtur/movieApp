@@ -8,13 +8,13 @@
 import UIKit
 
 class CardViewWithImageAndDetails: UIView {
-    // MARK: - Constant
+    // MARK: - Constants
     private struct Constants {
         static let cornerRadius: CGFloat = 8
         static let detailsLabelOpacity: CGFloat = 0.8
     }
 
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var coverImageView: FetchImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var detailsLabel: UILabel!

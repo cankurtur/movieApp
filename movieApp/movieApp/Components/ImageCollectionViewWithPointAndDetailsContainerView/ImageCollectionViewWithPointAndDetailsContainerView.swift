@@ -8,18 +8,22 @@
 import UIKit
 
 class ImageCollectionViewWithPointAndDetailsContainerView: UIView {
+    // MARK: - Constants
     struct Constants {
         static let customCollectionViewCellIdentifier: String = "customCollectionViewCell"
         static let customCollectionViewCellNibName: String = "CustomCollectionViewCell"
     }
 
+    // MARK: - IBOutlets
     @IBOutlet private weak var imageCollectionView: UICollectionView!
     @IBOutlet private weak var pointsAndDetailsContainerView: PointAndDetailsContainerView!
 
+    // MARK: - Properties
     private var imageArray: [UIImage]?
     private var currentImageNumber: Int = 0
     private var contentArray: [SliderContents]?
 
+    // MARK: - Business Logic
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -30,14 +34,14 @@ class ImageCollectionViewWithPointAndDetailsContainerView: UIView {
         commonInit()
     }
 
-    func commonInit() {
+    private func commonInit() {
         let view = nibInstantiate(autoResizingMask: [.flexibleHeight, .flexibleHeight])
         view.frame = self.bounds
         addSubview(view)
         setupUICollectionView()
     }
 
-    func setupUICollectionView() {
+    private func setupUICollectionView() {
         imageCollectionView.delegate = self
         imageCollectionView.dataSource = self
         imageCollectionView.register(
@@ -73,7 +77,7 @@ extension ImageCollectionViewWithPointAndDetailsContainerView: UICollectionViewD
         }
         if let safeContentArray = contentArray {
             let imagePosterPath = safeContentArray[indexPath .row].posterPath
-            cell.configure(image: FetchImageViewUIModel(imageLink: imagePosterPath))
+            cell.configure(uiModel: FetchImageViewUIModel(imageLink: imagePosterPath))
         }
         return cell
     }

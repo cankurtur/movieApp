@@ -8,9 +8,11 @@
 import Foundation
 
 struct TvSeriesDetailsViewModel {
+    // MARK: - Properties
     let networking = Networking()
     var genresUserDefault = GenresUserDefaults()
 
+    // MARK: - Business Logic
     func getTvSeriesDetails(id: Int, completion: @escaping(TvSeriesDetailsUIModel) -> Void ) {
         let tvSeriesDetailsEndPoint = "\(APIConstants.tvSeriesDetailsBaseURL)\(id)\(APIConstants.tvSeriesDetailsLastURL)"
         networking.performRequest(url: tvSeriesDetailsEndPoint) { (result: Result<TvSeriesDetailsResponseModel, Error>) in

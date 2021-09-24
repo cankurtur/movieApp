@@ -8,8 +8,10 @@
 import Foundation
 
 struct FetchImageViewUIModel {
+    // MARK: - Properties
     let imageLink: String
 
+    // MARK: - Business Logic
     init(imageLink: String) {
         self.imageLink = imageLink
     }

@@ -8,8 +8,10 @@
 import UIKit
 
 struct ImageCollectionViewWithPointAndDetailsContainerViewUIModel {
+    // MARK: - Properties
     let contents: [SliderContents]
 
+    // MARK: - Business Logic
     init(contents: [SliderContents]) {
         self.contents = contents
     }
@@ -24,10 +26,12 @@ struct ImageCollectionViewWithPointAndDetailsContainerViewUIModel {
 }
 
 struct SliderContents {
+    // MARK: - Properties
     let image: UIImage
     let pointAndDetails: PointAndDetailsContainerViewUIModel
     let posterPath: String
 
+    // MARK: - Business Logic
     init(image: UIImage,
          pointAndDetails: PointAndDetailsContainerViewUIModel,
          posterPath: String) {

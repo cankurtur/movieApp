@@ -8,6 +8,7 @@
 import Foundation
 
 struct TvSeriesDetailsUIModel {
+    // MARK: - Properties
     let posterPath: String
     let voteAverage: String
     let name: String
@@ -17,6 +18,7 @@ struct TvSeriesDetailsUIModel {
     let overview: String
     let numberOfSeasons: String
 
+    // MARK: - Business Logic
     init(tvSeriesDetailsResponseModel: TvSeriesDetailsResponseModel) {
         // Tv Series Types
         let editedDetails = tvSeriesDetailsResponseModel.genres.reduce("") { result, genres -> String in

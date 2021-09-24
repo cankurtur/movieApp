@@ -8,11 +8,13 @@
 import Foundation
 
 struct LabelWithCircleImageViewUIModel {
+    // MARK: - Properties
     let titleText: String
     let contents: [CircleImageAndTextContents]
 }
 
 struct CircleImageAndTextContents {
+    // MARK: - Properties
     let posterPath: String
     let text: String
 }

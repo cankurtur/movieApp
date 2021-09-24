@@ -16,14 +16,13 @@ class CustomTableViewCell: UITableViewCell {
         static let shadowOffset: CGSize = CGSize.init(width: 0, height: 3)
         static let shadowOpacity: Float = 0.1
     }
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var cardViewWithImageAndDetails: CardViewWithImageAndDetails!
     @IBOutlet private weak var viewContainer: UIView!
 
     // MARK: - Business Logic
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -32,8 +31,6 @@ class CustomTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
     func setupShadow() {

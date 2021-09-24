@@ -42,7 +42,7 @@ class MoviesDetailsViewController: UIViewController {
         subjectLabel.textColor = .almostBlack
     }
 
-    func configure() {
+    private func configure() {
         guard let moviesID = moviesID else { return }
 
         viewModel.getMoviesDetails(id: moviesID) { moviesDetailsUIModel in

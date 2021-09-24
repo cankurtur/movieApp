@@ -8,6 +8,7 @@
 import Foundation
 
 struct TvSeriesViewModel {
+    // MARK: - Properties
     let networking = Networking()
     var genresUserDefault = GenresUserDefaults()
 
@@ -15,6 +16,7 @@ struct TvSeriesViewModel {
         getTvSeriesGenres()
     }
 
+    // MARK: - Business Logic
     func getPopularTvSeries(completion: @escaping([SliderContents]) -> Void) {
         var imageCollectionWithPDArray: [SliderContents] = []
         networking.performRequest(url: APIConstants.popularTvSeriesURL) { (result: Result<PopularTvSeriesResponseModel, Error>) in

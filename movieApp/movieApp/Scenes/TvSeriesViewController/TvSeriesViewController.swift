@@ -22,11 +22,12 @@ class TvSeriesViewController: UIViewController {
     @IBOutlet private weak var imageCollectionViewWithPD: ImageCollectionViewWithPointAndDetailsContainerView!
     @IBOutlet private weak var topRatedSeriesCollectionView: AutoSizedCollectionView!
 
-
+    // MARK: - Properties
     private var viewModel = TvSeriesViewModel()
     private var verticalCardViewUIModel: [VerticalCardViewWithImageAndDetailsUIModel]?
     private var tvID: Int?
-    // MARK: - Business Logic
+
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

@@ -8,8 +8,10 @@
 import Foundation
 
 struct MoviesDetailsViewModel {
+    // MARK: - Properties
     let networking = Networking()
 
+    // MARK: - Business Logic
     func getMoviesDetails(id: Int, completion: @escaping(MoviesDetailsUIModel) -> Void ) {
         let moviesDetailsEndPoint = "\(APIConstants.moviesDetailsBaseURL)\(id)\(APIConstants.moviesDetailsLastURL)"
         networking.performRequest(url: moviesDetailsEndPoint) { (result: Result<MoviesDetailsResponseModel, Error>) in

@@ -8,15 +8,19 @@
 import UIKit
 
 class LabelWithCircleImageView: UIView {
+    // MARK: - Constants
     private struct Constants {
         static let collectionViewIdentifier: String = "circleImageCell"
     }
 
+    // MARK: - IBOutlets
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var circleImagesCollectionView: UICollectionView!
 
+    // MARK: - Properties
     var model: LabelWithCircleImageViewUIModel?
 
+    // MARK: - Business Logic
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -44,7 +48,7 @@ class LabelWithCircleImageView: UIView {
         titleLabel.text = viewModel.titleText
     }
 }
-
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension LabelWithCircleImageView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         model?.contents.count ?? 0
@@ -62,7 +66,7 @@ extension LabelWithCircleImageView: UICollectionViewDelegate, UICollectionViewDa
         return cell
     }
 }
-
+// MARK: - UICollectionViewDelegateFlowLayout
 extension LabelWithCircleImageView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: 100, height: 100)

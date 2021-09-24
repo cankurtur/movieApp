@@ -16,12 +16,13 @@ class VerticalCardCollectionViewCell: UICollectionViewCell {
         static let shadowOpacity: Float = 0.1
     }
 
+    // MARK: - IBOutlets
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var verticalCardView: VerticalCardViewWithImageAndDetails!
 
+    // MARK: - Business Logic
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func layoutSubviews() {

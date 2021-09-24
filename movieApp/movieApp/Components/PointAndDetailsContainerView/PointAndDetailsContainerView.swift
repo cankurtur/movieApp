@@ -8,12 +8,13 @@
 import UIKit
 
 class PointAndDetailsContainerView: UIView {
+    // MARK: - IBOutlets
     @IBOutlet private weak var iconWithPointLabelView: IconWithPointLabel!
     @IBOutlet private weak var titleText: UILabel!
     @IBOutlet private weak var detailsText: UILabel!
     @IBOutlet private weak var separatorView: UIView!
 
-    
+    // MARK: - Business Logic
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

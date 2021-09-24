@@ -8,12 +8,12 @@
 import UIKit
 
 class VerticalCardViewWithImageAndDetails: UIView {
-    // MARK: - Constant
+    // MARK: - Constants
     struct Constants {
         static let cornerRadius: CGFloat = 8.0
     }
 
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var imageView: FetchImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var iconWithPointLabel: IconWithPointLabel!

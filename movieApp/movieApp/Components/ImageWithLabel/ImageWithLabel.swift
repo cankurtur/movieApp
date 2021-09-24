@@ -14,7 +14,7 @@ class ImageWithLabel: UIView {
         static let dateOpacity: CGFloat = 0.6
     }
 
-    // MARK: - IBOutlet
+    // MARK: - IBOutlets
     @IBOutlet private weak var iconImageView: UIImageView!
     @IBOutlet private weak var dateLabel: UILabel!
 

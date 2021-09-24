@@ -8,6 +8,7 @@
 import Foundation
 
 struct MoviesDetailsUIModel {
+    // MARK: - Properties
     let posterPath: String
     let voteAverage: String
     let title: String
@@ -16,6 +17,7 @@ struct MoviesDetailsUIModel {
     let releaseDate: String
     let overview: String
 
+    // MARK: - Business Logic
     init(moviesDetailsResponseModel: MoviesDetailsResponseModel) {
         self.posterPath = moviesDetailsResponseModel.posterPath
         self.voteAverage = String(format: "%.1f", moviesDetailsResponseModel.voteAverage)

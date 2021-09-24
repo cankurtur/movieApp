@@ -8,14 +8,16 @@
 import UIKit
 
 class CircleImageCollectionViewCell: UICollectionViewCell {
+    // MARK: - IBOutlets
     @IBOutlet private weak var circleImage: FetchImageView!
     @IBOutlet private weak var textLabel: UILabel!
 
+    // MARK: - Business Logic
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
-        // Initialization code
     }
+    
     private func setupUI() {
         textLabel.font = .body2
         textLabel.textColor = .almostBlack

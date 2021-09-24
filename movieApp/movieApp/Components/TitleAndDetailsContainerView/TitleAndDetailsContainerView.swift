@@ -8,6 +8,7 @@
 import UIKit
 
 class TitleAndDetailsContainerView: UIView {
+    // MARK: - IBOutlets
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var detailsLabel: UILabel!
     @IBOutlet private weak var durationView: ImageWithLabel!
@@ -15,6 +16,7 @@ class TitleAndDetailsContainerView: UIView {
     @IBOutlet private weak var typeView: ImageWithLabel!
     @IBOutlet private weak var separatorView: UIView!
 
+    // MARK: - Business Logic
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

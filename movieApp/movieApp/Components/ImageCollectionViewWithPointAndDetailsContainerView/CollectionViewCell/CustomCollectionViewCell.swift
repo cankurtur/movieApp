@@ -8,14 +8,15 @@
 import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
+    // MARK: - IBOutlets
     @IBOutlet private weak var imageView: FetchImageView!
 
+    // MARK: - Business Logic
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    func configure(image: FetchImageViewUIModel) {
-        imageView.configure(viewModel: image)
+    func configure(uiModel: FetchImageViewUIModel) {
+        imageView.configure(viewModel: uiModel)
     }
 }
