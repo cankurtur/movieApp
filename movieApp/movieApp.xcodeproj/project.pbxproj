@@ -94,6 +94,9 @@
 		2666978426FE04D8009A717B /* TvSeries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2666978326FE04D8009A717B /* TvSeries.storyboard */; };
 		2666978526FE04D8009A717B /* TvSeries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2666978326FE04D8009A717B /* TvSeries.storyboard */; };
 		2666978626FE04D8009A717B /* TvSeries.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2666978326FE04D8009A717B /* TvSeries.storyboard */; };
+		2666979526FE05C3009A717B /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2666979426FE05C3009A717B /* Movie.storyboard */; };
+		2666979626FE05C3009A717B /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2666979426FE05C3009A717B /* Movie.storyboard */; };
+		2666979726FE05C3009A717B /* Movie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2666979426FE05C3009A717B /* Movie.storyboard */; };
 		26684F9626CD330200E5BAD9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684F9526CD330200E5BAD9 /* Fonts.swift */; };
 		26684F9726CD330200E5BAD9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684F9526CD330200E5BAD9 /* Fonts.swift */; };
 		26684F9826CD330200E5BAD9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26684F9526CD330200E5BAD9 /* Fonts.swift */; };
@@ -413,6 +416,7 @@
 		2653B82C26F214CC006B8655 /* NowPlayingResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingResponseModel.swift; sourceTree = "<group>"; };
 		2666973D26FDE48A009A717B /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
 		2666978326FE04D8009A717B /* TvSeries.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TvSeries.storyboard; sourceTree = "<group>"; };
+		2666979426FE05C3009A717B /* Movie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movie.storyboard; sourceTree = "<group>"; };
 		26684F9526CD330200E5BAD9 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		26684FA226CD34F800E5BAD9 /* UIImageThemeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageThemeExtension.swift; sourceTree = "<group>"; };
 		26684FAC26CD351C00E5BAD9 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -582,6 +586,7 @@
 			isa = PBXGroup;
 			children = (
 				2618834826C16E19003EF23C /* MainViewController.swift */,
+				2666979426FE05C3009A717B /* Movie.storyboard */,
 				2699355E26C1C430008BB5A8 /* MainViewModel.swift */,
 			);
 			path = MainViewController;
@@ -1079,6 +1084,7 @@
 				26A37B2E26C4095E00E539F8 /* SF-Pro-Display-Bold.otf in Resources */,
 				26A37B0A26C4095E00E539F8 /* SF-Pro-Text-ThinItalic.otf in Resources */,
 				2685168C26EB6945009D5576 /* PointAndDetailsContainerView.xib in Resources */,
+				2666979526FE05C3009A717B /* Movie.storyboard in Resources */,
 				26A37AFB26C4095E00E539F8 /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				26A37B6726C4095E00E539F8 /* SF-Pro-Display-Thin.otf in Resources */,
 				26A37B5526C4095E00E539F8 /* SF-Pro-Rounded-Semibold.otf in Resources */,
@@ -1137,6 +1143,7 @@
 				26A37AFC26C4095E00E539F8 /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				26A37B5F26C4095E00E539F8 /* SF-Pro-Rounded-Regular.otf in Resources */,
 				26A37AE126C4095E00E539F8 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
+				2666979626FE05C3009A717B /* Movie.storyboard in Resources */,
 				261882EF26C14528003EF23C /* CardViewWithImageAndDetails.xib in Resources */,
 				26A37B0526C4095E00E539F8 /* SF-Pro-Display-Ultralight.otf in Resources */,
 				26FFFFE226F7546A00A6CD2E /* VerticalCardViewWithImageAndDetails.xib in Resources */,
@@ -1209,6 +1216,7 @@
 				26A37AFD26C4095E00E539F8 /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				26A37B6026C4095E00E539F8 /* SF-Pro-Rounded-Regular.otf in Resources */,
 				26A37AE226C4095E00E539F8 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
+				2666979726FE05C3009A717B /* Movie.storyboard in Resources */,
 				261882F026C14528003EF23C /* CardViewWithImageAndDetails.xib in Resources */,
 				26A37B0626C4095E00E539F8 /* SF-Pro-Display-Ultralight.otf in Resources */,
 				26FFFFE326F7546A00A6CD2E /* VerticalCardViewWithImageAndDetails.xib in Resources */,
