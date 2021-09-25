@@ -17,9 +17,11 @@ struct TvSeriesDetailsUIModel {
     let seriesRunTime: String
     let overview: String
     let numberOfSeasons: String
+    let castHeadline: String
+    let cast: [CircleImageAndTextContents]
 
     // MARK: - Business Logic
-    init(tvSeriesDetailsResponseModel: TvSeriesDetailsResponseModel) {
+    init(tvSeriesDetailsResponseModel: TvSeriesDetailsResponseModel, tvSeriesCastResponseModel: TvSeriesCastResponseModel) {
         // Tv Series Types
         let editedDetails = tvSeriesDetailsResponseModel.genres.reduce("") { result, genres -> String in
             var detailsString = result
@@ -59,5 +61,16 @@ struct TvSeriesDetailsUIModel {
         self.voteAverage = String(format: "%.1f", tvSeriesDetailsResponseModel.voteAverage)
         self.overview = tvSeriesDetailsResponseModel.overview
         self.numberOfSeasons = "\(tvSeriesDetailsResponseModel.numberOfSeasons) seasons"
+        self.castHeadline = "Cast"
+
+        var castArray: [CircleImageAndTextContents] = []
+        for tvSeriesCast in tvSeriesCastResponseModel.cast {
+            let circleImageAndTextContent = CircleImageAndTextContents(
+                posterPath: tvSeriesCast.profilePath ?? "",
+                text: tvSeriesCast.name ?? "-"
+            )
+            castArray.append(circleImageAndTextContent)
+        }
+        self.cast = castArray
     }
 }

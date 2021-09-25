@@ -12,8 +12,8 @@ struct TvSeriesCastResponseModel: Codable {
 }
 
 struct CastResponseModel: Codable {
-    let name: String
-    let profilePath: String
+    let name: String?
+    let profilePath: String?
 
     private enum CodingKeys: String, CodingKey {
         case name = "name"

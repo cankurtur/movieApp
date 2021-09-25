@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="-96" width="390" height="940"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" restorationIdentifier="detailsVC" translatesAutoresizingMaskIntoConstraints="NO" id="9qb-nx-kCq" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="629"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="689"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v45-V4-G5T" customClass="FetchImageView" customModule="movieApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="400"/>
@@ -78,19 +78,29 @@
                                                     <constraint firstAttribute="width" constant="81" id="sOu-qh-0zi"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ek0-GD-tF8" customClass="LabelWithCircleImageView" customModule="movieApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="599" width="390" height="140"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="140" id="df8-hb-Fnn"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Cgn-8a-5C7" firstAttribute="top" secondItem="v45-V4-G5T" secondAttribute="bottom" constant="20" id="6Md-IX-Ld5"/>
                                             <constraint firstAttribute="trailing" secondItem="Cgn-8a-5C7" secondAttribute="trailing" constant="24" id="8XO-EH-zuG"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ek0-GD-tF8" secondAttribute="trailing" id="9yD-bd-fcS"/>
                                             <constraint firstAttribute="trailing" secondItem="v45-V4-G5T" secondAttribute="trailing" id="A6n-65-fQY"/>
                                             <constraint firstAttribute="trailing" secondItem="QX7-iB-FBF" secondAttribute="trailing" constant="285" id="BD0-YQ-6Nc"/>
-                                            <constraint firstAttribute="bottom" secondItem="QX7-iB-FBF" secondAttribute="bottom" constant="50" id="Dmz-eq-4LC"/>
+                                            <constraint firstItem="Ek0-GD-tF8" firstAttribute="bottom" secondItem="9qb-nx-kCq" secondAttribute="bottom" constant="50" id="BVb-wx-YDa"/>
                                             <constraint firstItem="t5R-Xc-n8Q" firstAttribute="leading" secondItem="9qb-nx-kCq" secondAttribute="leading" constant="24" id="IRT-oD-6s7"/>
+                                            <constraint firstItem="Ek0-GD-tF8" firstAttribute="top" secondItem="QX7-iB-FBF" secondAttribute="bottom" constant="20" id="Nkw-pF-9cP"/>
                                             <constraint firstItem="QX7-iB-FBF" firstAttribute="leading" secondItem="9qb-nx-kCq" secondAttribute="leading" constant="24" id="XnJ-45-QmI"/>
                                             <constraint firstAttribute="trailing" secondItem="t5R-Xc-n8Q" secondAttribute="trailing" constant="24" id="Z8R-Ne-FKZ"/>
                                             <constraint firstItem="QX7-iB-FBF" firstAttribute="top" secondItem="t5R-Xc-n8Q" secondAttribute="bottom" constant="10" id="aPw-a8-DdU"/>
                                             <constraint firstItem="v45-V4-G5T" firstAttribute="top" secondItem="9qb-nx-kCq" secondAttribute="top" id="bdz-w8-Obq"/>
+                                            <constraint firstItem="Ek0-GD-tF8" firstAttribute="leading" secondItem="9qb-nx-kCq" secondAttribute="leading" id="fbs-Uk-jTn"/>
                                             <constraint firstItem="v45-V4-G5T" firstAttribute="leading" secondItem="9qb-nx-kCq" secondAttribute="leading" id="iLr-bs-fxF"/>
                                             <constraint firstItem="t5R-Xc-n8Q" firstAttribute="top" secondItem="Cgn-8a-5C7" secondAttribute="bottom" constant="20" id="kqn-md-1AQ"/>
                                             <constraint firstItem="Cgn-8a-5C7" firstAttribute="leading" secondItem="9qb-nx-kCq" secondAttribute="leading" constant="24" id="llb-sT-TFq"/>
@@ -124,6 +134,7 @@
                     <size key="freeformSize" width="390" height="844"/>
                     <connections>
                         <outlet property="iconWithPointLabelView" destination="1Bz-oN-5Xx" id="dhY-jV-Xvu"/>
+                        <outlet property="labelWithCircleImageView" destination="Ek0-GD-tF8" id="TfS-9Q-EK6"/>
                         <outlet property="posterImageView" destination="v45-V4-G5T" id="eum-LY-hmL"/>
                         <outlet property="seasonLabel" destination="4fP-K5-SDe" id="M80-DK-3Ww"/>
                         <outlet property="seasonView" destination="QX7-iB-FBF" id="Qni-JX-9Pn"/>

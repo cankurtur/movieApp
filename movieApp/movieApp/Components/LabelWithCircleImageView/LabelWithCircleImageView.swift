@@ -10,7 +10,8 @@ import UIKit
 class LabelWithCircleImageView: UIView {
     // MARK: - Constants
     private struct Constants {
-        static let collectionViewIdentifier: String = "circleImageCell"
+        static let circleImagesCollectionViewIdentifier: String = "circleImageCell"
+        static let circleImagesCollectionViewNibName: String = "CircleImageCollectionViewCell"
     }
 
     // MARK: - IBOutlets
@@ -36,6 +37,7 @@ class LabelWithCircleImageView: UIView {
         view.frame = self.bounds
         addSubview(view)
         setupUI()
+        setupUICollectionView()
     }
 
     private func setupUI() {
@@ -43,9 +45,19 @@ class LabelWithCircleImageView: UIView {
         titleLabel.textColor = . almostBlack
     }
 
+    private func setupUICollectionView() {
+        circleImagesCollectionView.delegate = self
+        circleImagesCollectionView.dataSource = self
+        circleImagesCollectionView.register(
+            UINib(nibName: Constants.circleImagesCollectionViewNibName, bundle: nil),
+            forCellWithReuseIdentifier: Constants.circleImagesCollectionViewIdentifier
+        )
+    }
+
     func configure(viewModel: LabelWithCircleImageViewUIModel) {
         self.model = viewModel
         titleLabel.text = viewModel.titleText
+        circleImagesCollectionView.reloadData()
     }
 }
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
@@ -55,7 +67,7 @@ extension LabelWithCircleImageView: UICollectionViewDelegate, UICollectionViewDa
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = circleImagesCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.collectionViewIdentifier, for: indexPath)
+        guard let cell = circleImagesCollectionView.dequeueReusableCell(withReuseIdentifier: Constants.circleImagesCollectionViewIdentifier, for: indexPath)
                 as? CircleImageCollectionViewCell, let model = model else {
             return UICollectionViewCell()
         }

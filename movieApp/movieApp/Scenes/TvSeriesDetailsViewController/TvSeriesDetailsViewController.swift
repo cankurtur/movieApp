@@ -20,6 +20,7 @@ class TvSeriesDetailsViewController: UIViewController {
     @IBOutlet private weak var subjectLabel: UILabel!
     @IBOutlet private weak var seasonView: UIView!
     @IBOutlet private weak var seasonLabel: UILabel!
+    @IBOutlet private weak var labelWithCircleImageView: LabelWithCircleImageView!
 
     // MARK: - Properties
     private var viewModel: TvSeriesDetailsViewModel = TvSeriesDetailsViewModel()
@@ -28,7 +29,8 @@ class TvSeriesDetailsViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
+//        setBackBarButtonCustom()
+//        setupNavigationBar()
         setupUI()
     }
 
@@ -73,6 +75,28 @@ class TvSeriesDetailsViewController: UIViewController {
             )
             self.subjectLabel.text = detailsUIModel.overview
             self.seasonLabel.text = detailsUIModel.numberOfSeasons
+            self.labelWithCircleImageView.configure(
+                viewModel: LabelWithCircleImageViewUIModel(
+                    titleText: detailsUIModel.castHeadline,
+                    contents: detailsUIModel.cast
+                )
+            )
         }
     }
 }
+
+// extension TvSeriesDetailsViewController {
+//    func setBackBarButtonCustom() {
+//        let btnLeftMenu: UIButton = UIButton()
+//        btnLeftMenu.setImage(UIImage(named: "clock"), for: UIControl.State())
+//        btnLeftMenu.addTarget(self, action: #selector(TvSeriesDetailsViewController.onClcikBack), for: UIControl.Event.touchUpInside)
+//        btnLeftMenu.frame = CGRect(x: 0, y: 0, width: 33 / 2, height: 27 / 2)
+//        let barButton = UIBarButtonItem(customView: btnLeftMenu)
+//        self.navigationItem.leftBarButtonItem = barButton
+//        
+//    }
+//
+//    @objc func onClcikBack() {
+//        _ = self.navigationController?.popViewController(animated: true)
+//    }
+// }

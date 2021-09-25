@@ -80,6 +80,7 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(with: model[indexPath.row])
         return cell
     }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let model = cardViewUIModel {
             let moviesID = model[indexPath.row].id
