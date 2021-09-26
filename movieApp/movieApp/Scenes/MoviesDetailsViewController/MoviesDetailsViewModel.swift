@@ -14,11 +14,22 @@ struct MoviesDetailsViewModel {
     // MARK: - Business Logic
     func getMoviesDetails(id: Int, completion: @escaping(MoviesDetailsUIModel) -> Void ) {
         let moviesDetailsEndPoint = "\(APIConstants.moviesDetailsBaseURL)\(id)\(APIConstants.moviesDetailsLastURL)"
+        let moviesCastEndPoint = "\(APIConstants.moviesCastBaseURL)\(id)\(APIConstants.moviesCastLastURL)"
         networking.performRequest(url: moviesDetailsEndPoint) { (result: Result<MoviesDetailsResponseModel, Error>) in
             switch result {
             case.success(let moviesDetailsResponseModel):
-                let moviesDetailsUIModel = MoviesDetailsUIModel.init(moviesDetailsResponseModel: moviesDetailsResponseModel)
-                completion(moviesDetailsUIModel)
+                networking.performRequest(url: moviesCastEndPoint) { (result: Result<MoviesCastResponseModel, Error>) in
+                    switch result {
+                    case .success(let moviesCastResponseModel):
+                        let moviesDetailsUIModel = MoviesDetailsUIModel.init(
+                            moviesDetailsResponseModel: moviesDetailsResponseModel,
+                            moviesCastResponseModel: moviesCastResponseModel
+                        )
+                        completion(moviesDetailsUIModel)
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
             case.failure(let error):
                 print(error)
             }

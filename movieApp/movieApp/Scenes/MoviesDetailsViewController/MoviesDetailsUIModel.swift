@@ -16,9 +16,12 @@ struct MoviesDetailsUIModel {
     let runtime: String
     let releaseDate: String
     let overview: String
+    let director: String
+    let castHeadline: String
+    let cast: [CircleImageAndTextContents]
 
     // MARK: - Business Logic
-    init(moviesDetailsResponseModel: MoviesDetailsResponseModel) {
+    init(moviesDetailsResponseModel: MoviesDetailsResponseModel, moviesCastResponseModel: MoviesCastResponseModel) {
         self.posterPath = moviesDetailsResponseModel.posterPath
         self.voteAverage = String(format: "%.1f", moviesDetailsResponseModel.voteAverage)
         self.title = moviesDetailsResponseModel.title
@@ -35,5 +38,22 @@ struct MoviesDetailsUIModel {
         self.runtime = "\(moviesDetailsResponseModel.runtime) min"
         self.releaseDate = moviesDetailsResponseModel.releaseDate
         self.overview = moviesDetailsResponseModel.overview
+
+        // Director
+        self.director = ""
+
+        // Cast
+        self.castHeadline = "Cast"
+
+        var castArray: [CircleImageAndTextContents] = []
+        for moviesCast in moviesCastResponseModel.cast {
+            let circleImageAndTextContent = CircleImageAndTextContents(
+                id: moviesCast.id,
+                posterPath: moviesCast.profilePath ?? "",
+                text: moviesCast.name ?? "-"
+            )
+            castArray.append(circleImageAndTextContent)
+        }
+        self.cast = castArray
     }
 }

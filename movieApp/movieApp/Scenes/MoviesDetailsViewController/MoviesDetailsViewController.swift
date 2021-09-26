@@ -13,6 +13,8 @@ class MoviesDetailsViewController: UIViewController {
     @IBOutlet private weak var iconWithPointLabelView: IconWithPointLabel!
     @IBOutlet private weak var titleAndDetailsView: TitleAndDetailsContainerView!
     @IBOutlet private weak var subjectLabel: UILabel!
+    @IBOutlet private weak var directorLabel: UILabel!
+    @IBOutlet private weak var labelWithCircleImageView: LabelWithCircleImageView!
 
     // MARK: - Properties
     private var viewModel: MoviesDetailsViewModel = MoviesDetailsViewModel()
@@ -21,6 +23,7 @@ class MoviesDetailsViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        labelWithCircleImageView.someDelegate = self
 //        setupNavigationBar()
         setupUI()
     }
@@ -57,6 +60,28 @@ class MoviesDetailsViewController: UIViewController {
                 )
             )
             self.subjectLabel.text = moviesDetailsUIModel.overview
+            self.directorLabel.text = moviesDetailsUIModel.director
+            self.labelWithCircleImageView.configure(
+                viewModel: LabelWithCircleImageViewUIModel(
+                    titleText: moviesDetailsUIModel.castHeadline,
+                    contents: moviesDetailsUIModel.cast
+                )
+            )
+        }
+    }
+}
+
+extension MoviesDetailsViewController: PersonID {
+    func passPersonIDBack(id: Int) {
+        showPeopleDetailsVC(personID: id)
+    }
+}
+
+extension MoviesDetailsViewController {
+    func showPeopleDetailsVC(personID: Int) {
+        if let peopleDetailsVC = UIStoryboard(name: "PeopleDetails", bundle: nil).instantiateInitialViewController() as? PeopleDetailsViewController {
+            peopleDetailsVC.personID = personID
+            navigationController?.pushViewController(peopleDetailsVC, animated: true)
         }
     }
 }
