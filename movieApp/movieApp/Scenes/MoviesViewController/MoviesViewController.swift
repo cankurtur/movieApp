@@ -30,6 +30,7 @@ class MoviesViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        imageCollectionViewAndDetails.someDelegate = self
         setupUI()
         setupBinding()
     }
@@ -108,5 +109,11 @@ extension MoviesViewController {
             moviesDetailVC.moviesID = id
             navigationController?.pushViewController(moviesDetailVC, animated: true)
         }
+    }
+}
+
+extension MoviesViewController: MoviesAndTvSeriesID {
+    func passIDBack(id: Int) {
+        showMoviesDetailVC(id: id)
     }
 }

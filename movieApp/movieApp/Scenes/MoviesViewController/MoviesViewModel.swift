@@ -23,6 +23,7 @@ struct MoviesViewModel {
             switch result {
             case .success(let nowPlayingMoviesResponseModel):
                 for nowPlayingMovies in nowPlayingMoviesResponseModel.results {
+                    let id = nowPlayingMovies.id
                     let titleText = nowPlayingMovies.title
                     let voteAverage = String(format: "%.1f", nowPlayingMovies.voteAverage)
                     let genreIds = nowPlayingMovies.genreIds
@@ -30,6 +31,7 @@ struct MoviesViewModel {
                     let detailsText = self.movieGenresIdToString(intArray: genreIds)
 
                     let imageCollectionWithPDModel = SliderContents(
+                        id: id,
                         image: .dummyImage,
                         pointAndDetails: PointAndDetailsContainerViewUIModel(
                             iconWithPointLabelView: IconWithPointLabelUIModel(

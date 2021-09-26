@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol MoviesAndTvSeriesID {
+    func passIDBack(id: Int)
+}
+
 class ImageCollectionViewWithPointAndDetailsContainerView: UIView {
     // MARK: - Constants
     struct Constants {
@@ -18,10 +22,14 @@ class ImageCollectionViewWithPointAndDetailsContainerView: UIView {
     @IBOutlet private weak var imageCollectionView: UICollectionView!
     @IBOutlet private weak var pointsAndDetailsContainerView: PointAndDetailsContainerView!
 
+    // swiftlint:disable weak_delegate
+
     // MARK: - Properties
     private var imageArray: [UIImage]?
     private var currentImageNumber: Int = 0
     private var contentArray: [SliderContents]?
+    var model: ImageCollectionViewWithPointAndDetailsContainerViewUIModel?
+    var someDelegate: MoviesAndTvSeriesID?
 
     // MARK: - Business Logic
     override init(frame: CGRect) {
@@ -51,6 +59,7 @@ class ImageCollectionViewWithPointAndDetailsContainerView: UIView {
     }
 
     func configure(viewModel: ImageCollectionViewWithPointAndDetailsContainerViewUIModel) {
+        self.model = viewModel
         imageArray = viewModel.fetchImages()
         contentArray = viewModel.contents
         imageCollectionView.reloadData()
@@ -80,6 +89,12 @@ extension ImageCollectionViewWithPointAndDetailsContainerView: UICollectionViewD
             cell.configure(uiModel: FetchImageViewUIModel(imageLink: imagePosterPath))
         }
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let model = model {
+            someDelegate?.passIDBack(id: model.contents[indexPath.row].id)
+        }
     }
 }
 

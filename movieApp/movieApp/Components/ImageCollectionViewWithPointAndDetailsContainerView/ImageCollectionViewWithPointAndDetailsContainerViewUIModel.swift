@@ -27,14 +27,17 @@ struct ImageCollectionViewWithPointAndDetailsContainerViewUIModel {
 
 struct SliderContents {
     // MARK: - Properties
+    let id: Int
     let image: UIImage
     let pointAndDetails: PointAndDetailsContainerViewUIModel
     let posterPath: String
 
     // MARK: - Business Logic
-    init(image: UIImage,
+    init(id: Int,
+         image: UIImage,
          pointAndDetails: PointAndDetailsContainerViewUIModel,
          posterPath: String) {
+        self.id = id
         self.image = image
         self.pointAndDetails = pointAndDetails
         self.posterPath = posterPath

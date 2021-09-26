@@ -23,6 +23,7 @@ struct TvSeriesViewModel {
             switch result {
             case .success(let popularTvSeriesResponseModel):
                 for popularTvSeries in popularTvSeriesResponseModel.results {
+                    let id = popularTvSeries.id
                     let titleText = popularTvSeries.name
                     let voteAverage = String(format: "%.1f", popularTvSeries.voteAverage)
                     let genreIds = popularTvSeries.genreIds
@@ -30,6 +31,7 @@ struct TvSeriesViewModel {
                     let detailsText = genresIdToString(intArray: genreIds)
 
                     let imageCollectionWithPDModel = SliderContents(
+                        id: id,
                         image: .dummyImage,
                         pointAndDetails: PointAndDetailsContainerViewUIModel(
                             iconWithPointLabelView: IconWithPointLabelUIModel(
