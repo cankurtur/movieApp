@@ -11,8 +11,12 @@ import Kingfisher
 class FetchImageView: UIImageView {
     // MARK: - Business Logic
     func configure(viewModel: FetchImageViewUIModel) {
-        image = .dummyImage
-        let imageURL = URL(string: "\(APIConstants.imageBaseURL)\(viewModel.imageLink)")
-        self.kf.setImage(with: imageURL)
+        if viewModel.imageLink.isEmpty {
+            image = .dummyImage
+        } else {
+            image = .dummyImage
+            let imageURL = URL(string: "\(APIConstants.imageBaseURL)\(viewModel.imageLink)")
+            self.kf.setImage(with: imageURL)
+        }
     }
 }
