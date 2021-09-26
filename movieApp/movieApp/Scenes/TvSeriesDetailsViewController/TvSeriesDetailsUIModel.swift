@@ -17,6 +17,7 @@ struct TvSeriesDetailsUIModel {
     let seriesRunTime: String
     let overview: String
     let numberOfSeasons: String
+    let creators: String
     let castHeadline: String
     let cast: [CircleImageAndTextContents]
 
@@ -61,6 +62,23 @@ struct TvSeriesDetailsUIModel {
         self.voteAverage = String(format: "%.1f", tvSeriesDetailsResponseModel.voteAverage)
         self.overview = tvSeriesDetailsResponseModel.overview
         self.numberOfSeasons = "\(tvSeriesDetailsResponseModel.numberOfSeasons) seasons"
+
+        // Creators
+        var creators = ""
+        if tvSeriesDetailsResponseModel.createdBy.isEmpty {
+            creators = "Creators: Unknown"
+        } else {
+            let creatorsEdited = tvSeriesDetailsResponseModel.createdBy.reduce("Creators: ") { result, createdBy -> String in
+                var creatorString = result
+                creatorString += "\(createdBy.name), "
+                return creatorString
+            }
+            creators = String(creatorsEdited.dropLast(2))
+        }
+
+        self.creators = creators
+
+        // Cast
         self.castHeadline = "Cast"
 
         var castArray: [CircleImageAndTextContents] = []

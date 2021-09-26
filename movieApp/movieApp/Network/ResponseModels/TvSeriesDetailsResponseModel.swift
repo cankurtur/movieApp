@@ -18,6 +18,7 @@ struct TvSeriesDetailsResponseModel: Codable {
     let nextEpisodeToAir: NextEpisodeToAirResponseModel?
     let overview: String
     let numberOfSeasons: Int
+    let createdBy: [Creator]
 
     private enum CodingKeys: String, CodingKey {
         case posterPath = "poster_path"
@@ -30,6 +31,7 @@ struct TvSeriesDetailsResponseModel: Codable {
         case nextEpisodeToAir = "next_episode_to_air"
         case overview = "overview"
         case numberOfSeasons = "number_of_seasons"
+        case createdBy = "created_by"
     }
 }
 
@@ -44,4 +46,9 @@ struct NextEpisodeToAirResponseModel: Codable {
     private enum CodingKeys: String, CodingKey {
         case airDate = "air_date"
     }
+}
+
+struct Creator: Codable {
+    let id: Int?
+    let name: String
 }
