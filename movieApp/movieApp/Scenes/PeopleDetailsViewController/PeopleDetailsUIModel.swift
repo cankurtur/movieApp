@@ -13,6 +13,7 @@ struct PeopleDetailsUIModel {
     let bioText: String
     let bornText: String
     let bioButtonIsHide: Bool
+    let bornLabelIsHide: Bool
 
     init(peopleDetailsResponseModel: PeopleDetailsResponseModel) {
         self.profilePath = peopleDetailsResponseModel.profilePath ?? ""
@@ -26,12 +27,15 @@ struct PeopleDetailsUIModel {
         }
 
         self.bioText = peopleDetailsResponseModel.biography
+
         // Born Text
         if let birthday = peopleDetailsResponseModel.birthday, let placeOfBirth = peopleDetailsResponseModel.placeOfBirth {
-            let bornString = "Born: \(birthday) in \(placeOfBirth)"
+            let bornString = "\(birthday) in \(placeOfBirth)"
             self.bornText = bornString
+            self.bornLabelIsHide = false
         } else {
             self.bornText = ""
+            self.bornLabelIsHide = true
         }
     }
 }

@@ -13,6 +13,8 @@ class Fonts {
     static let headline2 = getSFText(.bold, size: 28)
     static let headline3 = getSFText(.bold, size: 22)
     static let headline4 = getSFText(.bold, size: 20)
+    static let headline5 = getSFText(.bold, size: 17)
+    
     static let subtitle1 = getSFText(.medium, size: 15)
     static let body1 = getSFText(.regular, size: 17)
     static let body2 = getSFText(.regular, size: 15)

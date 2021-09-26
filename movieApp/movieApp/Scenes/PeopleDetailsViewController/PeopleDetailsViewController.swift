@@ -11,6 +11,7 @@ class PeopleDetailsViewController: UIViewController {
     @IBOutlet private weak var posterImage: FetchImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var bioLabel: UILabel!
+    @IBOutlet private weak var bornText: UILabel!
     @IBOutlet private weak var bornLabel: UILabel!
     @IBOutlet private weak var seeFullBioButton: UIButton!
 
@@ -35,6 +36,9 @@ class PeopleDetailsViewController: UIViewController {
         bioLabel.font = .body1
         bioLabel.textColor = .almostBlack
 
+        bornText.font = .headline5
+        bornText.textColor = .almostBlack
+
         bornLabel.font = .body1
         bornLabel.textColor = .almostBlack
 }
@@ -46,6 +50,7 @@ class PeopleDetailsViewController: UIViewController {
             self.posterImage.configure(viewModel: FetchImageViewUIModel(imageLink: peopleDetailsUIModel.profilePath))
             self.nameLabel.text = peopleDetailsUIModel.nameText
             self.bioLabel.text = peopleDetailsUIModel.bioText
+            self.bornText.isHidden = peopleDetailsUIModel.bornLabelIsHide
             self.bornLabel.text = peopleDetailsUIModel.bornText
             self.seeFullBioButton.isHidden = peopleDetailsUIModel.bioButtonIsHide
         }
