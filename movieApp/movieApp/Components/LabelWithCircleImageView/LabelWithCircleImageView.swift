@@ -54,10 +54,12 @@ class LabelWithCircleImageView: UIView {
         )
     }
 
-    func configure(viewModel: LabelWithCircleImageViewUIModel) {
-        self.model = viewModel
-        titleLabel.text = viewModel.titleText
-        circleImagesCollectionView.reloadData()
+    func configure(viewModel: LabelWithCircleImageViewUIModel?) {
+        if let model = viewModel, !(model.contents.isEmpty) {
+            self.model = model
+            titleLabel.text = model.titleText
+            circleImagesCollectionView.reloadData()
+        }
     }
 }
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
