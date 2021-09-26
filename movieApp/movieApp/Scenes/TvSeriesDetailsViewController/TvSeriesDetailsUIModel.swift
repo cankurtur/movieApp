@@ -84,6 +84,7 @@ struct TvSeriesDetailsUIModel {
         var castArray: [CircleImageAndTextContents] = []
         for tvSeriesCast in tvSeriesCastResponseModel.cast {
             let circleImageAndTextContent = CircleImageAndTextContents(
+                id: tvSeriesCast.id,
                 posterPath: tvSeriesCast.profilePath ?? "",
                 text: tvSeriesCast.name ?? "-"
             )

@@ -12,10 +12,12 @@ struct TvSeriesCastResponseModel: Codable {
 }
 
 struct CastResponseModel: Codable {
+    let id: Int
     let name: String?
     let profilePath: String?
 
     private enum CodingKeys: String, CodingKey {
+        case id = "id"
         case name = "name"
         case profilePath = "profile_path"
     }

@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol PersonID {
+    func passPersonIDBack(id: Int)
+}
+
 class LabelWithCircleImageView: UIView {
     // MARK: - Constants
     private struct Constants {
@@ -18,8 +22,11 @@ class LabelWithCircleImageView: UIView {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var circleImagesCollectionView: UICollectionView!
 
+    // swiftlint:disable weak_delegate
+
     // MARK: - Properties
     var model: LabelWithCircleImageViewUIModel?
+    var someDelegate: PersonID?
 
     // MARK: - Business Logic
     override init(frame: CGRect) {
@@ -78,6 +85,13 @@ extension LabelWithCircleImageView: UICollectionViewDelegate, UICollectionViewDa
 
         cell.configure(text: currentRowText, imageLink: FetchImageViewUIModel(imageLink: currentRowPoster))
         return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let model = model {
+            let personID = model.contents[indexPath.row].id
+            someDelegate?.passPersonIDBack(id: personID)
+        }
     }
 }
 // MARK: - UICollectionViewDelegateFlowLayout

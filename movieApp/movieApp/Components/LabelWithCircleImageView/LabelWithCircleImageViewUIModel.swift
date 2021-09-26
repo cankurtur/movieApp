@@ -15,6 +15,7 @@ struct LabelWithCircleImageViewUIModel {
 
 struct CircleImageAndTextContents {
     // MARK: - Properties
+    let id: Int
     let posterPath: String
     let text: String
 }

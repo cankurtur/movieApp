@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h9j-z5-KE7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+        <array key="SF-Pro-Display-Semibold.otf">
+            <string>SFProDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--People Details View Controller-->
+        <scene sceneID="ukp-01-4lJ">
+            <objects>
+                <viewController id="h9j-z5-KE7" customClass="PeopleDetailsViewController" customModule="movieApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rmN-ic-iAF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXJ-57-Jvw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XuG-y7-Bfr" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="618"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CQI-Lb-CAS" customClass="FetchImageView" customModule="movieApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="400" id="EiS-do-CQX"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="oTv-aC-b5F" userLabel="Name Label">
+                                                <rect key="frame" x="24" y="420" width="366" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
+                                                <color key="textColor" name="almostBlack"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNU-Vb-UDs" userLabel="Bio Label">
+                                                <rect key="frame" x="24" y="435" width="366" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="2YN-L3-fht"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                                <color key="textColor" name="almostBlack"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqD-cg-mCL" userLabel="See Full Bio Button">
+                                                <rect key="frame" x="24" y="520" width="107" height="33"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                                                <state key="normal" title="See full bio &gt;&gt;">
+                                                    <color key="titleColor" name="vibrantBlue"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="seeButtonPressed" destination="h9j-z5-KE7" eventType="touchUpInside" id="tmc-e5-fgW"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0xp-s4-eRX" userLabel="Born Label">
+                                                <rect key="frame" x="24" y="568" width="366" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                                <color key="textColor" name="almostBlack"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="oTv-aC-b5F" firstAttribute="leading" secondItem="XuG-y7-Bfr" secondAttribute="leading" constant="24" id="0pa-HC-EMe"/>
+                                            <constraint firstItem="CQI-Lb-CAS" firstAttribute="top" secondItem="XuG-y7-Bfr" secondAttribute="top" id="2c5-cq-6d9"/>
+                                            <constraint firstItem="0xp-s4-eRX" firstAttribute="leading" secondItem="XuG-y7-Bfr" secondAttribute="leading" constant="24" id="2dB-55-nN3"/>
+                                            <constraint firstItem="EqD-cg-mCL" firstAttribute="leading" secondItem="XuG-y7-Bfr" secondAttribute="leading" constant="24" id="9lR-2i-i96"/>
+                                            <constraint firstAttribute="trailing" secondItem="oTv-aC-b5F" secondAttribute="trailing" constant="24" id="DMv-FG-ayV"/>
+                                            <constraint firstItem="CQI-Lb-CAS" firstAttribute="leading" secondItem="XuG-y7-Bfr" secondAttribute="leading" id="FJd-6d-DQH"/>
+                                            <constraint firstItem="0xp-s4-eRX" firstAttribute="top" secondItem="EqD-cg-mCL" secondAttribute="bottom" constant="15" id="FyQ-rc-UqD"/>
+                                            <constraint firstAttribute="trailing" secondItem="0xp-s4-eRX" secondAttribute="trailing" constant="24" id="I75-cY-KiY"/>
+                                            <constraint firstAttribute="bottom" secondItem="0xp-s4-eRX" secondAttribute="bottom" constant="50" id="Kmu-IG-Jc8"/>
+                                            <constraint firstItem="SNU-Vb-UDs" firstAttribute="leading" secondItem="XuG-y7-Bfr" secondAttribute="leading" constant="24" id="OaT-1r-i9p"/>
+                                            <constraint firstAttribute="trailing" secondItem="SNU-Vb-UDs" secondAttribute="trailing" constant="24" id="SyZ-co-hkm"/>
+                                            <constraint firstAttribute="trailing" secondItem="CQI-Lb-CAS" secondAttribute="trailing" id="YcV-hZ-cMi"/>
+                                            <constraint firstItem="oTv-aC-b5F" firstAttribute="top" secondItem="CQI-Lb-CAS" secondAttribute="bottom" constant="20" id="ahh-fk-j7E"/>
+                                            <constraint firstItem="SNU-Vb-UDs" firstAttribute="top" secondItem="oTv-aC-b5F" secondAttribute="bottom" constant="15" id="fQk-Tg-Uc6"/>
+                                            <constraint firstItem="EqD-cg-mCL" firstAttribute="top" secondItem="SNU-Vb-UDs" secondAttribute="bottom" constant="10" id="gje-rV-fkQ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XuG-y7-Bfr" secondAttribute="trailing" id="5VF-Vc-6pu"/>
+                                    <constraint firstAttribute="bottom" secondItem="XuG-y7-Bfr" secondAttribute="bottom" id="EHs-JN-mSh"/>
+                                    <constraint firstAttribute="width" secondItem="XuG-y7-Bfr" secondAttribute="width" id="iSc-fn-SaS"/>
+                                    <constraint firstItem="XuG-y7-Bfr" firstAttribute="leading" secondItem="MXJ-57-Jvw" secondAttribute="leading" id="sE2-QM-Q6F"/>
+                                    <constraint firstItem="XuG-y7-Bfr" firstAttribute="top" secondItem="MXJ-57-Jvw" secondAttribute="top" id="xNj-Vl-ELC"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="EmA-L3-YrI"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="P5T-F6-2x0"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6uc-rj-Z1c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MXJ-57-Jvw" firstAttribute="leading" secondItem="6uc-rj-Z1c" secondAttribute="leading" id="3c2-mS-QhE"/>
+                            <constraint firstItem="MXJ-57-Jvw" firstAttribute="trailing" secondItem="6uc-rj-Z1c" secondAttribute="trailing" id="LMM-dd-giH"/>
+                            <constraint firstItem="MXJ-57-Jvw" firstAttribute="top" secondItem="6uc-rj-Z1c" secondAttribute="top" id="auG-Rc-D6I"/>
+                            <constraint firstItem="MXJ-57-Jvw" firstAttribute="bottom" secondItem="6uc-rj-Z1c" secondAttribute="bottom" id="vq5-Sq-JHz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bioLabel" destination="SNU-Vb-UDs" id="8fu-N7-Ccb"/>
+                        <outlet property="bornLabel" destination="0xp-s4-eRX" id="wpE-DL-949"/>
+                        <outlet property="nameLabel" destination="oTv-aC-b5F" id="XmJ-Dr-Nt5"/>
+                        <outlet property="posterImage" destination="CQI-Lb-CAS" id="W3a-Qd-syB"/>
+                        <outlet property="seeFullBioButton" destination="EqD-cg-mCL" id="BWu-lD-ALH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ay7-10-6O2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="53.571428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="almostBlack">
+            <color red="0.030999999493360519" green="0.035000000149011612" blue="0.039000000804662704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="vibrantBlue">
+            <color red="0.0" green="0.23899999260902405" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

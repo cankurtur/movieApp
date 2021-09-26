@@ -30,6 +30,7 @@ class TvSeriesDetailsViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        labelWithCircleImageView.someDelegate = self
 //        setBackBarButtonCustom()
 //        setupNavigationBar()
         setupUI()
@@ -90,6 +91,21 @@ class TvSeriesDetailsViewController: UIViewController {
     }
 }
 
+extension TvSeriesDetailsViewController: PersonID {
+    func passPersonIDBack(id: Int) {
+        showPeopleDetailsVC(personID: id)
+    }
+}
+
+extension TvSeriesDetailsViewController {
+    func showPeopleDetailsVC(personID: Int) {
+        if let peopleDetailsVC = UIStoryboard(name: "PeopleDetails", bundle: nil).instantiateInitialViewController() as? PeopleDetailsViewController {
+            peopleDetailsVC.personID = personID
+            navigationController?.pushViewController(peopleDetailsVC, animated: true)
+        }
+    }
+}
+
 // extension TvSeriesDetailsViewController {
 //    func setBackBarButtonCustom() {
 //        let btnLeftMenu: UIButton = UIButton()
@@ -98,7 +114,7 @@ class TvSeriesDetailsViewController: UIViewController {
 //        btnLeftMenu.frame = CGRect(x: 0, y: 0, width: 33 / 2, height: 27 / 2)
 //        let barButton = UIBarButtonItem(customView: btnLeftMenu)
 //        self.navigationItem.leftBarButtonItem = barButton
-//        
+//
 //    }
 //
 //    @objc func onClcikBack() {
