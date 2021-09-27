@@ -12,9 +12,40 @@ struct MainViewModel {
     let networking = Networking()
     var movieGenresUserDefault = MovieGenresUserDefaults()
 
-
     init() {
         getMovieGenres()
+    }
+
+    func getNowPlayingMovies(completion: @escaping([SliderContents]) -> Void) {
+        var imageCollectionWithPDArray: [SliderContents] = []
+        networking.performRequest(url: APIConstants.nowPlayingMoviesURL) { (result: Result<NowPlayingMoviesResponseModel, Error>) in
+            switch result {
+            case .success(let nowPlayingMoviesResponseModel):
+                for nowPlayingMovies in nowPlayingMoviesResponseModel.results {
+                    let titleText = nowPlayingMovies.title
+                    let voteAverage = String(format: "%.1f", nowPlayingMovies.voteAverage)
+                    let genreIds = nowPlayingMovies.genreIds
+                    let posterPath = nowPlayingMovies.posterPath
+                    let detailsText = self.genresIdToString(intArray: genreIds)
+
+                    let imageCollectionWithPDModel = SliderContents(
+                        image: .dummyImage,
+                        pointAndDetails: PointAndDetailsContainerViewUIModel(
+                            iconWithPointLabelView: IconWithPointLabelUIModel(
+                                pointNumberText: voteAverage
+                            ),
+                            titleText: titleText,
+                            detailsText: detailsText
+                        ),
+                        posterPath: posterPath
+                    )
+                    imageCollectionWithPDArray.append(imageCollectionWithPDModel)
+                }
+                completion(imageCollectionWithPDArray)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
     func getPopularMovies(completion: @escaping([CardViewWithImageAndDetailsUIModel]) -> Void) {
@@ -28,6 +59,7 @@ struct MainViewModel {
                     let releaseDate = popularMovies.releaseDate
                     let genreIds = popularMovies.genreIds
                     let detailsText = self.genresIdToString(intArray: genreIds)
+                    let posterPath = popularMovies.posterPath
 
                     let cardViewModel = CardViewWithImageAndDetailsUIModel(
                         coverImage: .dummyImage,
@@ -40,7 +72,8 @@ struct MainViewModel {
                         iconWithPointLabel: IconWithPointLabelUIModel(
                             icon: .starIcon,
                             pointNumberText: voteAverage
-                        )
+                        ),
+                        posterPath: FetchImageViewUIModel(imageLink: posterPath)
                     )
                     cardViewArray.append(cardViewModel)
                 }

@@ -15,7 +15,7 @@ class CardViewWithImageAndDetails: UIView {
     }
 
     // MARK: - IBOutlet
-    @IBOutlet private weak var coverImageView: UIImageView!
+    @IBOutlet private weak var coverImageView: FetchImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var detailsLabel: UILabel!
     @IBOutlet private weak var imageWithLabelView: ImageWithLabel!
@@ -51,7 +51,7 @@ class CardViewWithImageAndDetails: UIView {
     }
 
     func configure(uiModel: CardViewWithImageAndDetailsUIModel) {
-        coverImageView.image = uiModel.coverImage
+        coverImageView.configure(viewModel: uiModel.posterPath)
         titleLabel.text = uiModel.titleText
         detailsLabel.text = uiModel.detailsText
         imageWithLabelView.configure(uiModel: uiModel.imageWithLabelView)

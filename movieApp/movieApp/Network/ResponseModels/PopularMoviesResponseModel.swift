@@ -23,6 +23,7 @@ struct PopularMoviesResponseModel: Codable {
 
 struct MovieResponseModel: Codable {
     let id: Int
+    let posterPath: String
     let title: String
     let releaseDate: String
     let voteAverage: Double
@@ -30,6 +31,7 @@ struct MovieResponseModel: Codable {
 
     private enum CodingKeys: String, CodingKey {
         case id = "id"
+        case posterPath = "poster_path"
         case title = "title"
         case releaseDate = "release_date"
         case voteAverage = "vote_average"

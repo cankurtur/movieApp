@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PointAndDetailsContainerView" customModule="movieApp" customModuleProvider="target">
+            <connections>
+                <outlet property="detailsText" destination="PSX-KC-luF" id="vRx-R6-VJQ"/>
+                <outlet property="iconWithPointLabelView" destination="90R-s7-cRp" id="59I-5y-KQl"/>
+                <outlet property="separatorView" destination="9pZ-Ih-G5J" id="BV0-et-XRx"/>
+                <outlet property="titleText" destination="9QX-2G-36t" id="aVD-8E-pto"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="112"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90R-s7-cRp" userLabel="IconWithPointLabel" customClass="IconWithPointLabel" customModule="movieApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="61" height="25"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="61" id="HkM-rJ-pCb"/>
+                        <constraint firstAttribute="height" constant="25" id="ynB-xa-y8t"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="9QX-2G-36t" userLabel="Title Label">
+                    <rect key="frame" x="0.0" y="35" width="327" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="Cib-NF-rfE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
+                    <color key="textColor" name="almostBlack"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="PSX-KC-luF" userLabel="Details Label">
+                    <rect key="frame" x="0.0" y="73" width="327" height="18"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="15"/>
+                    <color key="textColor" name="almostBlack"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pZ-Ih-G5J" userLabel="Separator View">
+                    <rect key="frame" x="0.0" y="111" width="327" height="1"/>
+                    <color key="backgroundColor" name="separator"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="c8c-KD-oT4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="PSX-KC-luF" secondAttribute="trailing" id="00U-xU-jjR"/>
+                <constraint firstItem="9pZ-Ih-G5J" firstAttribute="top" secondItem="PSX-KC-luF" secondAttribute="bottom" constant="20" id="0xj-hx-SVX"/>
+                <constraint firstItem="90R-s7-cRp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2DB-tt-rwA"/>
+                <constraint firstItem="PSX-KC-luF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5LF-NQ-BwV"/>
+                <constraint firstItem="9pZ-Ih-G5J" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QOz-6p-l3f"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="90R-s7-cRp" secondAttribute="trailing" constant="266" id="RjR-xz-gmr"/>
+                <constraint firstItem="90R-s7-cRp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="V1V-Lk-1cm"/>
+                <constraint firstItem="9QX-2G-36t" firstAttribute="top" secondItem="90R-s7-cRp" secondAttribute="bottom" constant="10" id="aC4-nT-TzZ"/>
+                <constraint firstItem="9QX-2G-36t" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="dLU-o8-3Do"/>
+                <constraint firstItem="PSX-KC-luF" firstAttribute="top" secondItem="9QX-2G-36t" secondAttribute="bottom" constant="5" id="hVF-xN-h1V"/>
+                <constraint firstItem="9pZ-Ih-G5J" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="lW7-Kl-6dS"/>
+                <constraint firstAttribute="bottom" secondItem="9pZ-Ih-G5J" secondAttribute="bottom" id="ppP-zK-70R"/>
+                <constraint firstItem="9QX-2G-36t" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="w9q-re-Vxq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="136.81640625" y="151.75695461200584"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="almostBlack">
+            <color red="0.030999999493360519" green="0.035000000149011612" blue="0.039000000804662704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="separator">
+            <color red="0.81999999284744263" green="0.81999999284744263" blue="0.83899998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

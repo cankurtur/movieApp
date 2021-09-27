@@ -11,10 +11,18 @@ struct IconWithPointLabelUIModel {
     // MARK: - Properties
     let icon: UIImage
     let pointNumberText: String
+    let fontSize: CGFloat
 
     // MARK: - Business Logic
-    init(icon: UIImage = UIImage(), pointNumberText: String = "") {
+    init(icon: UIImage = UIImage(), pointNumberText: String = "", fontSize: CGFloat = 10) {
         self.icon = icon
         self.pointNumberText = pointNumberText
+        self.fontSize = fontSize
+    }
+
+    init(pointNumberText: String) {
+        self.icon = .starIcon
+        self.pointNumberText = pointNumberText
+        self.fontSize = 12
     }
 }

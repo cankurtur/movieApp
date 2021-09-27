@@ -18,14 +18,15 @@ class MainViewController: UIViewController {
     }
     // MARK: - IBOutlet
     @IBOutlet private weak var filmTableView: UITableView!
-    @IBOutlet private weak var tableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var headlineLabel: UILabel!
+    @IBOutlet private weak var imageCollectionViewAndDetails: ImageCollectionViewWithPointAndDetailsContainerView!
 
     // MARK: - Properties
     private var viewModel: MainViewModel = MainViewModel()
-    private var count: Double = 0
+    private var count: Double = 20
     private var cardViewUIModel: [CardViewWithImageAndDetailsUIModel]?
+
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,7 @@ class MainViewController: UIViewController {
     private func setupUI() {
         scrollView.delegate = self
         view.backgroundColor = .whiteTwo
+        self.setupTableView()
     }
 
     private func setupBinding() {
@@ -44,7 +46,10 @@ class MainViewController: UIViewController {
             self.cardViewUIModel = cardViewUIModel
             self.count = Double(cardViewUIModel.count)
             self.filmTableView.reloadData()
-            self.setupTableView()
+        }
+
+        viewModel.getNowPlayingMovies { sliderContents in
+            self.configureSliderView(content: sliderContents)
         }
     }
 
@@ -52,7 +57,14 @@ class MainViewController: UIViewController {
         filmTableView.delegate = self
         filmTableView.dataSource = self
         filmTableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
-        tableViewHeightConstraint.constant = CGFloat(count * Constants.tableViewRowHeight)
+    }
+
+    private func configureSliderView(content: [SliderContents]) {
+        imageCollectionViewAndDetails.configure(
+            viewModel: ImageCollectionViewWithPointAndDetailsContainerViewUIModel(
+                contents: content 
+            )
+        )
     }
 }
 
