@@ -21,10 +21,10 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oDV-zE-RCg" customClass="VerticalCardViewWithImageAndDetails" customModule="movieApp" customModuleProvider="target">
                                 <rect key="frame" x="1" y="0.0" width="156" height="310"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="oDV-zE-RCg" secondAttribute="trailing" constant="1" id="5eu-GG-eb4"/>
                             <constraint firstItem="oDV-zE-RCg" firstAttribute="top" secondItem="Y35-pv-8J9" secondAttribute="top" id="UwA-kT-yQ9"/>
@@ -35,6 +35,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Y35-pv-8J9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Gi3-7I-MHQ"/>
                 <constraint firstAttribute="bottom" secondItem="Y35-pv-8J9" secondAttribute="bottom" id="LYd-EV-hRN"/>

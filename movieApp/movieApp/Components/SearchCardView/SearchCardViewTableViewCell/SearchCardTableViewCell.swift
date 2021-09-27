@@ -1,13 +1,13 @@
 //
-//  VerticalCardCollectionViewCell.swift
+//  SearchCardTableViewCell.swift
 //  movieApp
 //
-//  Created by Can Kurtur on 19.09.2021.
+//  Created by Can Kurtur on 27.09.2021.
 //
 
 import UIKit
 
-class VerticalCardCollectionViewCell: UICollectionViewCell {
+class SearchCardTableViewCell: UITableViewCell {
     // MARK: - Constants
     struct Constants {
         static let cornerRadius: CGFloat = 8
@@ -15,21 +15,19 @@ class VerticalCardCollectionViewCell: UICollectionViewCell {
         static let shadowOffset: CGSize = CGSize.init(width: 0, height: 5)
         static let shadowOpacity: Float = 0.1
     }
-
-    // MARK: - IBOutlets
+    
     @IBOutlet private weak var containerView: UIView!
-    @IBOutlet private weak var verticalCardView: VerticalCardViewWithImageAndDetails!
-
-    // MARK: - Business Logic
+    @IBOutlet private weak var searchCardView: SearchCardView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupShadow()
     }
 
     private func setupShadow() {
-        verticalCardView.backgroundColor = .white
-        verticalCardView.layer.cornerRadius = Constants.cornerRadius
-        verticalCardView.layer.masksToBounds = true
+        searchCardView.backgroundColor = .white
+        searchCardView.layer.cornerRadius = Constants.cornerRadius
+        searchCardView.layer.masksToBounds = true
 
         containerView.layer.cornerRadius = Constants.cornerRadius
         containerView.layer.masksToBounds = true
@@ -40,7 +38,8 @@ class VerticalCardCollectionViewCell: UICollectionViewCell {
         containerView.layer.shadowOpacity = Constants.shadowOpacity
         containerView.backgroundColor = nil
     }
-    func configure(with verticalCardViewUIModel: VerticalCardViewWithImageAndDetailsUIModel) {
-        verticalCardView.configure(viewModel: verticalCardViewUIModel)
+
+    func configure(viewModel: SearchCardViewModel) {
+        searchCardView.configure(viewModel: viewModel)
     }
 }

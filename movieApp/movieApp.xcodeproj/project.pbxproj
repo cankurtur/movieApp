@@ -352,9 +352,36 @@
 		26A99CEB26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A99CEA26C1C0110068D9A9 /* CustomTableViewCell.swift */; };
 		26A99CEC26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A99CEA26C1C0110068D9A9 /* CustomTableViewCell.swift */; };
 		26A99CED26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A99CEA26C1C0110068D9A9 /* CustomTableViewCell.swift */; };
+		26B142BB2702609200B6E49C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B142BA2702609200B6E49C /* SearchViewController.swift */; };
+		26B142BC2702609200B6E49C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B142BA2702609200B6E49C /* SearchViewController.swift */; };
+		26B142BD2702609200B6E49C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B142BA2702609200B6E49C /* SearchViewController.swift */; };
+		26B142C52702609D00B6E49C /* SearchView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26B142C42702609D00B6E49C /* SearchView.storyboard */; };
+		26B142C62702609D00B6E49C /* SearchView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26B142C42702609D00B6E49C /* SearchView.storyboard */; };
+		26B142C72702609D00B6E49C /* SearchView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26B142C42702609D00B6E49C /* SearchView.storyboard */; };
+		26B142CC270260A900B6E49C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B142CB270260A900B6E49C /* SearchViewModel.swift */; };
+		26B142CD270260A900B6E49C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B142CB270260A900B6E49C /* SearchViewModel.swift */; };
+		26B142CE270260A900B6E49C /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B142CB270260A900B6E49C /* SearchViewModel.swift */; };
+		26B142D3270260F600B6E49C /* SearchViewUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B142D2270260F600B6E49C /* SearchViewUIModel.swift */; };
+		26B142D4270260F600B6E49C /* SearchViewUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B142D2270260F600B6E49C /* SearchViewUIModel.swift */; };
+		26B142D5270260F600B6E49C /* SearchViewUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B142D2270260F600B6E49C /* SearchViewUIModel.swift */; };
+		26B142E12702614D00B6E49C /* SearchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B142E02702614D00B6E49C /* SearchCardView.swift */; };
+		26B142E22702614D00B6E49C /* SearchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B142E02702614D00B6E49C /* SearchCardView.swift */; };
+		26B142E32702614D00B6E49C /* SearchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B142E02702614D00B6E49C /* SearchCardView.swift */; };
+		26B142EB270261E300B6E49C /* SearchCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B142EA270261E300B6E49C /* SearchCardViewModel.swift */; };
+		26B142EC270261E300B6E49C /* SearchCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B142EA270261E300B6E49C /* SearchCardViewModel.swift */; };
+		26B142ED270261E300B6E49C /* SearchCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B142EA270261E300B6E49C /* SearchCardViewModel.swift */; };
+		26B142F22702623500B6E49C /* SearchCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B142F12702623500B6E49C /* SearchCardView.xib */; };
+		26B142F32702623500B6E49C /* SearchCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B142F12702623500B6E49C /* SearchCardView.xib */; };
+		26B142F42702623500B6E49C /* SearchCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B142F12702623500B6E49C /* SearchCardView.xib */; };
 		26B45AD726E8AFFE00D5BAA4 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B45AD626E8AFFE00D5BAA4 /* UserDefaultsConstants.swift */; };
 		26B45AD826E8AFFE00D5BAA4 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B45AD626E8AFFE00D5BAA4 /* UserDefaultsConstants.swift */; };
 		26B45AD926E8AFFE00D5BAA4 /* UserDefaultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B45AD626E8AFFE00D5BAA4 /* UserDefaultsConstants.swift */; };
+		26BC31C727026747006EAA8A /* SearchCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BC31C527026747006EAA8A /* SearchCardTableViewCell.swift */; };
+		26BC31C827026747006EAA8A /* SearchCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BC31C527026747006EAA8A /* SearchCardTableViewCell.swift */; };
+		26BC31C927026747006EAA8A /* SearchCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26BC31C527026747006EAA8A /* SearchCardTableViewCell.swift */; };
+		26BC31CA27026747006EAA8A /* SearchCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26BC31C627026747006EAA8A /* SearchCardTableViewCell.xib */; };
+		26BC31CB27026747006EAA8A /* SearchCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26BC31C627026747006EAA8A /* SearchCardTableViewCell.xib */; };
+		26BC31CC27026747006EAA8A /* SearchCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26BC31C627026747006EAA8A /* SearchCardTableViewCell.xib */; };
 		26D5FE9426ECC04300636E33 /* ImageCollectionViewWithPointAndDetailsContainerViewUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D5FE9326ECC04300636E33 /* ImageCollectionViewWithPointAndDetailsContainerViewUIModel.swift */; };
 		26D5FE9526ECC04300636E33 /* ImageCollectionViewWithPointAndDetailsContainerViewUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D5FE9326ECC04300636E33 /* ImageCollectionViewWithPointAndDetailsContainerViewUIModel.swift */; };
 		26D5FE9626ECC04300636E33 /* ImageCollectionViewWithPointAndDetailsContainerViewUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D5FE9326ECC04300636E33 /* ImageCollectionViewWithPointAndDetailsContainerViewUIModel.swift */; };
@@ -554,7 +581,16 @@
 		26A37ADF26C4095E00E539F8 /* SF-Pro-Text-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-BoldItalic.otf"; sourceTree = "<group>"; };
 		26A37B8026C4113800E539F8 /* LaunchScreen.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LaunchScreen.xcassets; sourceTree = "<group>"; };
 		26A99CEA26C1C0110068D9A9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		26B142BA2702609200B6E49C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		26B142C42702609D00B6E49C /* SearchView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchView.storyboard; sourceTree = "<group>"; };
+		26B142CB270260A900B6E49C /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		26B142D2270260F600B6E49C /* SearchViewUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewUIModel.swift; sourceTree = "<group>"; };
+		26B142E02702614D00B6E49C /* SearchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCardView.swift; sourceTree = "<group>"; };
+		26B142EA270261E300B6E49C /* SearchCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCardViewModel.swift; sourceTree = "<group>"; };
+		26B142F12702623500B6E49C /* SearchCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCardView.xib; sourceTree = "<group>"; };
 		26B45AD626E8AFFE00D5BAA4 /* UserDefaultsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsConstants.swift; sourceTree = "<group>"; };
+		26BC31C527026747006EAA8A /* SearchCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCardTableViewCell.swift; sourceTree = "<group>"; };
+		26BC31C627026747006EAA8A /* SearchCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCardTableViewCell.xib; sourceTree = "<group>"; };
 		26D5FE9326ECC04300636E33 /* ImageCollectionViewWithPointAndDetailsContainerViewUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewWithPointAndDetailsContainerViewUIModel.swift; sourceTree = "<group>"; };
 		26D5FE9D26ECC04B00636E33 /* ImageCollectionViewWithPointAndDetailsContainerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewWithPointAndDetailsContainerView.xib; sourceTree = "<group>"; };
 		26D5FEA426ECC05A00636E33 /* ImageCollectionViewWithPointAndDetailsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewWithPointAndDetailsContainerView.swift; sourceTree = "<group>"; };
@@ -648,6 +684,7 @@
 				266E085126FE7D2B00407D83 /* MoviesDetailsViewController */,
 				26790B4D26FB52E00069E2FC /* TvSeriesDetailsViewController */,
 				2693A0AA2700912F009E6ED8 /* PeopleDetailsViewController */,
+				26B142B92702606D00B6E49C /* SearchViewController */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -675,6 +712,7 @@
 		2618825826C112E7003EF23C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				26B142DF2702613400B6E49C /* SearchCardView */,
 				266697A226FE13A6009A717B /* LabelWithCircleImageView */,
 				26790B5F26FB55F50069E2FC /* TitleAndDetailsContainerView */,
 				26FFFFC626F7536200A6CD2E /* VerticalCardViewWithImageAndDetails */,
@@ -996,6 +1034,28 @@
 			path = "SF-Pro-Display Fonts";
 			sourceTree = "<group>";
 		};
+		26B142B92702606D00B6E49C /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				26B142BA2702609200B6E49C /* SearchViewController.swift */,
+				26B142CB270260A900B6E49C /* SearchViewModel.swift */,
+				26B142D2270260F600B6E49C /* SearchViewUIModel.swift */,
+				26B142C42702609D00B6E49C /* SearchView.storyboard */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		26B142DF2702613400B6E49C /* SearchCardView */ = {
+			isa = PBXGroup;
+			children = (
+				26BC31C427026718006EAA8A /* SearchCardViewTableViewCell */,
+				26B142E02702614D00B6E49C /* SearchCardView.swift */,
+				26B142EA270261E300B6E49C /* SearchCardViewModel.swift */,
+				26B142F12702623500B6E49C /* SearchCardView.xib */,
+			);
+			path = SearchCardView;
+			sourceTree = "<group>";
+		};
 		26B45AD526E8AFD200D5BAA4 /* UserDefaultsManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1003,6 +1063,15 @@
 				2602C2F526F4C515008F44A2 /* GenresUserDefaults.swift */,
 			);
 			path = UserDefaultsManager;
+			sourceTree = "<group>";
+		};
+		26BC31C427026718006EAA8A /* SearchCardViewTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				26BC31C527026747006EAA8A /* SearchCardTableViewCell.swift */,
+				26BC31C627026747006EAA8A /* SearchCardTableViewCell.xib */,
+			);
+			path = SearchCardViewTableViewCell;
 			sourceTree = "<group>";
 		};
 		26D5FE9226ECC00200636E33 /* ImageCollectionViewWithPointAndDetailsContainerView */ = {
@@ -1184,6 +1253,7 @@
 				26A37B2B26C4095E00E539F8 /* SF-Pro-Display-Heavy.otf in Resources */,
 				261882B626C11F7A003EF23C /* IconWithPointLabel.xib in Resources */,
 				26A37AAA26C4031800E539F8 /* Images.xcassets in Resources */,
+				26B142C52702609D00B6E49C /* SearchView.storyboard in Resources */,
 				266E086B26FE7E0900407D83 /* MoviesDetails.storyboard in Resources */,
 				26D5FEB526ECC69F00636E33 /* CustomCollectionViewCell.xib in Resources */,
 				26A37B3426C4095E00E539F8 /* SF-Pro-Rounded-Light.otf in Resources */,
@@ -1231,6 +1301,7 @@
 				26336F7A26BAED6D0010EA73 /* Main.storyboard in Resources */,
 				26A37B6126C4095E00E539F8 /* SF-Pro-Text-Light.otf in Resources */,
 				26A37B0126C4095E00E539F8 /* SF-Pro-Text-Semibold.otf in Resources */,
+				26B142F22702623500B6E49C /* SearchCardView.xib in Resources */,
 				26A37AFE26C4095E00E539F8 /* SF-Pro-Text-LightItalic.otf in Resources */,
 				2666978426FE04D8009A717B /* TvSeries.storyboard in Resources */,
 				26790B6B26FB56620069E2FC /* TitleAndDetailsContainerView.xib in Resources */,
@@ -1247,6 +1318,7 @@
 				2693A0B627009184009E6ED8 /* PeopleDetails.storyboard in Resources */,
 				26A37AF826C4095E00E539F8 /* SF-Pro-Display-Medium.otf in Resources */,
 				26A37B8126C4113800E539F8 /* LaunchScreen.xcassets in Resources */,
+				26BC31CA27026747006EAA8A /* SearchCardTableViewCell.xib in Resources */,
 				26A37B2226C4095E00E539F8 /* SF-Pro-Display-BlackItalic.otf in Resources */,
 				26A37B6426C4095E00E539F8 /* SF-Pro-Display-BoldItalic.otf in Resources */,
 				26A37B4F26C4095E00E539F8 /* SF-Pro-Rounded-Thin.otf in Resources */,
@@ -1261,8 +1333,10 @@
 				26A37B1726C4095E00E539F8 /* SF-Pro-Display-Semibold.otf in Resources */,
 				26A37B4726C4095E00E539F8 /* SF-Pro-Display-LightItalic.otf in Resources */,
 				26A37B2026C4095E00E539F8 /* SF-Pro-Display-Black.otf in Resources */,
+				26BC31CB27026747006EAA8A /* SearchCardTableViewCell.xib in Resources */,
 				26A37AFC26C4095E00E539F8 /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				26A37B5F26C4095E00E539F8 /* SF-Pro-Rounded-Regular.otf in Resources */,
+				26B142F32702623500B6E49C /* SearchCardView.xib in Resources */,
 				26A37AE126C4095E00E539F8 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
 				2666979626FE05C3009A717B /* Movies.storyboard in Resources */,
 				261882EF26C14528003EF23C /* CardViewWithImageAndDetails.xib in Resources */,
@@ -1286,6 +1360,7 @@
 				2608D6C726CD722900FFBF20 /* CustomTableViewCell.xib in Resources */,
 				26A37AFF26C4095E00E539F8 /* SF-Pro-Text-LightItalic.otf in Resources */,
 				26A37B1426C4095E00E539F8 /* SF-Pro-Text-Black.otf in Resources */,
+				26B142C62702609D00B6E49C /* SearchView.storyboard in Resources */,
 				26A37AE426C4095E00E539F8 /* SF-Pro-Rounded-Bold.otf in Resources */,
 				26A37B8226C4113800E539F8 /* LaunchScreen.xcassets in Resources */,
 				26A37B2926C4095E00E539F8 /* SF-Pro-Display-MediumItalic.otf in Resources */,
@@ -1338,8 +1413,10 @@
 				26A37B1826C4095E00E539F8 /* SF-Pro-Display-Semibold.otf in Resources */,
 				26A37B4826C4095E00E539F8 /* SF-Pro-Display-LightItalic.otf in Resources */,
 				26A37B2126C4095E00E539F8 /* SF-Pro-Display-Black.otf in Resources */,
+				26BC31CC27026747006EAA8A /* SearchCardTableViewCell.xib in Resources */,
 				26A37AFD26C4095E00E539F8 /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				26A37B6026C4095E00E539F8 /* SF-Pro-Rounded-Regular.otf in Resources */,
+				26B142F42702623500B6E49C /* SearchCardView.xib in Resources */,
 				26A37AE226C4095E00E539F8 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
 				2666979726FE05C3009A717B /* Movies.storyboard in Resources */,
 				261882F026C14528003EF23C /* CardViewWithImageAndDetails.xib in Resources */,
@@ -1363,6 +1440,7 @@
 				2608D6C826CD722900FFBF20 /* CustomTableViewCell.xib in Resources */,
 				26A37B0026C4095E00E539F8 /* SF-Pro-Text-LightItalic.otf in Resources */,
 				26A37B1526C4095E00E539F8 /* SF-Pro-Text-Black.otf in Resources */,
+				26B142C72702609D00B6E49C /* SearchView.storyboard in Resources */,
 				26A37AE526C4095E00E539F8 /* SF-Pro-Rounded-Bold.otf in Resources */,
 				26A37B8326C4113800E539F8 /* LaunchScreen.xcassets in Resources */,
 				26A37B2A26C4095E00E539F8 /* SF-Pro-Display-MediumItalic.otf in Resources */,
@@ -1535,6 +1613,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26B142EB270261E300B6E49C /* SearchCardViewModel.swift in Sources */,
 				266E087826FE80C700407D83 /* MoviesDetailsResponseModel.swift in Sources */,
 				266E5FAB26E51884000C4DD5 /* MovieGenreResponseModel.swift in Sources */,
 				264DF59426C8012D009A0665 /* UIFontThemeExtension.swift in Sources */,
@@ -1545,6 +1624,7 @@
 				2626DC1026F1F9E600C7CC65 /* FetchImageViewUIModel.swift in Sources */,
 				266697AE26FE1439009A717B /* LabelWithCircleImageView.swift in Sources */,
 				26790B6126FB564C0069E2FC /* TitleAndDetailsContainerViewUIModel.swift in Sources */,
+				26B142BB2702609200B6E49C /* SearchViewController.swift in Sources */,
 				2693A0AC27009170009E6ED8 /* PeopleDetailsViewModel.swift in Sources */,
 				261D7EE226F4731B002C21F2 /* TvSeriesViewModel.swift in Sources */,
 				26D5FEA526ECC05A00636E33 /* ImageCollectionViewWithPointAndDetailsContainerView.swift in Sources */,
@@ -1565,12 +1645,14 @@
 				2602C2CA26F496BF008F44A2 /* AutoSizedCollectionView.swift in Sources */,
 				264E913E26FC5EAF00327B00 /* TvSeriesDetailsResponseModel.swift in Sources */,
 				266697BE26FE1667009A717B /* CircleImageCollectionViewCell.swift in Sources */,
+				26B142CC270260A900B6E49C /* SearchViewModel.swift in Sources */,
 				2602C2D126F4A30B008F44A2 /* TvSeriesResponseModel.swift in Sources */,
 				2626DC1A26F1F9FB00C7CC65 /* FetchImageView.swift in Sources */,
 				261882C026C124D0003EF23C /* IconWithPointLabel.swift in Sources */,
 				261882F526C14531003EF23C /* CardViewWithImageAndDetailsUIModel.swift in Sources */,
 				266E085326FE7D7400407D83 /* MoviesDetailsViewModel.swift in Sources */,
 				2699355F26C1C430008BB5A8 /* MoviesViewModel.swift in Sources */,
+				26B142D3270260F600B6E49C /* SearchViewUIModel.swift in Sources */,
 				2618825B26C11318003EF23C /* ImageWithLabelUIModel.swift in Sources */,
 				26A99CEB26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */,
 				268516B326EBA5BE009D5576 /* AutoSizedTableView.swift in Sources */,
@@ -1582,11 +1664,13 @@
 				261882CA26C124F3003EF23C /* ImageWithLabel.swift in Sources */,
 				2693A0A427009044009E6ED8 /* PeopleResponseModel.swift in Sources */,
 				2673B65726C2C0AB00E5659B /* UIViewExtension.swift in Sources */,
+				26B142E12702614D00B6E49C /* SearchCardView.swift in Sources */,
 				26790B5926FB53200069E2FC /* TvSeriesDetailsViewModel.swift in Sources */,
 				261882E426C14521003EF23C /* CardViewWithImageAndDetails.swift in Sources */,
 				26336F7326BAED6D0010EA73 /* AppDelegate.swift in Sources */,
 				2618834926C16E19003EF23C /* MoviesViewController.swift in Sources */,
 				2666979C26FE0FD0009A717B /* TvSeriesCastResponseModel.swift in Sources */,
+				26BC31C727026747006EAA8A /* SearchCardTableViewCell.swift in Sources */,
 				269917CE26E25690001510A1 /* APIConstants.swift in Sources */,
 				2693A0BD27009191009E6ED8 /* PeopleDetailsViewController.swift in Sources */,
 				2685169626EB6A84009D5576 /* PointAndDetailsContainerViewUIModel.swift in Sources */,
@@ -1615,13 +1699,17 @@
 				26A99CEC26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */,
 				2685169726EB6A84009D5576 /* PointAndDetailsContainerViewUIModel.swift in Sources */,
 				26E5FC7526F789250063F094 /* TopRatedSeriesResponseModel.swift in Sources */,
+				26BC31C827026747006EAA8A /* SearchCardTableViewCell.swift in Sources */,
 				266E087926FE80C700407D83 /* MoviesDetailsResponseModel.swift in Sources */,
+				26B142E22702614D00B6E49C /* SearchCardView.swift in Sources */,
 				260A7C6526E1FC56004194FA /* Networking.swift in Sources */,
 				266697A526FE13FF009A717B /* LabelWithCircleImageViewUIModel.swift in Sources */,
 				26D5FE9526ECC04300636E33 /* ImageCollectionViewWithPointAndDetailsContainerViewUIModel.swift in Sources */,
 				2693A0AD27009170009E6ED8 /* PeopleDetailsViewModel.swift in Sources */,
+				26B142EC270261E300B6E49C /* SearchCardViewModel.swift in Sources */,
 				264E913F26FC5EAF00327B00 /* TvSeriesDetailsResponseModel.swift in Sources */,
 				26684F9726CD330200E5BAD9 /* Fonts.swift in Sources */,
+				26B142CD270260A900B6E49C /* SearchViewModel.swift in Sources */,
 				266697AF26FE1439009A717B /* LabelWithCircleImageView.swift in Sources */,
 				2693A0DC2700CE92009E6ED8 /* MoviesCastResponseModel.swift in Sources */,
 				26790B5A26FB53200069E2FC /* TvSeriesDetailsViewModel.swift in Sources */,
@@ -1635,6 +1723,7 @@
 				26EA2CFB26FC6454005BE828 /* TvSeriesDetailsUIModel.swift in Sources */,
 				26684FAE26CD351C00E5BAD9 /* Images.swift in Sources */,
 				261882E526C14521003EF23C /* CardViewWithImageAndDetails.swift in Sources */,
+				26B142BC2702609200B6E49C /* SearchViewController.swift in Sources */,
 				261D7EE326F4731B002C21F2 /* TvSeriesViewModel.swift in Sources */,
 				26D5FEB326ECC69F00636E33 /* CustomCollectionViewCell.swift in Sources */,
 				26D5FEA626ECC05A00636E33 /* ImageCollectionViewWithPointAndDetailsContainerView.swift in Sources */,
@@ -1643,6 +1732,7 @@
 				26790B7326FB566D0069E2FC /* TitleAndDetailsContainerView.swift in Sources */,
 				266E085426FE7D7400407D83 /* MoviesDetailsViewModel.swift in Sources */,
 				260A7C7426E2121C004194FA /* PopularMoviesResponseModel.swift in Sources */,
+				26B142D4270260F600B6E49C /* SearchViewUIModel.swift in Sources */,
 				2685169E26EB6A9F009D5576 /* PointAndDetailsContainerView.swift in Sources */,
 				266697BF26FE1667009A717B /* CircleImageCollectionViewCell.swift in Sources */,
 				2693A0BE27009191009E6ED8 /* PeopleDetailsViewController.swift in Sources */,
@@ -1681,13 +1771,17 @@
 				26A99CED26C1C0110068D9A9 /* CustomTableViewCell.swift in Sources */,
 				2685169826EB6A84009D5576 /* PointAndDetailsContainerViewUIModel.swift in Sources */,
 				26E5FC7626F789250063F094 /* TopRatedSeriesResponseModel.swift in Sources */,
+				26BC31C927026747006EAA8A /* SearchCardTableViewCell.swift in Sources */,
 				266E087A26FE80C700407D83 /* MoviesDetailsResponseModel.swift in Sources */,
+				26B142E32702614D00B6E49C /* SearchCardView.swift in Sources */,
 				260A7C6626E1FC56004194FA /* Networking.swift in Sources */,
 				266697A626FE13FF009A717B /* LabelWithCircleImageViewUIModel.swift in Sources */,
 				26D5FE9626ECC04300636E33 /* ImageCollectionViewWithPointAndDetailsContainerViewUIModel.swift in Sources */,
 				2693A0AE27009170009E6ED8 /* PeopleDetailsViewModel.swift in Sources */,
+				26B142ED270261E300B6E49C /* SearchCardViewModel.swift in Sources */,
 				264E914026FC5EAF00327B00 /* TvSeriesDetailsResponseModel.swift in Sources */,
 				26684F9826CD330200E5BAD9 /* Fonts.swift in Sources */,
+				26B142CE270260A900B6E49C /* SearchViewModel.swift in Sources */,
 				266697B026FE1439009A717B /* LabelWithCircleImageView.swift in Sources */,
 				2693A0DD2700CE92009E6ED8 /* MoviesCastResponseModel.swift in Sources */,
 				26790B5B26FB53200069E2FC /* TvSeriesDetailsViewModel.swift in Sources */,
@@ -1701,6 +1795,7 @@
 				26EA2CFC26FC6454005BE828 /* TvSeriesDetailsUIModel.swift in Sources */,
 				26684FAF26CD351C00E5BAD9 /* Images.swift in Sources */,
 				261882E626C14521003EF23C /* CardViewWithImageAndDetails.swift in Sources */,
+				26B142BD2702609200B6E49C /* SearchViewController.swift in Sources */,
 				261D7EE426F4731B002C21F2 /* TvSeriesViewModel.swift in Sources */,
 				26D5FEB426ECC69F00636E33 /* CustomCollectionViewCell.swift in Sources */,
 				26D5FEA726ECC05A00636E33 /* ImageCollectionViewWithPointAndDetailsContainerView.swift in Sources */,
@@ -1709,6 +1804,7 @@
 				26790B7426FB566D0069E2FC /* TitleAndDetailsContainerView.swift in Sources */,
 				266E085526FE7D7400407D83 /* MoviesDetailsViewModel.swift in Sources */,
 				260A7C7526E2121C004194FA /* PopularMoviesResponseModel.swift in Sources */,
+				26B142D5270260F600B6E49C /* SearchViewUIModel.swift in Sources */,
 				2685169F26EB6A9F009D5576 /* PointAndDetailsContainerView.swift in Sources */,
 				266697C026FE1667009A717B /* CircleImageCollectionViewCell.swift in Sources */,
 				2693A0BF27009191009E6ED8 /* PeopleDetailsViewController.swift in Sources */,
