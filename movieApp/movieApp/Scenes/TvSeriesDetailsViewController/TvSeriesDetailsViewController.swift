@@ -31,8 +31,7 @@ class TvSeriesDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         labelWithCircleImageView.someDelegate = self
-//        setBackBarButtonCustom()
-//        setupNavigationBar()
+        setupNavigationBar()
         setupUI()
     }
 
@@ -43,8 +42,7 @@ class TvSeriesDetailsViewController: UIViewController {
 
     // MARK: - Business Logic
     private func setupNavigationBar() {
-        navigationController?.navigationBar.backgroundColor = .clear
-        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.navigationBar.isHidden = true
     }
 
     private func setupUI() {
