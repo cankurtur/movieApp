@@ -29,7 +29,6 @@ class PeopleDetailsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configure()
-//        setupSeeFullBioButton()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -57,8 +56,6 @@ class PeopleDetailsViewController: UIViewController {
             seeFullBioButton.isHidden = true
         } else {
             seeFullBioButton.isHidden = false
-//            heightConstraint = bioLabel.heightAnchor.constraint(equalToConstant: 85)
-//            heightConstraint?.isActive = true
             seeFullBioButton.setTitle("See full bio >>", for: .normal)
         }
     }
@@ -82,9 +79,7 @@ class PeopleDetailsViewController: UIViewController {
             seeFullBioButton.setTitle("<< Close full bio", for: .normal)
         } else {
             seeFullBioButton.setTitle("See full bio >>", for: .normal)
-//            heightConstraint = bioLabel.heightAnchor.constraint(equalToConstant: 85)
             bioLabelHeightConstraint.constant = 85
-//            heightConstraint?.isActive = true
         }
     }
     
