@@ -24,7 +24,7 @@ class MoviesDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         labelWithCircleImageView.someDelegate = self
-//        setupNavigationBar()
+        setupNavigationBar()
         setupUI()
     }
 
@@ -35,8 +35,7 @@ class MoviesDetailsViewController: UIViewController {
     
     // MARK: - Business Logic
     private func setupNavigationBar() {
-        navigationController?.navigationBar.backgroundColor = .clear
-        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.navigationBar.isHidden = true
     }
 
     private func setupUI() {
