@@ -12,9 +12,6 @@
         <array key="SF-Pro-Display-Regular.otf">
             <string>SFProDisplay-Regular</string>
         </array>
-        <array key="SF-Pro-Display-Semibold.otf">
-            <string>SFProDisplay-Semibold</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Movies Details View Controller-->
@@ -29,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="-50" width="390" height="894"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" restorationIdentifier="detailsVC" translatesAutoresizingMaskIntoConstraints="NO" id="na6-q7-ZFX" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="895"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="875"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VLg-iH-QQS" customClass="FetchImageView" customModule="movieApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="500"/>
@@ -64,25 +61,13 @@
                                                 <color key="textColor" name="almostBlack"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ZF-TX-Kxw" userLabel="Director Label">
-                                                <rect key="frame" x="29" y="665" width="337" height="0.0"/>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
-                                                <color key="textColor" name="vibrantBlue"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mnt-6M-FkU" customClass="LabelWithCircleImageView" customModule="movieApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="685" width="390" height="140"/>
+                                                <rect key="frame" x="0.0" y="665" width="390" height="140"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="140" id="kue-oT-y8S"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6h-0W-Kx4" userLabel="Director Text">
-                                                <rect key="frame" x="24" y="665" width="0.0" height="0.0"/>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
-                                                <color key="textColor" name="almostBlack"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -90,23 +75,18 @@
                                             <constraint firstAttribute="trailing" secondItem="956-tN-ju3" secondAttribute="trailing" constant="305" id="4ZE-iZ-abO"/>
                                             <constraint firstAttribute="trailing" secondItem="4aq-DD-W3M" secondAttribute="trailing" constant="24" id="7RF-5V-xth"/>
                                             <constraint firstAttribute="trailing" secondItem="Mnt-6M-FkU" secondAttribute="trailing" id="8h2-1Y-KnH"/>
-                                            <constraint firstItem="Y6h-0W-Kx4" firstAttribute="leading" secondItem="na6-q7-ZFX" secondAttribute="leading" constant="24" id="Fcv-6M-csR"/>
-                                            <constraint firstItem="8ZF-TX-Kxw" firstAttribute="leading" secondItem="Y6h-0W-Kx4" secondAttribute="trailing" constant="5" id="Fqf-ww-OFJ"/>
-                                            <constraint firstItem="Mnt-6M-FkU" firstAttribute="top" secondItem="8ZF-TX-Kxw" secondAttribute="bottom" constant="20" id="Gnl-TL-NKo"/>
                                             <constraint firstItem="0RO-md-ZBi" firstAttribute="top" secondItem="956-tN-ju3" secondAttribute="bottom" constant="10" id="Guo-ad-3Tn"/>
+                                            <constraint firstItem="Mnt-6M-FkU" firstAttribute="top" secondItem="4aq-DD-W3M" secondAttribute="bottom" constant="20" id="HPb-o2-cyj"/>
                                             <constraint firstItem="0RO-md-ZBi" firstAttribute="leading" secondItem="na6-q7-ZFX" secondAttribute="leading" constant="24" id="JJe-RG-Upo"/>
                                             <constraint firstItem="0RO-md-ZBi" firstAttribute="top" secondItem="VLg-iH-QQS" secondAttribute="bottom" constant="20" id="OHX-jK-MYp"/>
-                                            <constraint firstItem="Y6h-0W-Kx4" firstAttribute="top" secondItem="4aq-DD-W3M" secondAttribute="bottom" constant="20" id="PH7-3N-fqI"/>
                                             <constraint firstItem="crM-hr-eJr" firstAttribute="leading" secondItem="na6-q7-ZFX" secondAttribute="leading" constant="24" id="S9n-yV-QQk"/>
                                             <constraint firstItem="4aq-DD-W3M" firstAttribute="leading" secondItem="na6-q7-ZFX" secondAttribute="leading" constant="24" id="SST-Ul-F8q"/>
                                             <constraint firstItem="Mnt-6M-FkU" firstAttribute="leading" secondItem="na6-q7-ZFX" secondAttribute="leading" id="XG9-K0-36e"/>
                                             <constraint firstItem="crM-hr-eJr" firstAttribute="top" secondItem="na6-q7-ZFX" secondAttribute="top" constant="55" id="b3S-C3-mFp"/>
                                             <constraint firstAttribute="trailing" secondItem="0RO-md-ZBi" secondAttribute="trailing" constant="24" id="eH5-Qz-8hZ"/>
                                             <constraint firstItem="VLg-iH-QQS" firstAttribute="top" secondItem="na6-q7-ZFX" secondAttribute="top" id="eZZ-wD-x7Z"/>
-                                            <constraint firstItem="8ZF-TX-Kxw" firstAttribute="top" secondItem="4aq-DD-W3M" secondAttribute="bottom" constant="20" id="oLW-7p-2Ce"/>
                                             <constraint firstAttribute="bottom" secondItem="Mnt-6M-FkU" secondAttribute="bottom" constant="70" id="pMo-uU-nJf"/>
                                             <constraint firstItem="4aq-DD-W3M" firstAttribute="top" secondItem="0RO-md-ZBi" secondAttribute="bottom" constant="20" id="qsy-Qv-W18"/>
-                                            <constraint firstAttribute="trailing" secondItem="8ZF-TX-Kxw" secondAttribute="trailing" constant="24" id="xLK-Ad-U8k"/>
                                             <constraint firstItem="956-tN-ju3" firstAttribute="leading" secondItem="na6-q7-ZFX" secondAttribute="leading" constant="24" id="xtW-ma-NGJ"/>
                                             <constraint firstItem="VLg-iH-QQS" firstAttribute="leading" secondItem="na6-q7-ZFX" secondAttribute="leading" id="zQo-FY-sos"/>
                                         </constraints>
@@ -114,7 +94,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="na6-q7-ZFX" secondAttribute="bottom" constant="94" id="K40-Ka-eTw"/>
+                                    <constraint firstAttribute="bottom" secondItem="na6-q7-ZFX" secondAttribute="bottom" id="K40-Ka-eTw"/>
                                     <constraint firstItem="na6-q7-ZFX" firstAttribute="leading" secondItem="oct-pS-XqL" secondAttribute="leading" id="LCP-ZM-BzK"/>
                                     <constraint firstItem="na6-q7-ZFX" firstAttribute="top" secondItem="oct-pS-XqL" secondAttribute="top" id="UlD-Ne-ww5"/>
                                     <constraint firstAttribute="trailing" secondItem="na6-q7-ZFX" secondAttribute="trailing" id="oX4-NH-KuY"/>
@@ -136,8 +116,6 @@
                     <navigationItem key="navigationItem" id="Km7-ek-Yiu"/>
                     <size key="freeformSize" width="390" height="844"/>
                     <connections>
-                        <outlet property="directorLabel" destination="8ZF-TX-Kxw" id="E17-7I-xv4"/>
-                        <outlet property="directorText" destination="Y6h-0W-Kx4" id="1cV-zJ-qKg"/>
                         <outlet property="iconWithPointLabelView" destination="956-tN-ju3" id="jtn-g5-8Mt"/>
                         <outlet property="labelWithCircleImageView" destination="Mnt-6M-FkU" id="V8X-L9-jr6"/>
                         <outlet property="posterImageView" destination="VLg-iH-QQS" id="cyn-cb-b92"/>
@@ -154,9 +132,6 @@
         <image name="arrowBack" width="27" height="21"/>
         <namedColor name="almostBlack">
             <color red="0.030999999493360519" green="0.035000000149011612" blue="0.039000000804662704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="vibrantBlue">
-            <color red="0.0" green="0.23899999260902405" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

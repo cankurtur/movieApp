@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,83 +30,108 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXJ-57-Jvw">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="-50" width="414" height="946"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XuG-y7-Bfr" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="617"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="710"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CQI-Lb-CAS" customClass="FetchImageView" customModule="movieApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="400" id="EiS-do-CQX"/>
+                                                    <constraint firstAttribute="height" constant="500" id="YK2-NF-ge6"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="oTv-aC-b5F" userLabel="Name Label">
-                                                <rect key="frame" x="24" y="420" width="366" height="0.0"/>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
-                                                <color key="textColor" name="almostBlack"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNU-Vb-UDs" userLabel="Bio Label">
-                                                <rect key="frame" x="24" y="435" width="366" height="75"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="75" id="2YN-L3-fht"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
-                                                <color key="textColor" name="almostBlack"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqD-cg-mCL" userLabel="See Full Bio Button">
-                                                <rect key="frame" x="24" y="520" width="110" height="32"/>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
-                                                <state key="normal" title="See full bio &gt;&gt;">
-                                                    <color key="titleColor" name="vibrantBlue"/>
-                                                </state>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abj-aX-uRp" userLabel="Back Button">
+                                                <rect key="frame" x="24" y="55" width="27" height="22"/>
+                                                <state key="normal" image="arrowBack"/>
                                                 <connections>
-                                                    <action selector="seeButtonPressed" destination="h9j-z5-KE7" eventType="touchUpInside" id="tmc-e5-fgW"/>
+                                                    <action selector="backButtonPressed" destination="h9j-z5-KE7" eventType="touchUpInside" id="eEb-dg-EsO"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yeo-il-JQR" userLabel="Born Text">
-                                                <rect key="frame" x="24" y="567" width="0.0" height="0.0"/>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="17"/>
-                                                <color key="textColor" name="almostBlack"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0xp-s4-eRX" userLabel="Born Label">
-                                                <rect key="frame" x="29" y="567" width="361" height="0.0"/>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
-                                                <color key="textColor" name="almostBlack"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gku-zp-uck" userLabel="Details Stack View">
+                                                <rect key="frame" x="24" y="520" width="366" height="140"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="oTv-aC-b5F" userLabel="Name Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="366" height="50"/>
+                                                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
+                                                        <color key="textColor" name="almostBlack"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNU-Vb-UDs" userLabel="Bio Label">
+                                                        <rect key="frame" x="0.0" y="65" width="366" height="0.0"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="85" id="3Ck-kH-NkY"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                                        <color key="textColor" name="almostBlack"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqD-cg-mCL" userLabel="See Full Bio Button">
+                                                        <rect key="frame" x="0.0" y="75" width="110" height="0.0"/>
+                                                        <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="17"/>
+                                                        <state key="normal" title="See full bio &gt;&gt;">
+                                                            <color key="titleColor" name="vibrantBlue"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="seeButtonPressed" destination="h9j-z5-KE7" eventType="touchUpInside" id="tmc-e5-fgW"/>
+                                                        </connections>
+                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Did-tT-b0T">
+                                                        <rect key="frame" x="0.0" y="90" width="366" height="50"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Born:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yeo-il-JQR" userLabel="Born Text">
+                                                                <rect key="frame" x="0.0" y="0.0" width="42" height="50"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="17"/>
+                                                                <color key="textColor" name="almostBlack"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="0xp-s4-eRX" userLabel="Born Label">
+                                                                <rect key="frame" x="47" y="0.0" width="319" height="50"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                                                <color key="textColor" name="almostBlack"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Did-tT-b0T" firstAttribute="top" secondItem="EqD-cg-mCL" secondAttribute="bottom" constant="15" id="0UJ-8t-cZL"/>
+                                                    <constraint firstItem="Did-tT-b0T" firstAttribute="leading" secondItem="Gku-zp-uck" secondAttribute="leading" id="0k8-FR-DAB"/>
+                                                    <constraint firstItem="SNU-Vb-UDs" firstAttribute="leading" secondItem="Gku-zp-uck" secondAttribute="leading" id="5p1-fz-MFJ"/>
+                                                    <constraint firstItem="oTv-aC-b5F" firstAttribute="top" secondItem="Gku-zp-uck" secondAttribute="top" id="BAJ-kj-mF0"/>
+                                                    <constraint firstAttribute="trailing" secondItem="oTv-aC-b5F" secondAttribute="trailing" id="D8a-Aa-TSd"/>
+                                                    <constraint firstItem="oTv-aC-b5F" firstAttribute="leading" secondItem="Gku-zp-uck" secondAttribute="leading" id="FOq-hV-XLy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Did-tT-b0T" secondAttribute="trailing" id="JUy-ZY-0c1"/>
+                                                    <constraint firstItem="EqD-cg-mCL" firstAttribute="leading" secondItem="Gku-zp-uck" secondAttribute="leading" id="JkB-zm-bZx"/>
+                                                    <constraint firstAttribute="trailing" secondItem="SNU-Vb-UDs" secondAttribute="trailing" id="XwA-fv-aSm"/>
+                                                    <constraint firstItem="EqD-cg-mCL" firstAttribute="top" secondItem="SNU-Vb-UDs" secondAttribute="bottom" constant="10" id="in7-He-gzp"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Did-tT-b0T" secondAttribute="bottom" id="rzm-Ma-fRQ"/>
+                                                    <constraint firstItem="SNU-Vb-UDs" firstAttribute="top" secondItem="oTv-aC-b5F" secondAttribute="bottom" constant="15" id="ykx-no-54l"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="0xp-s4-eRX" firstAttribute="leading" secondItem="Yeo-il-JQR" secondAttribute="trailing" constant="5" id="0KF-OU-vZA"/>
-                                            <constraint firstItem="oTv-aC-b5F" firstAttribute="leading" secondItem="XuG-y7-Bfr" secondAttribute="leading" constant="24" id="0pa-HC-EMe"/>
-                                            <constraint firstItem="Yeo-il-JQR" firstAttribute="leading" secondItem="XuG-y7-Bfr" secondAttribute="leading" constant="24" id="1Br-kJ-clU"/>
-                                            <constraint firstItem="CQI-Lb-CAS" firstAttribute="top" secondItem="XuG-y7-Bfr" secondAttribute="top" id="2c5-cq-6d9"/>
-                                            <constraint firstItem="EqD-cg-mCL" firstAttribute="leading" secondItem="XuG-y7-Bfr" secondAttribute="leading" constant="24" id="9lR-2i-i96"/>
-                                            <constraint firstAttribute="trailing" secondItem="oTv-aC-b5F" secondAttribute="trailing" constant="24" id="DMv-FG-ayV"/>
-                                            <constraint firstItem="CQI-Lb-CAS" firstAttribute="leading" secondItem="XuG-y7-Bfr" secondAttribute="leading" id="FJd-6d-DQH"/>
-                                            <constraint firstItem="0xp-s4-eRX" firstAttribute="top" secondItem="EqD-cg-mCL" secondAttribute="bottom" constant="15" id="FyQ-rc-UqD"/>
-                                            <constraint firstItem="Yeo-il-JQR" firstAttribute="top" secondItem="EqD-cg-mCL" secondAttribute="bottom" constant="15" id="GVP-ec-4yB"/>
-                                            <constraint firstAttribute="trailing" secondItem="0xp-s4-eRX" secondAttribute="trailing" constant="24" id="I75-cY-KiY"/>
-                                            <constraint firstAttribute="bottom" secondItem="0xp-s4-eRX" secondAttribute="bottom" constant="50" id="Kmu-IG-Jc8"/>
-                                            <constraint firstItem="SNU-Vb-UDs" firstAttribute="leading" secondItem="XuG-y7-Bfr" secondAttribute="leading" constant="24" id="OaT-1r-i9p"/>
-                                            <constraint firstAttribute="trailing" secondItem="SNU-Vb-UDs" secondAttribute="trailing" constant="24" id="SyZ-co-hkm"/>
-                                            <constraint firstAttribute="trailing" secondItem="CQI-Lb-CAS" secondAttribute="trailing" id="YcV-hZ-cMi"/>
-                                            <constraint firstItem="oTv-aC-b5F" firstAttribute="top" secondItem="CQI-Lb-CAS" secondAttribute="bottom" constant="20" id="ahh-fk-j7E"/>
-                                            <constraint firstItem="SNU-Vb-UDs" firstAttribute="top" secondItem="oTv-aC-b5F" secondAttribute="bottom" constant="15" id="fQk-Tg-Uc6"/>
-                                            <constraint firstItem="EqD-cg-mCL" firstAttribute="top" secondItem="SNU-Vb-UDs" secondAttribute="bottom" constant="10" id="gje-rV-fkQ"/>
+                                            <constraint firstItem="Gku-zp-uck" firstAttribute="top" secondItem="CQI-Lb-CAS" secondAttribute="bottom" constant="20" id="2eg-yk-blu"/>
+                                            <constraint firstAttribute="bottom" secondItem="Gku-zp-uck" secondAttribute="bottom" constant="50" id="EsZ-sl-zOB"/>
+                                            <constraint firstAttribute="trailing" secondItem="CQI-Lb-CAS" secondAttribute="trailing" id="TR5-pe-ZbD"/>
+                                            <constraint firstItem="abj-aX-uRp" firstAttribute="leading" secondItem="XuG-y7-Bfr" secondAttribute="leading" constant="24" id="VXU-hm-Nm5"/>
+                                            <constraint firstItem="CQI-Lb-CAS" firstAttribute="top" secondItem="XuG-y7-Bfr" secondAttribute="top" id="YnV-nH-KtG"/>
+                                            <constraint firstItem="abj-aX-uRp" firstAttribute="top" secondItem="XuG-y7-Bfr" secondAttribute="top" constant="55" id="iYQ-x3-1Bq"/>
+                                            <constraint firstItem="Gku-zp-uck" firstAttribute="leading" secondItem="XuG-y7-Bfr" secondAttribute="leading" constant="24" id="jbX-uj-Ud9"/>
+                                            <constraint firstItem="CQI-Lb-CAS" firstAttribute="leading" secondItem="XuG-y7-Bfr" secondAttribute="leading" id="m95-Ci-v98"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gku-zp-uck" secondAttribute="trailing" constant="24" id="wCm-dS-ZbM"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="XuG-y7-Bfr" secondAttribute="trailing" id="5VF-Vc-6pu"/>
-                                    <constraint firstAttribute="bottom" secondItem="XuG-y7-Bfr" secondAttribute="bottom" id="EHs-JN-mSh"/>
-                                    <constraint firstAttribute="width" secondItem="XuG-y7-Bfr" secondAttribute="width" id="iSc-fn-SaS"/>
-                                    <constraint firstItem="XuG-y7-Bfr" firstAttribute="leading" secondItem="MXJ-57-Jvw" secondAttribute="leading" id="sE2-QM-Q6F"/>
-                                    <constraint firstItem="XuG-y7-Bfr" firstAttribute="top" secondItem="MXJ-57-Jvw" secondAttribute="top" id="xNj-Vl-ELC"/>
+                                    <constraint firstItem="XuG-y7-Bfr" firstAttribute="leading" secondItem="MXJ-57-Jvw" secondAttribute="leading" id="SKN-Nc-DB0"/>
+                                    <constraint firstItem="XuG-y7-Bfr" firstAttribute="top" secondItem="MXJ-57-Jvw" secondAttribute="top" id="SNS-7g-1Tz"/>
+                                    <constraint firstAttribute="trailing" secondItem="XuG-y7-Bfr" secondAttribute="trailing" id="TXY-fa-I8n"/>
+                                    <constraint firstAttribute="bottom" secondItem="XuG-y7-Bfr" secondAttribute="bottom" id="dim-8U-w6g"/>
+                                    <constraint firstAttribute="width" secondItem="XuG-y7-Bfr" secondAttribute="width" id="es4-31-Uzv"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="EmA-L3-YrI"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="P5T-F6-2x0"/>
@@ -114,14 +140,16 @@
                         <viewLayoutGuide key="safeArea" id="6uc-rj-Z1c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="MXJ-57-Jvw" firstAttribute="leading" secondItem="6uc-rj-Z1c" secondAttribute="leading" id="3c2-mS-QhE"/>
-                            <constraint firstItem="MXJ-57-Jvw" firstAttribute="trailing" secondItem="6uc-rj-Z1c" secondAttribute="trailing" id="LMM-dd-giH"/>
-                            <constraint firstItem="MXJ-57-Jvw" firstAttribute="top" secondItem="6uc-rj-Z1c" secondAttribute="top" id="auG-Rc-D6I"/>
-                            <constraint firstItem="MXJ-57-Jvw" firstAttribute="bottom" secondItem="6uc-rj-Z1c" secondAttribute="bottom" id="vq5-Sq-JHz"/>
+                            <constraint firstAttribute="bottom" secondItem="MXJ-57-Jvw" secondAttribute="bottom" id="FBh-D1-0Zq"/>
+                            <constraint firstAttribute="trailing" secondItem="MXJ-57-Jvw" secondAttribute="trailing" id="GiV-tA-1GW"/>
+                            <constraint firstItem="MXJ-57-Jvw" firstAttribute="leading" secondItem="rmN-ic-iAF" secondAttribute="leading" id="jST-BF-4Hr"/>
+                            <constraint firstItem="MXJ-57-Jvw" firstAttribute="top" secondItem="rmN-ic-iAF" secondAttribute="top" constant="-50" id="qvg-Jh-J47"/>
                         </constraints>
                     </view>
+                    <size key="freeformSize" width="414" height="896"/>
                     <connections>
                         <outlet property="bioLabel" destination="SNU-Vb-UDs" id="8fu-N7-Ccb"/>
+                        <outlet property="bioLabelHeightConstraint" destination="3Ck-kH-NkY" id="1gJ-QK-hPG"/>
                         <outlet property="bornLabel" destination="0xp-s4-eRX" id="wpE-DL-949"/>
                         <outlet property="bornText" destination="Yeo-il-JQR" id="s9z-m7-gMS"/>
                         <outlet property="nameLabel" destination="oTv-aC-b5F" id="XmJ-Dr-Nt5"/>
@@ -135,6 +163,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowBack" width="27" height="21"/>
         <namedColor name="almostBlack">
             <color red="0.030999999493360519" green="0.035000000149011612" blue="0.039000000804662704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

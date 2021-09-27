@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol PersonID {
+protocol PersonIDDelegate: AnyObject {
     func passPersonIDBack(id: Int)
 }
 
@@ -22,11 +22,10 @@ class LabelWithCircleImageView: UIView {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var circleImagesCollectionView: UICollectionView!
 
-    // swiftlint:disable weak_delegate
 
     // MARK: - Properties
     var model: LabelWithCircleImageViewUIModel?
-    var someDelegate: PersonID?
+    weak var delegate: PersonIDDelegate?
 
     // MARK: - Business Logic
     override init(frame: CGRect) {
@@ -90,7 +89,7 @@ extension LabelWithCircleImageView: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let model = model {
             let personID = model.contents[indexPath.row].id
-            someDelegate?.passPersonIDBack(id: personID)
+            delegate?.passPersonIDBack(id: personID)
         }
     }
 }

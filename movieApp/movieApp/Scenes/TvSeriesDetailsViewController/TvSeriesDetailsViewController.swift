@@ -31,7 +31,7 @@ class TvSeriesDetailsViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelWithCircleImageView.someDelegate = self
+        labelWithCircleImageView.delegate = self
         setupNavigationBar()
         setupUI()
     }
@@ -98,12 +98,12 @@ class TvSeriesDetailsViewController: UIViewController {
 }
 
 // MARK: - PersonID
-extension TvSeriesDetailsViewController: PersonID {
+extension TvSeriesDetailsViewController: PersonIDDelegate {
     func passPersonIDBack(id: Int) {
         showPeopleDetailsVC(personID: id)
     }
 
-    func showPeopleDetailsVC(personID: Int) {
+    private func showPeopleDetailsVC(personID: Int) {
         if let peopleDetailsVC = UIStoryboard(name: "PeopleDetails", bundle: nil).instantiateInitialViewController() as? PeopleDetailsViewController {
             peopleDetailsVC.personID = personID
             navigationController?.pushViewController(peopleDetailsVC, animated: true)

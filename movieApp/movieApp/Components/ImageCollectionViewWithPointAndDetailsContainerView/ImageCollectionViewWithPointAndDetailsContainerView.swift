@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol MoviesAndTvSeriesID {
+protocol MoviesAndTvSeriesIDDelegate: AnyObject {
     func passIDBack(id: Int)
 }
 
@@ -22,14 +22,12 @@ class ImageCollectionViewWithPointAndDetailsContainerView: UIView {
     @IBOutlet private weak var imageCollectionView: UICollectionView!
     @IBOutlet private weak var pointsAndDetailsContainerView: PointAndDetailsContainerView!
 
-    // swiftlint:disable weak_delegate
-
     // MARK: - Properties
     private var imageArray: [UIImage]?
     private var currentImageNumber: Int = 0
     private var contentArray: [SliderContents]?
     var model: ImageCollectionViewWithPointAndDetailsContainerViewUIModel?
-    var someDelegate: MoviesAndTvSeriesID?
+    weak var delegate: MoviesAndTvSeriesIDDelegate?
 
     // MARK: - Business Logic
     override init(frame: CGRect) {
@@ -93,7 +91,7 @@ extension ImageCollectionViewWithPointAndDetailsContainerView: UICollectionViewD
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let model = model {
-            someDelegate?.passIDBack(id: model.contents[indexPath.row].id)
+            delegate?.passIDBack(id: model.contents[indexPath.row].id)
         }
     }
 }

@@ -13,8 +13,6 @@ class MoviesDetailsViewController: UIViewController {
     @IBOutlet private weak var iconWithPointLabelView: IconWithPointLabel!
     @IBOutlet private weak var titleAndDetailsView: TitleAndDetailsContainerView!
     @IBOutlet private weak var subjectLabel: UILabel!
-    @IBOutlet private weak var directorText: UILabel!
-    @IBOutlet private weak var directorLabel: UILabel!
     @IBOutlet private weak var labelWithCircleImageView: LabelWithCircleImageView!
 
     // MARK: - Properties
@@ -24,7 +22,7 @@ class MoviesDetailsViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelWithCircleImageView.someDelegate = self
+        labelWithCircleImageView.delegate = self
         setupNavigationBar()
         setupUI()
     }
@@ -43,12 +41,6 @@ class MoviesDetailsViewController: UIViewController {
         view.backgroundColor = .white
         subjectLabel.font = .body1
         subjectLabel.textColor = .almostBlack
-
-        directorText.font = .body1
-        directorText.textColor = .almostBlack
-
-        directorLabel.font = .link
-        directorLabel.textColor = .vibrantBlue
     }
 
     private func configure() {
@@ -66,8 +58,6 @@ class MoviesDetailsViewController: UIViewController {
                 )
             )
             self.subjectLabel.text = moviesDetailsUIModel.overview
-            self.directorText.text = moviesDetailsUIModel.directorTitle
-            self.directorLabel.text = moviesDetailsUIModel.director
             self.labelWithCircleImageView.configure(
                 viewModel: LabelWithCircleImageViewUIModel(
                     titleText: moviesDetailsUIModel.castHeadline,
@@ -82,12 +72,12 @@ class MoviesDetailsViewController: UIViewController {
 }
 
 // MARK: - PersonID
-extension MoviesDetailsViewController: PersonID {
+extension MoviesDetailsViewController: PersonIDDelegate {
     func passPersonIDBack(id: Int) {
         showPeopleDetailsVC(personID: id)
     }
 
-    func showPeopleDetailsVC(personID: Int) {
+    private func showPeopleDetailsVC(personID: Int) {
         if let peopleDetailsVC = UIStoryboard(name: "PeopleDetails", bundle: nil).instantiateInitialViewController() as? PeopleDetailsViewController {
             peopleDetailsVC.personID = personID
             navigationController?.pushViewController(peopleDetailsVC, animated: true)

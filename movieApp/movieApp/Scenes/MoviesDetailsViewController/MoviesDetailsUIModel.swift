@@ -16,8 +16,6 @@ struct MoviesDetailsUIModel {
     let runtime: String
     let releaseDate: String
     let overview: String
-    let directorTitle: String
-    let director: String
     let castHeadline: String
     let cast: [CircleImageAndTextContents]
 
@@ -39,10 +37,6 @@ struct MoviesDetailsUIModel {
         self.runtime = "\(moviesDetailsResponseModel.runtime) min"
         self.releaseDate = moviesDetailsResponseModel.releaseDate
         self.overview = moviesDetailsResponseModel.overview
-
-        // Director
-        self.directorTitle = "Director: "
-        self.director = "Unknown"
 
         // Cast
         self.castHeadline = "Cast"

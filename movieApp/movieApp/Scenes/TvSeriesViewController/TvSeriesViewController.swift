@@ -30,7 +30,7 @@ class TvSeriesViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageCollectionViewWithPD.someDelegate = self
+        imageCollectionViewWithPD.delegate = self
         setupUI()
         setupBindings()
     }
@@ -113,12 +113,12 @@ extension TvSeriesViewController: UICollectionViewDelegateFlowLayout {
 }
 
 // MARK: - MoviesAndTvSeriesID
-extension TvSeriesViewController: MoviesAndTvSeriesID {
+extension TvSeriesViewController: MoviesAndTvSeriesIDDelegate {
     func passIDBack(id: Int) {
         showTvSeriesDetailVC(id: id)
     }
 
-    func showTvSeriesDetailVC(id: Int) {
+    private func showTvSeriesDetailVC(id: Int) {
         if let tvSeriesDetailsVC = UIStoryboard(name: "TvSeriesDetails", bundle: nil).instantiateInitialViewController() as? TvSeriesDetailsViewController {
             tvSeriesDetailsVC.tvSeriesID = id
             navigationController?.pushViewController(tvSeriesDetailsVC, animated: true)

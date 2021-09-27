@@ -30,7 +30,7 @@ class MoviesViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageCollectionViewAndDetails.someDelegate = self
+        imageCollectionViewAndDetails.delegate = self
         setupUI()
         setupBinding()
     }
@@ -103,12 +103,12 @@ extension MoviesViewController: UIScrollViewDelegate {
 }
 
 // MARK: - MoviesAndTvSeriesID
-extension MoviesViewController: MoviesAndTvSeriesID {
+extension MoviesViewController: MoviesAndTvSeriesIDDelegate {
     func passIDBack(id: Int) {
         showMoviesDetailVC(id: id)
     }
 
-    func showMoviesDetailVC(id: Int) {
+    private func showMoviesDetailVC(id: Int) {
         if let moviesDetailVC = UIStoryboard(name: "MoviesDetails", bundle: nil).instantiateInitialViewController() as? MoviesDetailsViewController {
             moviesDetailVC.moviesID = id
             navigationController?.pushViewController(moviesDetailVC, animated: true)
