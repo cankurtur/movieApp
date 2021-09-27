@@ -112,18 +112,16 @@ extension TvSeriesViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-// MARK: - PushViewController
-extension TvSeriesViewController {
+// MARK: - MoviesAndTvSeriesID
+extension TvSeriesViewController: MoviesAndTvSeriesID {
+    func passIDBack(id: Int) {
+        showTvSeriesDetailVC(id: id)
+    }
+
     func showTvSeriesDetailVC(id: Int) {
         if let tvSeriesDetailsVC = UIStoryboard(name: "TvSeriesDetails", bundle: nil).instantiateInitialViewController() as? TvSeriesDetailsViewController {
             tvSeriesDetailsVC.tvSeriesID = id
             navigationController?.pushViewController(tvSeriesDetailsVC, animated: true)
         }
-    }
-}
-
-extension TvSeriesViewController: MoviesAndTvSeriesID {
-    func passIDBack(id: Int) {
-        showTvSeriesDetailVC(id: id)
     }
 }

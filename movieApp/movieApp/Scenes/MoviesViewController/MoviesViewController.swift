@@ -102,18 +102,16 @@ extension MoviesViewController: UIScrollViewDelegate {
     }
 }
 
-// MARK: - PushViewController
-extension MoviesViewController {
+// MARK: - MoviesAndTvSeriesID
+extension MoviesViewController: MoviesAndTvSeriesID {
+    func passIDBack(id: Int) {
+        showMoviesDetailVC(id: id)
+    }
+
     func showMoviesDetailVC(id: Int) {
         if let moviesDetailVC = UIStoryboard(name: "MoviesDetails", bundle: nil).instantiateInitialViewController() as? MoviesDetailsViewController {
             moviesDetailVC.moviesID = id
             navigationController?.pushViewController(moviesDetailVC, animated: true)
         }
-    }
-}
-
-extension MoviesViewController: MoviesAndTvSeriesID {
-    func passIDBack(id: Int) {
-        showMoviesDetailVC(id: id)
     }
 }

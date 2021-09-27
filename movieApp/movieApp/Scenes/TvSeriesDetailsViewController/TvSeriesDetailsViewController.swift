@@ -87,15 +87,17 @@ class TvSeriesDetailsViewController: UIViewController {
             )
         }
     }
+    @IBAction private func backButtonPressed() {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
+// MARK: - PersonID
 extension TvSeriesDetailsViewController: PersonID {
     func passPersonIDBack(id: Int) {
         showPeopleDetailsVC(personID: id)
     }
-}
 
-extension TvSeriesDetailsViewController {
     func showPeopleDetailsVC(personID: Int) {
         if let peopleDetailsVC = UIStoryboard(name: "PeopleDetails", bundle: nil).instantiateInitialViewController() as? PeopleDetailsViewController {
             peopleDetailsVC.personID = personID
@@ -103,19 +105,3 @@ extension TvSeriesDetailsViewController {
         }
     }
 }
-
-// extension TvSeriesDetailsViewController {
-//    func setBackBarButtonCustom() {
-//        let btnLeftMenu: UIButton = UIButton()
-//        btnLeftMenu.setImage(UIImage(named: "clock"), for: UIControl.State())
-//        btnLeftMenu.addTarget(self, action: #selector(TvSeriesDetailsViewController.onClcikBack), for: UIControl.Event.touchUpInside)
-//        btnLeftMenu.frame = CGRect(x: 0, y: 0, width: 33 / 2, height: 27 / 2)
-//        let barButton = UIBarButtonItem(customView: btnLeftMenu)
-//        self.navigationItem.leftBarButtonItem = barButton
-//
-//    }
-//
-//    @objc func onClcikBack() {
-//        _ = self.navigationController?.popViewController(animated: true)
-//    }
-// }

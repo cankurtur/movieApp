@@ -68,15 +68,17 @@ class MoviesDetailsViewController: UIViewController {
             )
         }
     }
+    @IBAction private func backButtonPressed() {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
+// MARK: - PersonID
 extension MoviesDetailsViewController: PersonID {
     func passPersonIDBack(id: Int) {
         showPeopleDetailsVC(personID: id)
     }
-}
 
-extension MoviesDetailsViewController {
     func showPeopleDetailsVC(personID: Int) {
         if let peopleDetailsVC = UIStoryboard(name: "PeopleDetails", bundle: nil).instantiateInitialViewController() as? PeopleDetailsViewController {
             peopleDetailsVC.personID = personID
