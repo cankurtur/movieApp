@@ -13,6 +13,7 @@ class MoviesDetailsViewController: UIViewController {
     @IBOutlet private weak var iconWithPointLabelView: IconWithPointLabel!
     @IBOutlet private weak var titleAndDetailsView: TitleAndDetailsContainerView!
     @IBOutlet private weak var subjectLabel: UILabel!
+    @IBOutlet private weak var directorText: UILabel!
     @IBOutlet private weak var directorLabel: UILabel!
     @IBOutlet private weak var labelWithCircleImageView: LabelWithCircleImageView!
 
@@ -42,6 +43,12 @@ class MoviesDetailsViewController: UIViewController {
         view.backgroundColor = .white
         subjectLabel.font = .body1
         subjectLabel.textColor = .almostBlack
+
+        directorText.font = .body1
+        directorText.textColor = .almostBlack
+
+        directorLabel.font = .link
+        directorLabel.textColor = .vibrantBlue
     }
 
     private func configure() {
@@ -59,6 +66,7 @@ class MoviesDetailsViewController: UIViewController {
                 )
             )
             self.subjectLabel.text = moviesDetailsUIModel.overview
+            self.directorText.text = moviesDetailsUIModel.directorTitle
             self.directorLabel.text = moviesDetailsUIModel.director
             self.labelWithCircleImageView.configure(
                 viewModel: LabelWithCircleImageViewUIModel(

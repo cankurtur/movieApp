@@ -16,6 +16,7 @@ class Fonts {
     static let headline5 = getSFText(.bold, size: 17)
     
     static let subtitle1 = getSFText(.medium, size: 15)
+    static let link = getSFText(.semibold, size: 17)
     static let body1 = getSFText(.regular, size: 17)
     static let body2 = getSFText(.regular, size: 15)
     static let body3 = getSFText(.regular, size: 12)
@@ -27,6 +28,7 @@ class Fonts {
         case regular = "-Regular"
         case black = "-Black"
         case medium = "-Medium"
+        case semibold = "-Semibold"
     }
     
     // To add new UIFont we have to use this function below

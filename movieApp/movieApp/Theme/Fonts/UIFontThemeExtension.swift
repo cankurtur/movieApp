@@ -15,6 +15,7 @@ extension UIFont {
     static let headline5 = Fonts.headline5
     
     static let subtitle1 = Fonts.subtitle1
+    static let link = Fonts.link
     static let body1 = Fonts.body1
     static let body2 = Fonts.body2
     static let body3 = Fonts.body3

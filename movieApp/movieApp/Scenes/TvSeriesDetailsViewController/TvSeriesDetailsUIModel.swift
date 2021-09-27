@@ -17,6 +17,7 @@ struct TvSeriesDetailsUIModel {
     let seriesRunTime: String
     let overview: String
     let numberOfSeasons: String
+    let creatorsTitle: String
     let creators: String
     let castHeadline: String
     let cast: [CircleImageAndTextContents]
@@ -64,11 +65,13 @@ struct TvSeriesDetailsUIModel {
         self.numberOfSeasons = "\(tvSeriesDetailsResponseModel.numberOfSeasons) seasons"
 
         // Creators
+        self.creatorsTitle = "Creators:"
+        
         var creators = ""
         if tvSeriesDetailsResponseModel.createdBy.isEmpty {
-            creators = "Creators: Unknown"
+            creators = "Unknown"
         } else {
-            let creatorsEdited = tvSeriesDetailsResponseModel.createdBy.reduce("Creators: ") { result, createdBy -> String in
+            let creatorsEdited = tvSeriesDetailsResponseModel.createdBy.reduce("") { result, createdBy -> String in
                 var creatorString = result
                 creatorString += "\(createdBy.name), "
                 return creatorString

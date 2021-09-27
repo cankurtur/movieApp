@@ -20,6 +20,7 @@ class TvSeriesDetailsViewController: UIViewController {
     @IBOutlet private weak var subjectLabel: UILabel!
     @IBOutlet private weak var seasonView: UIView!
     @IBOutlet private weak var seasonLabel: UILabel!
+    @IBOutlet private weak var creatorsText: UILabel!
     @IBOutlet private weak var creatorsLabel: UILabel!
     @IBOutlet private weak var labelWithCircleImageView: LabelWithCircleImageView!
 
@@ -57,8 +58,11 @@ class TvSeriesDetailsViewController: UIViewController {
         seasonLabel.font = .season
         seasonLabel.textColor = .white
 
-        creatorsLabel.font = .body1
-        creatorsLabel.textColor = .almostBlack
+        creatorsText.font = .body1
+        creatorsText.textColor = .almostBlack
+
+        creatorsLabel.font = .link
+        creatorsLabel.textColor = .vibrantBlue
     }
 
     private func configure() {
@@ -78,6 +82,7 @@ class TvSeriesDetailsViewController: UIViewController {
             )
             self.subjectLabel.text = detailsUIModel.overview
             self.seasonLabel.text = detailsUIModel.numberOfSeasons
+            self.creatorsText.text = detailsUIModel.creatorsTitle
             self.creatorsLabel.text = detailsUIModel.creators
             self.labelWithCircleImageView.configure(
                 viewModel: LabelWithCircleImageViewUIModel(
