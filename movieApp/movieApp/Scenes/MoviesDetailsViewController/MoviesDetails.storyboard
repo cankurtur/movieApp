@@ -34,13 +34,6 @@
                                                     <constraint firstAttribute="height" constant="500" id="Q7P-oK-Dya"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crM-hr-eJr" userLabel="Back Button">
-                                                <rect key="frame" x="24" y="55" width="27" height="22"/>
-                                                <state key="normal" image="arrowBack"/>
-                                                <connections>
-                                                    <action selector="backButtonPressed" destination="NE1-74-k6p" eventType="touchUpInside" id="gnn-Dp-gya"/>
-                                                </connections>
-                                            </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="956-tN-ju3" customClass="IconWithPointLabel" customModule="movieApp" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="486" width="61" height="24"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,10 +72,8 @@
                                             <constraint firstItem="Mnt-6M-FkU" firstAttribute="top" secondItem="4aq-DD-W3M" secondAttribute="bottom" constant="20" id="HPb-o2-cyj"/>
                                             <constraint firstItem="0RO-md-ZBi" firstAttribute="leading" secondItem="na6-q7-ZFX" secondAttribute="leading" constant="24" id="JJe-RG-Upo"/>
                                             <constraint firstItem="0RO-md-ZBi" firstAttribute="top" secondItem="VLg-iH-QQS" secondAttribute="bottom" constant="20" id="OHX-jK-MYp"/>
-                                            <constraint firstItem="crM-hr-eJr" firstAttribute="leading" secondItem="na6-q7-ZFX" secondAttribute="leading" constant="24" id="S9n-yV-QQk"/>
                                             <constraint firstItem="4aq-DD-W3M" firstAttribute="leading" secondItem="na6-q7-ZFX" secondAttribute="leading" constant="24" id="SST-Ul-F8q"/>
                                             <constraint firstItem="Mnt-6M-FkU" firstAttribute="leading" secondItem="na6-q7-ZFX" secondAttribute="leading" id="XG9-K0-36e"/>
-                                            <constraint firstItem="crM-hr-eJr" firstAttribute="top" secondItem="na6-q7-ZFX" secondAttribute="top" constant="55" id="b3S-C3-mFp"/>
                                             <constraint firstAttribute="trailing" secondItem="0RO-md-ZBi" secondAttribute="trailing" constant="24" id="eH5-Qz-8hZ"/>
                                             <constraint firstItem="VLg-iH-QQS" firstAttribute="top" secondItem="na6-q7-ZFX" secondAttribute="top" id="eZZ-wD-x7Z"/>
                                             <constraint firstAttribute="bottom" secondItem="Mnt-6M-FkU" secondAttribute="bottom" constant="70" id="pMo-uU-nJf"/>
@@ -103,11 +94,20 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="s9P-jc-IYl"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="ze1-VN-w4i"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crM-hr-eJr" userLabel="Back Button">
+                                <rect key="frame" x="24" y="44" width="27" height="22"/>
+                                <state key="normal" image="arrowBack"/>
+                                <connections>
+                                    <action selector="backButtonPressed" destination="NE1-74-k6p" eventType="touchUpInside" id="gnn-Dp-gya"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eYl-69-4nU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="oct-pS-XqL" secondAttribute="trailing" id="30U-1U-iMm"/>
+                            <constraint firstItem="crM-hr-eJr" firstAttribute="leading" secondItem="eYl-69-4nU" secondAttribute="leading" constant="24" id="9wa-Tl-me6"/>
+                            <constraint firstItem="crM-hr-eJr" firstAttribute="top" secondItem="eYl-69-4nU" secondAttribute="top" id="A1q-Gt-hN3"/>
                             <constraint firstItem="oct-pS-XqL" firstAttribute="leading" secondItem="g3X-Ma-J1Z" secondAttribute="leading" id="UbL-KV-21R"/>
                             <constraint firstItem="oct-pS-XqL" firstAttribute="top" secondItem="g3X-Ma-J1Z" secondAttribute="top" constant="-50" id="c6h-3m-SeW"/>
                             <constraint firstAttribute="bottom" secondItem="oct-pS-XqL" secondAttribute="bottom" id="xB1-ft-VMe"/>

@@ -41,13 +41,6 @@
                                                     <constraint firstAttribute="height" constant="500" id="YK2-NF-ge6"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abj-aX-uRp" userLabel="Back Button">
-                                                <rect key="frame" x="24" y="55" width="27" height="22"/>
-                                                <state key="normal" image="arrowBack"/>
-                                                <connections>
-                                                    <action selector="backButtonPressed" destination="h9j-z5-KE7" eventType="touchUpInside" id="eEb-dg-EsO"/>
-                                                </connections>
-                                            </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gku-zp-uck" userLabel="Details Stack View">
                                                 <rect key="frame" x="24" y="520" width="366" height="140"/>
                                                 <subviews>
@@ -117,9 +110,7 @@
                                             <constraint firstItem="Gku-zp-uck" firstAttribute="top" secondItem="CQI-Lb-CAS" secondAttribute="bottom" constant="20" id="2eg-yk-blu"/>
                                             <constraint firstAttribute="bottom" secondItem="Gku-zp-uck" secondAttribute="bottom" constant="50" id="EsZ-sl-zOB"/>
                                             <constraint firstAttribute="trailing" secondItem="CQI-Lb-CAS" secondAttribute="trailing" id="TR5-pe-ZbD"/>
-                                            <constraint firstItem="abj-aX-uRp" firstAttribute="leading" secondItem="XuG-y7-Bfr" secondAttribute="leading" constant="24" id="VXU-hm-Nm5"/>
                                             <constraint firstItem="CQI-Lb-CAS" firstAttribute="top" secondItem="XuG-y7-Bfr" secondAttribute="top" id="YnV-nH-KtG"/>
-                                            <constraint firstItem="abj-aX-uRp" firstAttribute="top" secondItem="XuG-y7-Bfr" secondAttribute="top" constant="55" id="iYQ-x3-1Bq"/>
                                             <constraint firstItem="Gku-zp-uck" firstAttribute="leading" secondItem="XuG-y7-Bfr" secondAttribute="leading" constant="24" id="jbX-uj-Ud9"/>
                                             <constraint firstItem="CQI-Lb-CAS" firstAttribute="leading" secondItem="XuG-y7-Bfr" secondAttribute="leading" id="m95-Ci-v98"/>
                                             <constraint firstAttribute="trailing" secondItem="Gku-zp-uck" secondAttribute="trailing" constant="24" id="wCm-dS-ZbM"/>
@@ -136,14 +127,23 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="EmA-L3-YrI"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="P5T-F6-2x0"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abj-aX-uRp" userLabel="Back Button">
+                                <rect key="frame" x="24" y="44" width="27" height="22"/>
+                                <state key="normal" image="arrowBack"/>
+                                <connections>
+                                    <action selector="backButtonPressed" destination="h9j-z5-KE7" eventType="touchUpInside" id="eEb-dg-EsO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6uc-rj-Z1c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="MXJ-57-Jvw" secondAttribute="bottom" id="FBh-D1-0Zq"/>
                             <constraint firstAttribute="trailing" secondItem="MXJ-57-Jvw" secondAttribute="trailing" id="GiV-tA-1GW"/>
+                            <constraint firstItem="abj-aX-uRp" firstAttribute="leading" secondItem="6uc-rj-Z1c" secondAttribute="leading" constant="24" id="azt-EH-WQZ"/>
                             <constraint firstItem="MXJ-57-Jvw" firstAttribute="leading" secondItem="rmN-ic-iAF" secondAttribute="leading" id="jST-BF-4Hr"/>
                             <constraint firstItem="MXJ-57-Jvw" firstAttribute="top" secondItem="rmN-ic-iAF" secondAttribute="top" constant="-50" id="qvg-Jh-J47"/>
+                            <constraint firstItem="abj-aX-uRp" firstAttribute="top" secondItem="6uc-rj-Z1c" secondAttribute="top" id="xxI-C0-sJk"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="896"/>
