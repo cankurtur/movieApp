@@ -35,7 +35,19 @@ struct MoviesDetailsUIModel {
         self.details = details
 
         self.runtime = "\(moviesDetailsResponseModel.runtime) min"
-        self.releaseDate = moviesDetailsResponseModel.releaseDate
+
+        // Release Date Format
+        let releaseDateFromService = moviesDetailsResponseModel.releaseDate
+        var resultOfReleaseDate = ""
+        let dateFormatterToDate = DateFormatter()
+        dateFormatterToDate.dateFormat = "yyyy-MM-dd"
+        if let formattedDate = dateFormatterToDate.date(from: releaseDateFromService) {
+            let dateFormatterToString = DateFormatter()
+            dateFormatterToString.dateFormat = "dd.MM.yyyy"
+            resultOfReleaseDate = dateFormatterToString.string(from: formattedDate)
+        }
+        self.releaseDate = resultOfReleaseDate
+
         self.overview = moviesDetailsResponseModel.overview
 
         // Cast

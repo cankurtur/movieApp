@@ -5,6 +5,7 @@
 //  Created by Can Kurtur on 26.09.2021.
 //
 
+
 import Foundation
 
 struct PeopleDetailsUIModel {
@@ -22,7 +23,17 @@ struct PeopleDetailsUIModel {
 
         // Born Text
         if let birthday = peopleDetailsResponseModel.birthday, let placeOfBirth = peopleDetailsResponseModel.placeOfBirth {
-            let bornString = "\(birthday) in \(placeOfBirth)"
+            let birthdayString = birthday
+            var resultOfBirthday = ""
+            let dateFormatterToDate = DateFormatter()
+            dateFormatterToDate.dateFormat = "yyyy-MM-dd"
+            if let formattedDate = dateFormatterToDate.date(from: birthdayString) {
+                let dateFormatterToString = DateFormatter()
+                dateFormatterToString.dateFormat = "MMMM dd, yyyy"
+                resultOfBirthday = dateFormatterToString.string(from: formattedDate)
+            }
+
+            let bornString = "\(resultOfBirthday) in \(placeOfBirth)"
             self.bornText = bornString
             self.bornLabelIsHide = false
         } else {
