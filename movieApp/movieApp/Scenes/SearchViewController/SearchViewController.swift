@@ -20,7 +20,7 @@ class SearchViewController: UIViewController {
     @IBOutlet private weak var xButton: UIButton!
     @IBOutlet private weak var cancelButton: UIButton!
 
-    var viewModel: SearchViewModel?
+    var viewModel: SearchViewModel = SearchViewModel()
     var content: [SearchCardViewModel]?
     
     override func viewDidLoad() {
@@ -44,7 +44,7 @@ class SearchViewController: UIViewController {
     }
 
     func setupBindings() {
-        viewModel?.getMultiSearch(query: "Game", completion: { searchCardViewArray in
+        viewModel.getMultiSearch(query: "Game", completion: { searchCardViewArray in
             self.content = searchCardViewArray
             self.cardTableView.reloadData()
         })

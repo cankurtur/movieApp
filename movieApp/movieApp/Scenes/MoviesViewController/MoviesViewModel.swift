@@ -11,6 +11,7 @@ struct MoviesViewModel {
     // MARK: - Properties
     let networking = Networking()
     var genresUserDefault = GenresUserDefaults()
+    var dateFormatManager = DateFormatManager()
 
     init() {
         getMovieGenres()
@@ -57,16 +58,10 @@ struct MoviesViewModel {
             switch result {
             case .success(let popularMoviesResponseModel):
                 for popularMovies in popularMoviesResponseModel.results {
+                    // Release Date Format
                     let releaseDateFromService = popularMovies.releaseDate
-                    var resultOfReleaseDate = ""
-                    let dateFormatterToDate = DateFormatter()
-                    dateFormatterToDate.dateFormat = "yyyy-MM-dd"
-                    if let formattedDate = dateFormatterToDate.date(from: releaseDateFromService) {
-                        let dateFormatterToString = DateFormatter()
-                        dateFormatterToString.dateFormat = "dd.MM.yyyy"
-                        resultOfReleaseDate = dateFormatterToString.string(from: formattedDate)
-                    }
-
+                    let formattedDate = dateFormatManager.formatStringToDate(string: releaseDateFromService)
+                    let resultOfReleaseDate = dateFormatManager.formatDateToString(date: formattedDate)
                     let id = popularMovies.id
                     let titleText = popularMovies.title
                     let voteAverage = String(format: "%.1f", popularMovies.voteAverage)

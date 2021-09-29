@@ -11,16 +11,14 @@ struct SearchViewModel {
     let networking = Networking()
 
     func getMultiSearch(query: String, completion: @escaping([SearchCardViewModel]) -> Void) {
-        var searchCardViewArray: [SearchCardViewModel]?
-
         let url = "\(APIConstants.multiSearchURL)\(query)"
         networking.performRequest(url: url) { (result: Result<MultiSearchResponseModel, Error>) in
             switch result {
             case.success(let multiSearchResponseModel):
-
+                var searchCardViewArray: [SearchCardViewModel] = []
                 for multiSearch in multiSearchResponseModel.results {
                     switch multiSearch.mediaType {
-                    case "movie":
+                    case .movieType:
                         let id = multiSearch.id
                         let moviesCastEndPoint = "\(APIConstants.moviesCastBaseURL)\(id)\(APIConstants.moviesCastLastURL)"
                         networking.performRequest(url: moviesCastEndPoint) { (result: Result<MoviesCastResponseModel, Error>) in
@@ -34,21 +32,21 @@ struct SearchViewModel {
                                 let details = String(editedDetails.dropLast(2))
 
                                 let searchCardViewModelForMovie = SearchCardViewModel(
-                                    posterPath: multiSearch.posterPath,
-                                    titleText: multiSearch.name,
+                                    posterPath: multiSearch.posterPath ?? "",
+                                    titleText: multiSearch.name ?? "",
                                     detailsText: details,
                                     imageWithLabelViewModel: ImageWithLabelUIModel(
                                         image: .calendarIcon,
                                         labelText: "Movie"
                                     )
                                 )
-                                searchCardViewArray?.append(searchCardViewModelForMovie)
+                                searchCardViewArray.append(searchCardViewModelForMovie)
                             case .failure(let error):
                                 print(error)
                             }
                         }
 
-                    case "tv":
+                    case .tvType:
 
                         let id = multiSearch.id
                         let tvSeriesCastEndPoint = "\(APIConstants.tvSeriesCastBaseURL)\(id)\(APIConstants.tvSeriesCastLastURL)"
@@ -63,22 +61,22 @@ struct SearchViewModel {
                                 let details = String(editedDetails.dropLast(2))
 
                                 let searchCardViewModelForTv = SearchCardViewModel(
-                                    posterPath: multiSearch.posterPath,
-                                    titleText: multiSearch.name,
+                                    posterPath: multiSearch.posterPath ?? "",
+                                    titleText: multiSearch.name ?? "",
                                     detailsText: details,
                                     imageWithLabelViewModel: ImageWithLabelUIModel(
                                         image: .calendarIcon,
                                         labelText: "Movie"
                                     )
                                 )
-                                searchCardViewArray?.append(searchCardViewModelForTv)
+                                searchCardViewArray.append(searchCardViewModelForTv)
                             case .failure(let error):
                                 print(error)
                             }
                         }
 
 
-                    case "person":
+                    case .personType:
 
                         let id = multiSearch.id
                         let peopleDetailsURL = "\(APIConstants.peopleDetailsBaseURL)\(id)\(APIConstants.peopleDetailsLastURL)"
@@ -94,15 +92,15 @@ struct SearchViewModel {
                                 }
 
                                 let searchCardViewForPerson = SearchCardViewModel(
-                                    posterPath: multiSearch.profilePath,
-                                    titleText: multiSearch.name,
+                                    posterPath: multiSearch.profilePath ?? "",
+                                    titleText: multiSearch.name ?? "",
                                     detailsText: bornText,
                                     imageWithLabelViewModel: ImageWithLabelUIModel(
                                         image: .calendarIcon,
                                         labelText: "Actor"
                                     )
                                 )
-                                searchCardViewArray?.append(searchCardViewForPerson)
+                                searchCardViewArray.append(searchCardViewForPerson)
                             case .failure(let error):
                                 print(error)
                             }
@@ -111,7 +109,7 @@ struct SearchViewModel {
                         print("error")
                     }
                 }
-                completion(searchCardViewArray ?? [])
+                completion(searchCardViewArray)
             case .failure(let error):
                 print(error)
             }

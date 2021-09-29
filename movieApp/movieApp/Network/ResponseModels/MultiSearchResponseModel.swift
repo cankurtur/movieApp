@@ -14,10 +14,10 @@ struct MultiSearchResponseModel: Codable {
 
 struct ResultsResponseModel: Codable {
     let id: Int
-    let mediaType: String
-    let name: String
-    let profilePath: String
-    let posterPath: String
+    let mediaType: MediaType
+    let name: String?
+    let profilePath: String?
+    let posterPath: String?
 
     private enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -26,4 +26,10 @@ struct ResultsResponseModel: Codable {
         case profilePath = "profile_path"
         case posterPath = "poster_path"
     }
+}
+
+enum MediaType: String, Codable {
+    case movieType = "movie"
+    case tvType = "tv"
+    case personType = "person"
 }

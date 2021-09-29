@@ -8,6 +8,8 @@
 import Foundation
 
 struct MoviesDetailsUIModel {
+    // Init DateFormatManager
+    var dateFormatManager = DateFormatManager()
     // MARK: - Properties
     let posterPath: String
     let voteAverage: String
@@ -38,14 +40,8 @@ struct MoviesDetailsUIModel {
 
         // Release Date Format
         let releaseDateFromService = moviesDetailsResponseModel.releaseDate
-        var resultOfReleaseDate = ""
-        let dateFormatterToDate = DateFormatter()
-        dateFormatterToDate.dateFormat = "yyyy-MM-dd"
-        if let formattedDate = dateFormatterToDate.date(from: releaseDateFromService) {
-            let dateFormatterToString = DateFormatter()
-            dateFormatterToString.dateFormat = "dd.MM.yyyy"
-            resultOfReleaseDate = dateFormatterToString.string(from: formattedDate)
-        }
+        let formattedDate = dateFormatManager.formatStringToDate(string: releaseDateFromService)
+        let resultOfReleaseDate = dateFormatManager.formatDateToString(date: formattedDate)
         self.releaseDate = resultOfReleaseDate
 
         self.overview = moviesDetailsResponseModel.overview
