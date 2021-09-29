@@ -33,6 +33,7 @@ struct APIConstants {
     static let popularTvSeriesBaseURL = "https://api.themoviedb.org/3/tv/popular?"
     static let tvSeriesGenresBaseURL = "https://api.themoviedb.org/3/genre/tv/list?"
     static let topRatedTvSeriesBaseURL = "https://api.themoviedb.org/3/tv/top_rated?"
+    static let multiSearchBaseURL = "https://api.themoviedb.org/3/search/multi?"
 
     static let popularMoviesURL = "\(popularMoviesBaseURL)api_key=\(apiKey)&language=en-US&page=1"
     static let movieGenresURL = "\(movieGenresBaseURL)api_key=\(apiKey)&language=en-US"
@@ -40,4 +41,5 @@ struct APIConstants {
     static let popularTvSeriesURL = "\(popularTvSeriesBaseURL)api_key=\(apiKey)&language=en-US&page=1"
     static let tvSeriesGenresURL = "\(tvSeriesGenresBaseURL)api_key=\(apiKey)&language=en-US"
     static let topRatedTvSeriesURL = "\(topRatedTvSeriesBaseURL)api_key=\(apiKey)&language=en-US&page=1"
+    static let multiSearchURL = "\(multiSearchBaseURL)api_key=\(apiKey)&language=en-US&page=1&include_adult=false&query="
 }

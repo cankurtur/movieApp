@@ -12,4 +12,6 @@ extension UIImage {
     static let starIcon = Images.star
     static let dummyImage = Images.dummyImage
     static let clock = Images.clock
+    static let iconMiniX = Images.iconMiniX
+    static let iconMiniSearch = Images.iconMiniSearch
 }

@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct SearchViewUIModel {
+    let cardArray: [SearchCardViewModel]
+}

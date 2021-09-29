@@ -9,7 +9,6 @@ import Foundation
 
 struct SearchCardViewModel {
     let posterPath: String
-    let image: FetchImageView
     let titleText: String
     let detailsText: String
     let imageWithLabelViewModel: ImageWithLabelUIModel
