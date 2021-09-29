@@ -57,10 +57,20 @@ struct MoviesViewModel {
             switch result {
             case .success(let popularMoviesResponseModel):
                 for popularMovies in popularMoviesResponseModel.results {
+                    let releaseDateFromService = popularMovies.releaseDate
+                    var resultOfReleaseDate = ""
+                    let dateFormatterToDate = DateFormatter()
+                    dateFormatterToDate.dateFormat = "yyyy-MM-dd"
+                    if let formattedDate = dateFormatterToDate.date(from: releaseDateFromService) {
+                        let dateFormatterToString = DateFormatter()
+                        dateFormatterToString.dateFormat = "dd.MM.yyyy"
+                        resultOfReleaseDate = dateFormatterToString.string(from: formattedDate)
+                    }
+
                     let id = popularMovies.id
                     let titleText = popularMovies.title
                     let voteAverage = String(format: "%.1f", popularMovies.voteAverage)
-                    let releaseDate = popularMovies.releaseDate
+                    let releaseDate = resultOfReleaseDate
                     let genreIds = popularMovies.genreIds
                     let detailsText = self.movieGenresIdToString(intArray: genreIds)
                     let posterPath = popularMovies.posterPath
