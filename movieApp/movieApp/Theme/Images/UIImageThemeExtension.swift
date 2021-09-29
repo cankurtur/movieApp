@@ -14,4 +14,5 @@ extension UIImage {
     static let clock = Images.clock
     static let iconMiniX = Images.iconMiniX
     static let iconMiniSearch = Images.iconMiniSearch
+    static let emptyViewImage = Images.emptyViewImage
 }

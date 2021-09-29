@@ -15,6 +15,7 @@ class Images {
     static let clock: UIImage = getImage(imageName: "clock")
     static let iconMiniX: UIImage = getImage(imageName: "iconMiniX")
     static let iconMiniSearch: UIImage = getImage(imageName: "iconMiniSearch")
+    static let emptyViewImage: UIImage = getImage(imageName: "emptyViewImage")
 
     // To add new UIImage we have to use this function below
     static func getImage(imageName: String) -> UIImage {

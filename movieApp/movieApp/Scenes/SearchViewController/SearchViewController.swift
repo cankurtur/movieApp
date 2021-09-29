@@ -14,11 +14,13 @@ class SearchViewController: UIViewController {
         static let cellIdentifier: String = "searchCardTableViewCell"
     }
 
-    @IBOutlet private weak var miniSearchView: UIView!
+
     @IBOutlet private weak var searchTextField: UITextField!
     @IBOutlet private weak var cardTableView: AutoSizedTableView!
     @IBOutlet private weak var xButton: UIButton!
     @IBOutlet private weak var cancelButton: UIButton!
+    @IBOutlet private weak var contentView: UIView!
+    @IBOutlet private weak var emptyView: UIView!
 
     var viewModel: SearchViewModel = SearchViewModel()
     var content: [SearchCardViewModel]?
@@ -33,9 +35,11 @@ class SearchViewController: UIViewController {
     private func setupUI() {
         title = Constants.largeTitleBarText
         view.backgroundColor = .white
+        emptyView.backgroundColor = .white
+        contentView.backgroundColor = .white
 
-        miniSearchView.layer.cornerRadius = 8
-        miniSearchView.backgroundColor = .white
+        emptyView.isHidden = true
+        searchTextField.leftView?.backgroundColor = .black
     }
     private func setupCardTableView() {
         cardTableView.delegate = self
@@ -43,17 +47,12 @@ class SearchViewController: UIViewController {
         cardTableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
     }
 
-    func setupBindings() {
-        viewModel.getMultiSearch(query: "Game", completion: { searchCardViewArray in
-            self.content = searchCardViewArray
-            self.cardTableView.reloadData()
-        })
-    }
 
     @IBAction private func xButtonPressed() {
+        searchTextField.text = ""
     }
     @IBAction private func cancelButtonPressed() {
-        setupBindings()
+        searchTextField.endEditing(true)
     }
 }
 
@@ -74,4 +73,26 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension SearchViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if (textField.text?.isEmpty) != nil {
+            textField.placeholder = "Type something"
+        } else {
+            guard let searchText = textField.text else { return }
+            viewModel.getMultiSearch(query: searchText) { searchCardViewArray in
+                self.content = searchCardViewArray
+                self.cardTableView.reloadData()
+            }
+            searchTextField.text = ""
+            emptyView.isHidden = false
+        }
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchTextField.endEditing(true)
+        return true
+    }
+
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        true
+    }
 }
