@@ -16,6 +16,7 @@ struct ResultsResponseModel: Codable {
     let id: Int
     let mediaType: MediaType
     let name: String?
+    let title: String?
     let profilePath: String?
     let posterPath: String?
 
@@ -23,6 +24,7 @@ struct ResultsResponseModel: Codable {
         case id = "id"
         case mediaType = "media_type"
         case name = "name"
+        case title = "title"
         case profilePath = "profile_path"
         case posterPath = "poster_path"
     }

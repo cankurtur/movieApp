@@ -47,12 +47,23 @@ class SearchViewController: UIViewController {
         cardTableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
     }
 
+    private func fetchCardObject(query: String) {
+        viewModel.getMultiSearch(query: query) { searchCardViewModelArray in
+            self.content = searchCardViewModelArray
+            self.cardTableView.reloadData()
+        }
+    }
+
 
     @IBAction private func xButtonPressed() {
         searchTextField.text = ""
+        content = []
+        cardTableView.reloadData()
     }
     @IBAction private func cancelButtonPressed() {
-        searchTextField.endEditing(true)
+        searchTextField.text = ""
+        content = []
+        cardTableView.reloadData()
     }
 }
 
@@ -70,21 +81,27 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configure(viewModel: content[indexPath.row])
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let content = content {
+            let id = content[indexPath.row].id
+            let mediaType = content[indexPath.row].mediaType
+
+            switch mediaType {
+            case .movieType:
+                showMoviesDetailVC(id: id)
+            case .tvType:
+                showTvSeriesDetailVC(id: id)
+            case .personType:
+                showPeopleDetailsVC(personID: id)
+            }
+        }
+    }
 }
 
 extension SearchViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if (textField.text?.isEmpty) != nil {
-            textField.placeholder = "Type something"
-        } else {
-            guard let searchText = textField.text else { return }
-            viewModel.getMultiSearch(query: searchText) { searchCardViewArray in
-                self.content = searchCardViewArray
-                self.cardTableView.reloadData()
-            }
-            searchTextField.text = ""
-            emptyView.isHidden = false
-        }
+        fetchCardObject(query: textField.text ?? "")
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -94,5 +111,28 @@ extension SearchViewController: UITextFieldDelegate {
 
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         true
+    }
+}
+
+extension SearchViewController {
+    private func showTvSeriesDetailVC(id: Int) {
+        if let tvSeriesDetailsVC = UIStoryboard(name: "TvSeriesDetails", bundle: nil).instantiateInitialViewController() as? TvSeriesDetailsViewController {
+            tvSeriesDetailsVC.tvSeriesID = id
+            navigationController?.pushViewController(tvSeriesDetailsVC, animated: true)
+        }
+    }
+
+    private func showMoviesDetailVC(id: Int) {
+        if let moviesDetailVC = UIStoryboard(name: "MoviesDetails", bundle: nil).instantiateInitialViewController() as? MoviesDetailsViewController {
+            moviesDetailVC.moviesID = id
+            navigationController?.pushViewController(moviesDetailVC, animated: true)
+        }
+    }
+
+    private func showPeopleDetailsVC(personID: Int) {
+        if let peopleDetailsVC = UIStoryboard(name: "PeopleDetails", bundle: nil).instantiateInitialViewController() as? PeopleDetailsViewController {
+            peopleDetailsVC.personID = personID
+            navigationController?.pushViewController(peopleDetailsVC, animated: true)
+        }
     }
 }
