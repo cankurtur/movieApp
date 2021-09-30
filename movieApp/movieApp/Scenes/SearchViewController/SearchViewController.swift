@@ -33,13 +33,17 @@ class SearchViewController: UIViewController {
     }
 
     private func setupUI() {
-        title = Constants.largeTitleBarText
+        navigationItem.title = Constants.largeTitleBarText
         view.backgroundColor = .white
         emptyView.backgroundColor = .white
         contentView.backgroundColor = .white
 
         emptyView.isHidden = true
-        searchTextField.leftView?.backgroundColor = .black
+
+        let leftView = UIView.init(frame: CGRect(x: 0, y: 0, width: 20, height: searchTextField.frame.size.height))
+        leftView.backgroundColor = searchTextField.backgroundColor
+        searchTextField.leftView = leftView
+        searchTextField.leftViewMode = .always
     }
     private func setupCardTableView() {
         cardTableView.delegate = self
@@ -101,7 +105,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension SearchViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        fetchCardObject(query: textField.text ?? "")
+        var text = textField.text ?? ""
+        let whiteSpace = " "
+        let percent = "%20"
+        if text.contains(whiteSpace) {
+            text = text.replacingOccurrences(of: whiteSpace, with: percent)
+        }
+        fetchCardObject(query: text)
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
