@@ -10,33 +10,36 @@ import UIKit
 class SearchCardTableViewCell: UITableViewCell {
     // MARK: - Constants
     struct Constants {
+        static let contentViewFrame: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         static let cornerRadius: CGFloat = 8
-        static let shadowRadius: CGFloat = 5.0
-        static let shadowOffset: CGSize = CGSize.init(width: 0, height: 5)
+        static let shadowRadius: CGFloat = 3.0
+        static let shadowOffset: CGSize = CGSize.init(width: 0, height: 3)
         static let shadowOpacity: Float = 0.1
     }
-    
-    @IBOutlet private weak var containerView: UIView!
+
+    @IBOutlet private weak var viewContainer: UIView!
     @IBOutlet private weak var searchCardView: SearchCardView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setupShadow()
     }
 
-    private func setupShadow() {
-        searchCardView.backgroundColor = .white
+    func setupShadow() {
+        contentView.frame = contentView.frame.inset(by: Constants.contentViewFrame)
+
         searchCardView.layer.cornerRadius = Constants.cornerRadius
         searchCardView.layer.masksToBounds = true
 
-        containerView.layer.cornerRadius = Constants.cornerRadius
-        containerView.layer.masksToBounds = true
-
-        containerView.layer.shadowColor = UIColor.black.cgColor
-        containerView.layer.shadowRadius = Constants.shadowRadius
-        containerView.layer.shadowOffset = Constants.shadowOffset
-        containerView.layer.shadowOpacity = Constants.shadowOpacity
-        containerView.backgroundColor = nil
+        let bezierPath = UIBezierPath.init(roundedRect: self.viewContainer.bounds, cornerRadius: Constants.cornerRadius)
+        viewContainer.layer.shadowPath = bezierPath.cgPath
+        viewContainer.layer.shadowColor = UIColor.black.cgColor
+        viewContainer.layer.cornerRadius = Constants.cornerRadius
+        viewContainer.layer.masksToBounds = true
+        viewContainer.layer.shadowRadius = Constants.shadowRadius
+        viewContainer.layer.shadowOffset = Constants.shadowOffset
+        viewContainer.layer.shadowOpacity = Constants.shadowOpacity
+        viewContainer.backgroundColor = nil
     }
 
     func configure(viewModel: SearchCardViewModel) {
