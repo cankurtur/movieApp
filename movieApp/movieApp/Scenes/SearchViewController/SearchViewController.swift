@@ -15,6 +15,7 @@ class SearchViewController: UIViewController {
     }
 
 
+    @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var searchTextField: UITextField!
     @IBOutlet private weak var cardTableView: AutoSizedTableView!
     @IBOutlet private weak var xButton: UIButton!
@@ -29,6 +30,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupCardTableView()
+        scrollView.delegate = self
         searchTextField.delegate = self
     }
 
@@ -52,9 +54,15 @@ class SearchViewController: UIViewController {
     }
 
     private func fetchCardObject(query: String) {
+        emptyView.isHidden = true
         viewModel.getMultiSearch(query: query) { searchCardViewModelArray in
             self.content = searchCardViewModelArray
             self.cardTableView.reloadData()
+            if let content = self.content, content.isEmpty {
+                self.emptyView.isHidden = false
+            } else {
+                self.emptyView.isHidden = true
+            }
         }
     }
 
@@ -63,11 +71,13 @@ class SearchViewController: UIViewController {
         searchTextField.text = ""
         content = []
         cardTableView.reloadData()
+        emptyView.isHidden = true
     }
     @IBAction private func cancelButtonPressed() {
         searchTextField.text = ""
         content = []
         cardTableView.reloadData()
+        emptyView.isHidden = true
     }
 }
 
