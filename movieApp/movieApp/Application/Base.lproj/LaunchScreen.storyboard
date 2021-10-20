@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Gb5-Ha-PbR" userLabel="Background Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vibrantBlueBackground" translatesAutoresizingMaskIntoConstraints="NO" id="fEH-Pv-98u" userLabel="Rectangle Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moveeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Zao-Ol-sa6" userLabel="Logo Image View">
+                                <rect key="frame" x="142" y="352.66666666666669" width="106" height="149"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KRJ-8T-Wwj">
+                                <rect key="frame" x="149.66666666666666" y="769" width="90.666666666666657" height="19"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rnp-JF-FXA">
+                                        <rect key="frame" x="0.0" y="0.0" width="21.333333333333332" height="19"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="15"/>
+                                        <color key="textColor" name="white"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteHeart" translatesAutoresizingMaskIntoConstraints="NO" id="Jmv-E1-NMj" userLabel="Heart Image View">
+                                        <rect key="frame" x="26.333333333333343" y="0.0" width="19" height="19"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="movie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OY9-eN-NAs">
+                                        <rect key="frame" x="50.333333333333343" y="0.0" width="40.333333333333343" height="19"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="15"/>
+                                        <color key="textColor" name="white"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="H0v-PE-osQ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zao-Ol-sa6" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="3ne-tN-NYM"/>
+                            <constraint firstAttribute="bottom" secondItem="Gb5-Ha-PbR" secondAttribute="bottom" id="4vK-by-kK4"/>
+                            <constraint firstItem="fEH-Pv-98u" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Bcq-1w-hHR"/>
+                            <constraint firstItem="fEH-Pv-98u" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="MtM-3B-gMk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fEH-Pv-98u" secondAttribute="trailing" id="Ndr-7b-7ZB"/>
+                            <constraint firstItem="KRJ-8T-Wwj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Zqr-0e-04w"/>
+                            <constraint firstItem="Zao-Ol-sa6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c1z-s7-Fka"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gb5-Ha-PbR" secondAttribute="trailing" id="cOv-Cp-FrO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KRJ-8T-Wwj" secondAttribute="bottom" constant="22" id="fwA-aK-gcy"/>
+                            <constraint firstItem="Gb5-Ha-PbR" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="nX5-NR-zqy"/>
+                            <constraint firstItem="fEH-Pv-98u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ofx-cd-C6X"/>
+                            <constraint firstItem="Gb5-Ha-PbR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="riG-Aa-TNV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49.230769230769226" y="373.93364928909949"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launchScreenBackground" width="375" height="812"/>
+        <image name="moveeLogo" width="106" height="149"/>
+        <image name="vibrantBlueBackground" width="375" height="812"/>
+        <image name="whiteHeart" width="19" height="19"/>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

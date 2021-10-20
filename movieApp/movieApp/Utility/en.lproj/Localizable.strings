@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  movieApp
+
+  Created by Can Kurtur on 18.08.2021.
+  
+*/
+
+"_launch_screen_first_word_" = "We";
+"_launch_screen_second_word_" = "movie";
+"_large_title_" = "Movies";
+"_title_" = "Popular";
+"_small_title_" = "Popular Movies";

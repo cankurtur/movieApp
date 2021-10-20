@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Black.otf">
+            <string>SFProDisplay-Black</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchCardView" customModule="movieApp" customModuleProvider="target">
+            <connections>
+                <outlet property="cardImage" destination="gLx-w5-0BZ" id="Dno-gJ-ZF7"/>
+                <outlet property="detailsLabel" destination="bUu-On-i8a" id="xhS-SA-OUB"/>
+                <outlet property="imageWithLabelView" destination="Pej-lf-RJY" id="yLo-HH-mZ3"/>
+                <outlet property="titleLabel" destination="lEl-Nu-AQj" id="1zS-yP-4Hi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gLx-w5-0BZ" customClass="FetchImageView" customModule="movieApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="gLx-w5-0BZ" secondAttribute="height" multiplier="70:100" id="FOW-IQ-7ZB"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEl-Nu-AQj" userLabel="Title Label">
+                    <rect key="frame" x="80" y="10" width="247" height="0.0"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Black" family="SF Pro Display" pointSize="20"/>
+                    <color key="textColor" name="almostBlack"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pej-lf-RJY" userLabel="Image With Label View" customClass="ImageWithLabel" customModule="movieApp" customModuleProvider="target">
+                    <rect key="frame" x="80" y="67" width="100" height="15"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="3ID-TC-F2G"/>
+                        <constraint firstAttribute="height" constant="15" id="VpV-5h-JhN"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUu-On-i8a" userLabel="Details Label">
+                    <rect key="frame" x="80" y="15" width="247" height="42"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="15"/>
+                    <color key="textColor" name="almostBlack"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="bUu-On-i8a" firstAttribute="leading" secondItem="gLx-w5-0BZ" secondAttribute="trailing" constant="10" id="1ep-P6-QzP"/>
+                <constraint firstAttribute="trailing" secondItem="bUu-On-i8a" secondAttribute="trailing" id="DWb-V5-TjM"/>
+                <constraint firstItem="Pej-lf-RJY" firstAttribute="leading" secondItem="gLx-w5-0BZ" secondAttribute="trailing" constant="10" id="FIJ-RK-6D7"/>
+                <constraint firstItem="Pej-lf-RJY" firstAttribute="top" secondItem="bUu-On-i8a" secondAttribute="bottom" constant="10" id="HbR-fB-1CU"/>
+                <constraint firstAttribute="bottom" secondItem="Pej-lf-RJY" secondAttribute="bottom" constant="18" id="KjV-dI-gcw"/>
+                <constraint firstItem="lEl-Nu-AQj" firstAttribute="leading" secondItem="gLx-w5-0BZ" secondAttribute="trailing" constant="10" id="Pgp-BT-2Du"/>
+                <constraint firstItem="gLx-w5-0BZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZgU-B9-v9e"/>
+                <constraint firstItem="lEl-Nu-AQj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="cRV-wr-WSj"/>
+                <constraint firstItem="bUu-On-i8a" firstAttribute="top" secondItem="lEl-Nu-AQj" secondAttribute="bottom" constant="5" id="f4s-rr-yWL"/>
+                <constraint firstAttribute="trailing" secondItem="lEl-Nu-AQj" secondAttribute="trailing" id="hSU-cx-epX"/>
+                <constraint firstAttribute="bottom" secondItem="gLx-w5-0BZ" secondAttribute="bottom" id="mMj-bA-uJT"/>
+                <constraint firstItem="gLx-w5-0BZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qsf-u0-hZt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="138.57421875" y="84.773060029282576"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="almostBlack">
+            <color red="0.030999999493360519" green="0.035000000149011612" blue="0.039000000804662704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTableViewCell" customModule="movieApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="customFilmCell" rowHeight="100" id="dB1-Xa-Oyu" userLabel="CustomTableViewCell" customClass="CustomTableViewCell" customModule="movieApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dB1-Xa-Oyu" id="3Ld-W6-eNy">
+                <rect key="frame" x="0.0" y="0.0" width="342" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNU-1c-cbL" userLabel="View Container">
+                        <rect key="frame" x="0.0" y="0.0" width="342" height="100"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fwz-6M-DMu" customClass="CardViewWithImageAndDetails" customModule="movieApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="337" height="95"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fwz-6M-DMu" firstAttribute="leading" secondItem="KNU-1c-cbL" secondAttribute="leading" id="GP1-Yf-ReF"/>
+                            <constraint firstItem="Fwz-6M-DMu" firstAttribute="top" secondItem="KNU-1c-cbL" secondAttribute="top" id="UkZ-CE-LPD"/>
+                            <constraint firstAttribute="bottom" secondItem="Fwz-6M-DMu" secondAttribute="bottom" constant="5" id="Xif-6U-HOr"/>
+                            <constraint firstAttribute="trailing" secondItem="Fwz-6M-DMu" secondAttribute="trailing" constant="5" id="ued-UT-T3R"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="KNU-1c-cbL" firstAttribute="top" secondItem="3Ld-W6-eNy" secondAttribute="top" id="MJB-aZ-7ug"/>
+                    <constraint firstAttribute="trailing" secondItem="KNU-1c-cbL" secondAttribute="trailing" id="MUb-91-9bw"/>
+                    <constraint firstAttribute="bottom" secondItem="KNU-1c-cbL" secondAttribute="bottom" id="Pd0-yb-0aK"/>
+                    <constraint firstItem="KNU-1c-cbL" firstAttribute="leading" secondItem="3Ld-W6-eNy" secondAttribute="leading" id="euz-BY-cZP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cardViewWithImageAndDetails" destination="Fwz-6M-DMu" id="6hW-Yf-UTe"/>
+                <outlet property="viewContainer" destination="KNU-1c-cbL" id="vFY-C9-5mf"/>
+            </connections>
+            <point key="canvasLocation" x="-261" y="-9"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

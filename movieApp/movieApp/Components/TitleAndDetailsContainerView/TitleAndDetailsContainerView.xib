@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TitleAndDetailsContainerView" customModule="movieApp" customModuleProvider="target">
+            <connections>
+                <outlet property="detailsLabel" destination="x0M-pB-DnE" id="WWL-hH-IUi"/>
+                <outlet property="durationView" destination="qkj-BX-IzX" id="skA-VY-6ZU"/>
+                <outlet property="separatorView" destination="Lha-Xv-YwK" id="Y59-QW-XML"/>
+                <outlet property="stackViewSeparatorView" destination="xjD-v7-blw" id="CIj-7B-pQB"/>
+                <outlet property="titleLabel" destination="2ps-lg-yd0" id="Nwt-Gf-Hc1"/>
+                <outlet property="typeView" destination="9rs-L9-fxl" id="tHG-NO-hzb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="105"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="2ps-lg-yd0" userLabel="Title Label">
+                    <rect key="frame" x="0.0" y="0.0" width="327" height="33.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33.5" id="QQR-cg-f1C"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
+                    <color key="textColor" name="almostBlack"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="x0M-pB-DnE" userLabel="Details Label">
+                    <rect key="frame" x="0.0" y="28.5" width="327" height="48.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48.5" id="rav-jt-H9G"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="15"/>
+                    <color key="textColor" name="almostBlack"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qiA-hR-eMj">
+                    <rect key="frame" x="0.0" y="67" width="327" height="20"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkj-BX-IzX" userLabel="Duration View" customClass="ImageWithLabel" customModule="movieApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="72" height="20"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="72" id="J4F-ob-lyt"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjD-v7-blw" userLabel="Separator View">
+                            <rect key="frame" x="80" y="0.0" width="1" height="20"/>
+                            <color key="backgroundColor" name="separator"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="Eyp-pT-TfN"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rs-L9-fxl" userLabel="Type View" customClass="ImageWithLabel" customModule="movieApp" customModuleProvider="target">
+                            <rect key="frame" x="89" y="0.0" width="238" height="20"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="238" id="wLe-Gl-W7X"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="wng-Vz-Eyz"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lha-Xv-YwK" userLabel="Separator View">
+                    <rect key="frame" x="0.0" y="104" width="327" height="1"/>
+                    <color key="backgroundColor" name="separator"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="9zE-Qf-Dc1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="x0M-pB-DnE" firstAttribute="bottom" secondItem="qiA-hR-eMj" secondAttribute="top" constant="10" id="2Rj-pf-zWE"/>
+                <constraint firstItem="qiA-hR-eMj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="IB6-O6-fYz"/>
+                <constraint firstAttribute="trailing" secondItem="Lha-Xv-YwK" secondAttribute="trailing" id="Nck-YS-v4R"/>
+                <constraint firstAttribute="trailing" secondItem="qiA-hR-eMj" secondAttribute="trailing" id="O5C-j7-cxN"/>
+                <constraint firstItem="Lha-Xv-YwK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OG0-6o-Ifu"/>
+                <constraint firstItem="2ps-lg-yd0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VXd-9V-X5I"/>
+                <constraint firstAttribute="trailing" secondItem="2ps-lg-yd0" secondAttribute="trailing" id="ZHq-ok-31a"/>
+                <constraint firstItem="x0M-pB-DnE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZUW-l5-Y6x"/>
+                <constraint firstItem="2ps-lg-yd0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ccl-2Z-AZh"/>
+                <constraint firstAttribute="trailing" secondItem="x0M-pB-DnE" secondAttribute="trailing" id="eTk-0S-MGZ"/>
+                <constraint firstItem="2ps-lg-yd0" firstAttribute="bottom" secondItem="x0M-pB-DnE" secondAttribute="top" constant="5" id="iMx-fv-TPU"/>
+                <constraint firstItem="Lha-Xv-YwK" firstAttribute="top" secondItem="qiA-hR-eMj" secondAttribute="bottom" constant="17" id="r9C-N1-u8F"/>
+                <constraint firstItem="Lha-Xv-YwK" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="zJ7-2E-JVW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-201.26953125" y="109.5900439238653"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="almostBlack">
+            <color red="0.030999999493360519" green="0.035000000149011612" blue="0.039000000804662704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="separator">
+            <color red="0.81999999284744263" green="0.81999999284744263" blue="0.83899998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
