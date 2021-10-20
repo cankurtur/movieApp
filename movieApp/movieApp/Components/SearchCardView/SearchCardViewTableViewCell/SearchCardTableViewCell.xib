@@ -19,9 +19,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnf-q0-rwY" userLabel="View Container">
                         <rect key="frame" x="0.0" y="0.0" width="342" height="100"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="7vv-Ja-7ws" customClass="SearchCardView" customModule="movieApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7vv-Ja-7ws" customClass="SearchCardView" customModule="movieApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="337" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>

@@ -45,6 +45,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="TZ4-yi-4vd"/>
+                                                    <constraint firstAttribute="width" constant="61" id="zV6-fB-tKy"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cgn-8a-5C7" userLabel="Title And Details View" customClass="TitleAndDetailsContainerView" customModule="movieApp" customModuleProvider="target">
@@ -73,6 +74,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" constant="81" id="5sQ-ok-8Kh"/>
                                                     <constraint firstAttribute="height" constant="24" id="aPd-n6-TnR"/>
                                                 </constraints>
                                             </view>
@@ -104,7 +106,6 @@
                                             <constraint firstItem="L1u-ly-IRa" firstAttribute="top" secondItem="QX7-iB-FBF" secondAttribute="bottom" constant="20" id="5TI-Yd-COX"/>
                                             <constraint firstItem="Ek0-GD-tF8" firstAttribute="top" secondItem="L1u-ly-IRa" secondAttribute="bottom" constant="20" id="70z-yJ-jgm"/>
                                             <constraint firstItem="1Bz-oN-5Xx" firstAttribute="leading" secondItem="9qb-nx-kCq" secondAttribute="leading" constant="24" id="Day-Cn-MyC"/>
-                                            <constraint firstAttribute="trailing" secondItem="QX7-iB-FBF" secondAttribute="trailing" constant="285" id="Fw7-z9-6RU"/>
                                             <constraint firstAttribute="trailing" secondItem="v45-V4-G5T" secondAttribute="trailing" id="Hvp-Mf-GBB"/>
                                             <constraint firstItem="dIZ-92-ldC" firstAttribute="top" secondItem="QX7-iB-FBF" secondAttribute="bottom" constant="20" id="Jom-G0-U1g"/>
                                             <constraint firstAttribute="trailing" secondItem="L1u-ly-IRa" secondAttribute="trailing" constant="24" id="ONC-UE-3jK"/>
@@ -113,7 +114,6 @@
                                             <constraint firstItem="v45-V4-G5T" firstAttribute="leading" secondItem="9qb-nx-kCq" secondAttribute="leading" id="Sgj-Cj-fWb"/>
                                             <constraint firstItem="Cgn-8a-5C7" firstAttribute="top" secondItem="1Bz-oN-5Xx" secondAttribute="bottom" constant="10" id="TuB-1Y-Q4W"/>
                                             <constraint firstItem="t5R-Xc-n8Q" firstAttribute="leading" secondItem="9qb-nx-kCq" secondAttribute="leading" constant="24" id="ZJK-ob-waD"/>
-                                            <constraint firstAttribute="trailing" secondItem="1Bz-oN-5Xx" secondAttribute="trailing" constant="305" id="dEA-b8-r9V"/>
                                             <constraint firstItem="Ek0-GD-tF8" firstAttribute="leading" secondItem="9qb-nx-kCq" secondAttribute="leading" id="e8a-kd-MRW"/>
                                             <constraint firstAttribute="bottom" secondItem="Ek0-GD-tF8" secondAttribute="bottom" constant="70" id="fVO-qy-gNT"/>
                                             <constraint firstAttribute="trailing" secondItem="Ek0-GD-tF8" secondAttribute="trailing" id="hz2-HM-E6N"/>

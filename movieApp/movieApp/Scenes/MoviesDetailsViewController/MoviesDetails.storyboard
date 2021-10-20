@@ -39,6 +39,7 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="5H8-on-PXI"/>
+                                                    <constraint firstAttribute="width" constant="61" id="YAG-42-aAa"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0RO-md-ZBi" userLabel="Title And Details View" customClass="TitleAndDetailsContainerView" customModule="movieApp" customModuleProvider="target">
@@ -65,7 +66,6 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="VLg-iH-QQS" secondAttribute="trailing" id="1E9-cb-DhO"/>
-                                            <constraint firstAttribute="trailing" secondItem="956-tN-ju3" secondAttribute="trailing" constant="305" id="4ZE-iZ-abO"/>
                                             <constraint firstAttribute="trailing" secondItem="4aq-DD-W3M" secondAttribute="trailing" constant="24" id="7RF-5V-xth"/>
                                             <constraint firstAttribute="trailing" secondItem="Mnt-6M-FkU" secondAttribute="trailing" id="8h2-1Y-KnH"/>
                                             <constraint firstItem="0RO-md-ZBi" firstAttribute="top" secondItem="956-tN-ju3" secondAttribute="bottom" constant="10" id="Guo-ad-3Tn"/>
